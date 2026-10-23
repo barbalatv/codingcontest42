@@ -1,0 +1,1849 @@
+{
+  "scores": [
+    {
+      "file": "answer_level-6_0-example.txt",
+      "baseline": 43,
+      "live": 43,
+      "new": 43,
+      "sha256": "8cbb0aaedfa7cc673c35c1093d12cf63266fad8c87ae0b4631c714185b935dbe"
+    },
+    {
+      "file": "answer_level-6_1-small.txt",
+      "baseline": 110,
+      "live": 110,
+      "new": 110,
+      "sha256": "d25061f41bf081956fd4728169c25c7f134db5e55da03c22ee43c7dafe6653a5"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "baseline": 6334,
+      "live": 6334,
+      "new": 6291,
+      "sha256": "0a5fbff0c2c911112eddf941d04470a2ac5530531eecaf740f6454a61122c968"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "baseline": 6240,
+      "live": 6240,
+      "new": 5818,
+      "sha256": "32444f66418f072ba4fcb4203eb453325d5f677e8672bb35e104388e94fd75df"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "baseline": 6488,
+      "live": 6488,
+      "new": 5657,
+      "sha256": "e1f6b6de485069cb412404166f837b9a8277a3890c2d605b0263390ac16b349a"
+    }
+  ],
+  "changes": [
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 32,
+      "baseline": 14,
+      "live": 14,
+      "new": 13,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 50,
+      "baseline": 99,
+      "live": 99,
+      "new": 98,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 59,
+      "baseline": 38,
+      "live": 38,
+      "new": 37,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 73,
+      "baseline": 64,
+      "live": 64,
+      "new": 62,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 78,
+      "baseline": 35,
+      "live": 35,
+      "new": 34,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 81,
+      "baseline": 75,
+      "live": 75,
+      "new": 74,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 87,
+      "baseline": 41,
+      "live": 41,
+      "new": 33,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 120,
+      "baseline": 88,
+      "live": 88,
+      "new": 87,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 125,
+      "baseline": 52,
+      "live": 52,
+      "new": 51,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 133,
+      "baseline": 62,
+      "live": 62,
+      "new": 57,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 134,
+      "baseline": 43,
+      "live": 43,
+      "new": 42,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 168,
+      "baseline": 191,
+      "live": 191,
+      "new": 173,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 187,
+      "baseline": 35,
+      "live": 35,
+      "new": 34,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_2-medium.txt",
+      "case": 191,
+      "baseline": 39,
+      "live": 39,
+      "new": 38,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 6,
+      "baseline": 23,
+      "live": 23,
+      "new": 21,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 11,
+      "baseline": 20,
+      "live": 20,
+      "new": 19,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 13,
+      "baseline": 19,
+      "live": 19,
+      "new": 17,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 15,
+      "baseline": 22,
+      "live": 22,
+      "new": 18,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 16,
+      "baseline": 35,
+      "live": 35,
+      "new": 16,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 17,
+      "baseline": 67,
+      "live": 67,
+      "new": 57,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 22,
+      "baseline": 53,
+      "live": 53,
+      "new": 43,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 23,
+      "baseline": 61,
+      "live": 61,
+      "new": 53,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 26,
+      "baseline": 24,
+      "live": 24,
+      "new": 23,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 27,
+      "baseline": 68,
+      "live": 68,
+      "new": 66,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 29,
+      "baseline": 40,
+      "live": 40,
+      "new": 37,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 35,
+      "baseline": 26,
+      "live": 26,
+      "new": 25,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 36,
+      "baseline": 15,
+      "live": 15,
+      "new": 11,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 38,
+      "baseline": 39,
+      "live": 39,
+      "new": 38,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 39,
+      "baseline": 9,
+      "live": 9,
+      "new": 8,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 41,
+      "baseline": 27,
+      "live": 27,
+      "new": 26,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 43,
+      "baseline": 24,
+      "live": 24,
+      "new": 23,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 45,
+      "baseline": 51,
+      "live": 51,
+      "new": 47,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 49,
+      "baseline": 25,
+      "live": 25,
+      "new": 24,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 50,
+      "baseline": 11,
+      "live": 11,
+      "new": 7,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 52,
+      "baseline": 33,
+      "live": 33,
+      "new": 32,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 55,
+      "baseline": 74,
+      "live": 74,
+      "new": 69,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 56,
+      "baseline": 21,
+      "live": 21,
+      "new": 20,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 59,
+      "baseline": 32,
+      "live": 32,
+      "new": 29,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 60,
+      "baseline": 52,
+      "live": 52,
+      "new": 47,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 61,
+      "baseline": 57,
+      "live": 57,
+      "new": 56,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 63,
+      "baseline": 69,
+      "live": 69,
+      "new": 62,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 64,
+      "baseline": 54,
+      "live": 54,
+      "new": 51,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 65,
+      "baseline": 154,
+      "live": 154,
+      "new": 149,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 66,
+      "baseline": 27,
+      "live": 27,
+      "new": 25,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 69,
+      "baseline": 15,
+      "live": 15,
+      "new": 11,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 74,
+      "baseline": 55,
+      "live": 55,
+      "new": 49,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 75,
+      "baseline": 91,
+      "live": 91,
+      "new": 64,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 77,
+      "baseline": 65,
+      "live": 65,
+      "new": 62,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 78,
+      "baseline": 43,
+      "live": 43,
+      "new": 41,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 81,
+      "baseline": 62,
+      "live": 62,
+      "new": 46,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 88,
+      "baseline": 24,
+      "live": 24,
+      "new": 21,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 89,
+      "baseline": 47,
+      "live": 47,
+      "new": 42,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 90,
+      "baseline": 20,
+      "live": 20,
+      "new": 19,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 92,
+      "baseline": 51,
+      "live": 51,
+      "new": 41,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 95,
+      "baseline": 90,
+      "live": 90,
+      "new": 85,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 96,
+      "baseline": 52,
+      "live": 52,
+      "new": 51,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 97,
+      "baseline": 16,
+      "live": 16,
+      "new": 12,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 98,
+      "baseline": 18,
+      "live": 18,
+      "new": 16,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 99,
+      "baseline": 27,
+      "live": 27,
+      "new": 13,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 101,
+      "baseline": 38,
+      "live": 38,
+      "new": 37,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 104,
+      "baseline": 88,
+      "live": 88,
+      "new": 87,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 106,
+      "baseline": 53,
+      "live": 53,
+      "new": 52,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 108,
+      "baseline": 21,
+      "live": 21,
+      "new": 19,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 110,
+      "baseline": 35,
+      "live": 35,
+      "new": 34,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 113,
+      "baseline": 12,
+      "live": 12,
+      "new": 11,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 114,
+      "baseline": 13,
+      "live": 13,
+      "new": 11,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 115,
+      "baseline": 48,
+      "live": 48,
+      "new": 46,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 117,
+      "baseline": 15,
+      "live": 15,
+      "new": 14,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 119,
+      "baseline": 114,
+      "live": 114,
+      "new": 94,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 120,
+      "baseline": 66,
+      "live": 66,
+      "new": 63,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 123,
+      "baseline": 38,
+      "live": 38,
+      "new": 37,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 125,
+      "baseline": 75,
+      "live": 75,
+      "new": 58,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 127,
+      "baseline": 32,
+      "live": 32,
+      "new": 29,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 128,
+      "baseline": 99,
+      "live": 99,
+      "new": 93,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 129,
+      "baseline": 8,
+      "live": 8,
+      "new": 6,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 130,
+      "baseline": 10,
+      "live": 10,
+      "new": 7,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 133,
+      "baseline": 24,
+      "live": 24,
+      "new": 23,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 134,
+      "baseline": 40,
+      "live": 40,
+      "new": 18,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 135,
+      "baseline": 31,
+      "live": 31,
+      "new": 29,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 137,
+      "baseline": 27,
+      "live": 27,
+      "new": 26,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 140,
+      "baseline": 15,
+      "live": 15,
+      "new": 10,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 142,
+      "baseline": 161,
+      "live": 161,
+      "new": 143,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 144,
+      "baseline": 192,
+      "live": 192,
+      "new": 182,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 145,
+      "baseline": 33,
+      "live": 33,
+      "new": 32,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 146,
+      "baseline": 45,
+      "live": 45,
+      "new": 44,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 147,
+      "baseline": 62,
+      "live": 62,
+      "new": 55,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 148,
+      "baseline": 11,
+      "live": 11,
+      "new": 5,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 149,
+      "baseline": 66,
+      "live": 66,
+      "new": 64,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 150,
+      "baseline": 22,
+      "live": 22,
+      "new": 19,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 151,
+      "baseline": 8,
+      "live": 8,
+      "new": 6,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 152,
+      "baseline": 23,
+      "live": 23,
+      "new": 20,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 154,
+      "baseline": 33,
+      "live": 33,
+      "new": 31,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 159,
+      "baseline": 32,
+      "live": 32,
+      "new": 31,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 160,
+      "baseline": 27,
+      "live": 27,
+      "new": 26,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 162,
+      "baseline": 22,
+      "live": 22,
+      "new": 20,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 163,
+      "baseline": 34,
+      "live": 34,
+      "new": 31,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 164,
+      "baseline": 47,
+      "live": 47,
+      "new": 44,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 166,
+      "baseline": 33,
+      "live": 33,
+      "new": 30,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 167,
+      "baseline": 10,
+      "live": 10,
+      "new": 5,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 168,
+      "baseline": 41,
+      "live": 41,
+      "new": 37,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 169,
+      "baseline": 66,
+      "live": 66,
+      "new": 62,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 173,
+      "baseline": 131,
+      "live": 131,
+      "new": 121,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 175,
+      "baseline": 44,
+      "live": 44,
+      "new": 42,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 177,
+      "baseline": 8,
+      "live": 8,
+      "new": 6,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 178,
+      "baseline": 34,
+      "live": 34,
+      "new": 33,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 181,
+      "baseline": 20,
+      "live": 20,
+      "new": 19,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 183,
+      "baseline": 54,
+      "live": 54,
+      "new": 47,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_3-large.txt",
+      "case": 188,
+      "baseline": 10,
+      "live": 10,
+      "new": 6,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 1,
+      "baseline": 62,
+      "live": 62,
+      "new": 55,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 2,
+      "baseline": 84,
+      "live": 84,
+      "new": 79,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 3,
+      "baseline": 14,
+      "live": 14,
+      "new": 13,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 5,
+      "baseline": 77,
+      "live": 77,
+      "new": 74,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 6,
+      "baseline": 57,
+      "live": 57,
+      "new": 45,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 8,
+      "baseline": 93,
+      "live": 93,
+      "new": 68,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 9,
+      "baseline": 69,
+      "live": 69,
+      "new": 63,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 10,
+      "baseline": 25,
+      "live": 25,
+      "new": 21,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 11,
+      "baseline": 31,
+      "live": 31,
+      "new": 26,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 13,
+      "baseline": 74,
+      "live": 74,
+      "new": 68,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 14,
+      "baseline": 31,
+      "live": 31,
+      "new": 30,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 15,
+      "baseline": 41,
+      "live": 41,
+      "new": 33,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 16,
+      "baseline": 35,
+      "live": 35,
+      "new": 32,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 17,
+      "baseline": 44,
+      "live": 44,
+      "new": 43,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 20,
+      "baseline": 42,
+      "live": 42,
+      "new": 40,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 21,
+      "baseline": 32,
+      "live": 32,
+      "new": 27,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 22,
+      "baseline": 50,
+      "live": 50,
+      "new": 33,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 23,
+      "baseline": 27,
+      "live": 27,
+      "new": 24,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 24,
+      "baseline": 32,
+      "live": 32,
+      "new": 24,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 26,
+      "baseline": 29,
+      "live": 29,
+      "new": 26,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 27,
+      "baseline": 46,
+      "live": 46,
+      "new": 41,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 29,
+      "baseline": 68,
+      "live": 68,
+      "new": 40,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 30,
+      "baseline": 86,
+      "live": 86,
+      "new": 51,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 31,
+      "baseline": 109,
+      "live": 109,
+      "new": 104,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 32,
+      "baseline": 36,
+      "live": 36,
+      "new": 32,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 33,
+      "baseline": 24,
+      "live": 24,
+      "new": 21,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 34,
+      "baseline": 40,
+      "live": 40,
+      "new": 25,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 35,
+      "baseline": 15,
+      "live": 15,
+      "new": 10,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 36,
+      "baseline": 42,
+      "live": 42,
+      "new": 36,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 37,
+      "baseline": 81,
+      "live": 81,
+      "new": 76,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 38,
+      "baseline": 32,
+      "live": 32,
+      "new": 27,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 40,
+      "baseline": 47,
+      "live": 47,
+      "new": 45,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 41,
+      "baseline": 46,
+      "live": 46,
+      "new": 43,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 42,
+      "baseline": 35,
+      "live": 35,
+      "new": 34,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 44,
+      "baseline": 32,
+      "live": 32,
+      "new": 28,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 45,
+      "baseline": 18,
+      "live": 18,
+      "new": 16,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 46,
+      "baseline": 50,
+      "live": 50,
+      "new": 37,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 47,
+      "baseline": 22,
+      "live": 22,
+      "new": 20,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 48,
+      "baseline": 45,
+      "live": 45,
+      "new": 41,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 49,
+      "baseline": 45,
+      "live": 45,
+      "new": 42,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 50,
+      "baseline": 78,
+      "live": 78,
+      "new": 55,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 52,
+      "baseline": 155,
+      "live": 155,
+      "new": 142,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 53,
+      "baseline": 29,
+      "live": 29,
+      "new": 25,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 54,
+      "baseline": 39,
+      "live": 39,
+      "new": 29,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 55,
+      "baseline": 19,
+      "live": 19,
+      "new": 17,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 56,
+      "baseline": 53,
+      "live": 53,
+      "new": 38,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 57,
+      "baseline": 21,
+      "live": 21,
+      "new": 20,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 58,
+      "baseline": 90,
+      "live": 90,
+      "new": 87,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 59,
+      "baseline": 59,
+      "live": 59,
+      "new": 43,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 60,
+      "baseline": 41,
+      "live": 41,
+      "new": 40,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 61,
+      "baseline": 20,
+      "live": 20,
+      "new": 18,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 62,
+      "baseline": 33,
+      "live": 33,
+      "new": 31,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 63,
+      "baseline": 68,
+      "live": 68,
+      "new": 67,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 64,
+      "baseline": 34,
+      "live": 34,
+      "new": 32,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 65,
+      "baseline": 209,
+      "live": 209,
+      "new": 198,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 66,
+      "baseline": 25,
+      "live": 25,
+      "new": 24,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 67,
+      "baseline": 63,
+      "live": 63,
+      "new": 55,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 68,
+      "baseline": 17,
+      "live": 17,
+      "new": 15,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 69,
+      "baseline": 50,
+      "live": 50,
+      "new": 45,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 70,
+      "baseline": 39,
+      "live": 39,
+      "new": 32,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 71,
+      "baseline": 33,
+      "live": 33,
+      "new": 32,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 72,
+      "baseline": 55,
+      "live": 55,
+      "new": 40,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 73,
+      "baseline": 63,
+      "live": 63,
+      "new": 45,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 74,
+      "baseline": 25,
+      "live": 25,
+      "new": 23,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 75,
+      "baseline": 29,
+      "live": 29,
+      "new": 27,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 76,
+      "baseline": 28,
+      "live": 28,
+      "new": 22,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 77,
+      "baseline": 34,
+      "live": 34,
+      "new": 28,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 78,
+      "baseline": 58,
+      "live": 58,
+      "new": 49,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 79,
+      "baseline": 79,
+      "live": 79,
+      "new": 45,
+      "method": "cleanup_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 80,
+      "baseline": 45,
+      "live": 45,
+      "new": 43,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 81,
+      "baseline": 56,
+      "live": 56,
+      "new": 48,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 82,
+      "baseline": 33,
+      "live": 33,
+      "new": 27,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 84,
+      "baseline": 60,
+      "live": 60,
+      "new": 39,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 85,
+      "baseline": 54,
+      "live": 54,
+      "new": 53,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 86,
+      "baseline": 34,
+      "live": 34,
+      "new": 27,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 87,
+      "baseline": 57,
+      "live": 57,
+      "new": 53,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 89,
+      "baseline": 38,
+      "live": 38,
+      "new": 28,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 90,
+      "baseline": 42,
+      "live": 42,
+      "new": 34,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 91,
+      "baseline": 24,
+      "live": 24,
+      "new": 20,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 92,
+      "baseline": 39,
+      "live": 39,
+      "new": 36,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 93,
+      "baseline": 94,
+      "live": 94,
+      "new": 82,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 94,
+      "baseline": 64,
+      "live": 64,
+      "new": 47,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 95,
+      "baseline": 44,
+      "live": 44,
+      "new": 41,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 97,
+      "baseline": 27,
+      "live": 27,
+      "new": 24,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 98,
+      "baseline": 39,
+      "live": 39,
+      "new": 37,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 99,
+      "baseline": 63,
+      "live": 63,
+      "new": 58,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 100,
+      "baseline": 76,
+      "live": 76,
+      "new": 59,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 101,
+      "baseline": 35,
+      "live": 35,
+      "new": 31,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 103,
+      "baseline": 17,
+      "live": 17,
+      "new": 16,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 104,
+      "baseline": 107,
+      "live": 107,
+      "new": 100,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 107,
+      "baseline": 30,
+      "live": 30,
+      "new": 29,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 109,
+      "baseline": 43,
+      "live": 43,
+      "new": 41,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 110,
+      "baseline": 26,
+      "live": 26,
+      "new": 25,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 111,
+      "baseline": 30,
+      "live": 30,
+      "new": 23,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 112,
+      "baseline": 43,
+      "live": 43,
+      "new": 37,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 113,
+      "baseline": 42,
+      "live": 42,
+      "new": 37,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 114,
+      "baseline": 108,
+      "live": 108,
+      "new": 92,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 115,
+      "baseline": 171,
+      "live": 171,
+      "new": 158,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 117,
+      "baseline": 50,
+      "live": 50,
+      "new": 49,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 118,
+      "baseline": 94,
+      "live": 94,
+      "new": 90,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 119,
+      "baseline": 27,
+      "live": 27,
+      "new": 25,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 120,
+      "baseline": 25,
+      "live": 25,
+      "new": 22,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 121,
+      "baseline": 38,
+      "live": 38,
+      "new": 27,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 122,
+      "baseline": 27,
+      "live": 27,
+      "new": 26,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 123,
+      "baseline": 108,
+      "live": 108,
+      "new": 104,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 124,
+      "baseline": 23,
+      "live": 23,
+      "new": 22,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 125,
+      "baseline": 29,
+      "live": 29,
+      "new": 25,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 126,
+      "baseline": 88,
+      "live": 88,
+      "new": 79,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 127,
+      "baseline": 48,
+      "live": 48,
+      "new": 44,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 128,
+      "baseline": 14,
+      "live": 14,
+      "new": 12,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 129,
+      "baseline": 107,
+      "live": 107,
+      "new": 98,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 132,
+      "baseline": 31,
+      "live": 31,
+      "new": 25,
+      "method": "relax_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 133,
+      "baseline": 133,
+      "live": 133,
+      "new": 89,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 135,
+      "baseline": 54,
+      "live": 54,
+      "new": 44,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 136,
+      "baseline": 52,
+      "live": 52,
+      "new": 48,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 138,
+      "baseline": 29,
+      "live": 29,
+      "new": 27,
+      "method": "causal_candidates"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 139,
+      "baseline": 35,
+      "live": 35,
+      "new": 31,
+      "method": "retime"
+    },
+    {
+      "file": "answer_level-6_4-enormous.txt",
+      "case": 140,
+      "baseline": 32,
+      "live": 32,
+      "new": 19,
+      "method": "relax_candidates"
+    }
+  ]
+}
