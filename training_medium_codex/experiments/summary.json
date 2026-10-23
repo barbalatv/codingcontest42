@@ -1,0 +1,44 @@
+{
+  "baseline": 5946,
+  "best": 5926,
+  "gain": 20,
+  "improved_cases": [
+    21,
+    50,
+    66,
+    83,
+    106,
+    120
+  ],
+  "additive_gains": {
+    "native_acceptance_tail": 6,
+    "terminal_bounce": 14
+  },
+  "cp_searches": {
+    "joint_log": {
+      "queries": 7,
+      "seconds": 29.711452200077474,
+      "statuses": {
+        "INFEASIBLE": 2,
+        "UNKNOWN": 5
+      }
+    },
+    "pilot_log": {
+      "queries": 32,
+      "seconds": 117.52995959972031,
+      "statuses": {
+        "INFEASIBLE": 5,
+        "UNKNOWN": 27
+      }
+    },
+    "tail_log": {
+      "queries": 126,
+      "seconds": 197.30279910028912,
+      "statuses": {
+        "UNKNOWN": 116,
+        "INFEASIBLE": 10
+      }
+    }
+  },
+  "validation": "PYTHON_AND_ORIGINAL_JS_PASS"
+}
