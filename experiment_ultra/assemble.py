@@ -32,7 +32,8 @@ def main():
   for line in log.read_text().splitlines():
    try:logs.append(json.loads(line))
    except json.JSONDecodeError:pass
- initial_commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=REPO,text=True).strip()
+ base_file=BASE/'EXPERIMENT_BASE.txt'
+ initial_commit=base_file.read_text().strip() if base_file.exists() else subprocess.check_output(['git','rev-parse','HEAD'],cwd=REPO,text=True).strip()
  ref=BASE/'reference_latest/COMMIT.txt'
  report=dict(baseline_commit=ref.read_text().strip() if ref.exists() else initial_commit,initial_experiment_commit=initial_commit,datasets=summary,total_baseline=sum(x['baseline'] for x in main),total_candidate=sum(x['candidate'] for x in main),gain=sum(x['gain'] for x in main),improved_cases=sum(x['improved_cases'] for x in main),benchmark_runs=len(logs),evaluations=sum(x['evaluations'] for x in logs),peak_engine_bytes=max(x['peak_bytes'] for x in logs),measured_search_wall_s=sum(x['wall_s'] for x in logs),graph_additional_gain_over_run_regression_routes=sum(x.get('graph_additional_gain',0) for x in logs),independent_validation='PASS',original_sandbox='PASS',official_submission=False)
  (BASE/'SUMMARY.json').write_text(json.dumps(report,indent=2),encoding='utf-8')
