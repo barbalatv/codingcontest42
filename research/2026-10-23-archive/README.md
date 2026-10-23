@@ -1,6 +1,6 @@
 # Integration of the supplied Level 6 archive
 
-Current locally validated score: **15895** ticks for medium, large and enormous. This agent has not submitted the answers to the contest platform.
+Current locally validated score: **15876** ticks for medium, large and enormous. This agent has not submitted the answers to the contest platform.
 
 The strongest complete archive snapshot contained 16,232 ticks. Per-case integration with the repository produced 16,074. Additional suffix-requirement repair, causal emitter-path compaction, recovery of complete native checkpoints and bounded reverse search improved it further. Shorter programs from newer remote commits are preserved.
 
