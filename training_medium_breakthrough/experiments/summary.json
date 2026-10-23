@@ -1,0 +1,380 @@
+{
+  "baseline": 5917,
+  "best": 5917,
+  "gain": 0,
+  "improved_cases": 0,
+  "criterion": "NOT_MET",
+  "validation": "PASS",
+  "phases": {
+    "pilot": {
+      "queries": 110,
+      "runtime_seconds": 42.127194000873715,
+      "evaluations": 129721071,
+      "saved": 0,
+      "native_valid_cycles": 0,
+      "statuses": {
+        "COMPLETED": 110
+      }
+    },
+    "chain": {
+      "queries": 177,
+      "runtime_seconds": 107.61355969985016,
+      "evaluations": 359066158,
+      "saved": 0,
+      "native_valid_cycles": 0,
+      "statuses": {
+        "COMPLETED": 177
+      }
+    },
+    "multi_flood": {
+      "queries": 32,
+      "runtime_seconds": 52.212472599814646,
+      "evaluations": 18781448,
+      "saved": 0,
+      "native_valid_cycles": 0,
+      "statuses": {
+        "COMPLETED": 32
+      }
+    },
+    "static": {
+      "queries": 193,
+      "runtime_seconds": 0.3906996997538954,
+      "evaluations": 28986668,
+      "saved": 0,
+      "native_valid_cycles": 0,
+      "statuses": {
+        "COMPLETED": 193
+      }
+    },
+    "synthesis": {
+      "queries": 14,
+      "runtime_seconds": 31.085302999941632,
+      "evaluations": 586677136,
+      "saved": 0,
+      "native_valid_cycles": 0,
+      "statuses": {
+        "COMPLETED": 14
+      }
+    },
+    "coupled": {
+      "queries": 6,
+      "runtime_seconds": 19.297502200119197,
+      "evaluations": 243327852,
+      "saved": 0,
+      "native_valid_cycles": 0,
+      "statuses": {
+        "COMPLETED": 6
+      }
+    },
+    "synthesis_macro": {
+      "queries": 10,
+      "runtime_seconds": 40.58417049993295,
+      "evaluations": 648466227,
+      "saved": 0,
+      "native_valid_cycles": 0,
+      "statuses": {
+        "COMPLETED": 10
+      }
+    },
+    "guided_macro": {
+      "queries": 10,
+      "runtime_seconds": 46.39296470023692,
+      "evaluations": 636022267,
+      "saved": 0,
+      "native_valid_cycles": 0,
+      "statuses": {
+        "COMPLETED": 10
+      }
+    },
+    "near_cp": {
+      "queries": 6,
+      "runtime_seconds": 7.063884100178257,
+      "evaluations": 0,
+      "saved": 0,
+      "native_valid_cycles": 0,
+      "statuses": {
+        "INFEASIBLE": 5,
+        "UNKNOWN": 1
+      }
+    },
+    "discovery": {
+      "queries": 72,
+      "runtime_seconds": 25.720190799911506,
+      "evaluations": 90150932,
+      "saved": 0,
+      "native_valid_cycles": 0,
+      "statuses": {
+        "COMPLETED": 72
+      }
+    }
+  },
+  "methods": {
+    "old_regression": {
+      "queries": 11,
+      "runtime_seconds": 0.4280992002459243,
+      "saved": 0,
+      "explored": 11523942,
+      "positive_fragments": 9,
+      "added_edges": 6
+    },
+    "fixed_regression": {
+      "queries": 11,
+      "runtime_seconds": 0.4658563000848517,
+      "saved": 0,
+      "explored": 11523942,
+      "positive_fragments": 9,
+      "added_edges": 0
+    },
+    "six_emitter_meet_setup": {
+      "queries": 11,
+      "runtime_seconds": 6.400199299794622,
+      "saved": 0,
+      "explored": 7102464,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "six_emitter_meet_edge": {
+      "queries": 11,
+      "runtime_seconds": 2.9263115000212565,
+      "saved": 0,
+      "explored": 4665344,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "ordinary_beam_setup": {
+      "queries": 11,
+      "runtime_seconds": 1.6563320001587272,
+      "saved": 0,
+      "explored": 14938112,
+      "positive_fragments": 3,
+      "added_edges": 3
+    },
+    "ordinary_beam_edge": {
+      "queries": 11,
+      "runtime_seconds": 1.1743974001146853,
+      "saved": 0,
+      "explored": 10366976,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "ordinary_beam_cycle2": {
+      "queries": 11,
+      "runtime_seconds": 7.732384999748319,
+      "saved": 0,
+      "explored": 14737419,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "macro_chord_setup": {
+      "queries": 11,
+      "runtime_seconds": 7.74708100000862,
+      "saved": 0,
+      "explored": 24360970,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "macro_chord_edge": {
+      "queries": 11,
+      "runtime_seconds": 4.892862900276668,
+      "saved": 0,
+      "explored": 18203651,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "macro_chord_cycle2": {
+      "queries": 11,
+      "runtime_seconds": 8.70366940042004,
+      "saved": 0,
+      "explored": 12298251,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "meet_plateau_setup": {
+      "queries": 14,
+      "runtime_seconds": 12.401091900188476,
+      "saved": 0,
+      "explored": 11366400,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "meet_plateau_edge": {
+      "queries": 14,
+      "runtime_seconds": 5.526781300082803,
+      "saved": 0,
+      "explored": 12451840,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "ordinary_plateau_setup": {
+      "queries": 14,
+      "runtime_seconds": 3.4930881002219394,
+      "saved": 0,
+      "explored": 32612352,
+      "positive_fragments": 9,
+      "added_edges": 196
+    },
+    "ordinary_plateau_edge": {
+      "queries": 14,
+      "runtime_seconds": 2.5875580998836085,
+      "saved": 0,
+      "explored": 24010752,
+      "positive_fragments": 10,
+      "added_edges": 189
+    },
+    "chord_plateau_setup": {
+      "queries": 14,
+      "runtime_seconds": 12.685698699904606,
+      "saved": 0,
+      "explored": 40610316,
+      "positive_fragments": 2,
+      "added_edges": 26
+    },
+    "chord_plateau_edge": {
+      "queries": 14,
+      "runtime_seconds": 9.784532200079411,
+      "saved": 0,
+      "explored": 35648519,
+      "positive_fragments": 6,
+      "added_edges": 65
+    },
+    "meet_new_pose_edge": {
+      "queries": 23,
+      "runtime_seconds": 6.066351299756207,
+      "saved": 0,
+      "explored": 15851520,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "ordinary_new_pose_edge": {
+      "queries": 23,
+      "runtime_seconds": 3.039163399953395,
+      "saved": 0,
+      "explored": 28405760,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "chord_new_pose_edge": {
+      "queries": 23,
+      "runtime_seconds": 9.827671600040048,
+      "saved": 0,
+      "explored": 40569349,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "chord_new_cycle2": {
+      "queries": 12,
+      "runtime_seconds": 20.339651099871844,
+      "saved": 0,
+      "explored": 56857098,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "chord_new_cycle3": {
+      "queries": 12,
+      "runtime_seconds": 21.86197199986782,
+      "saved": 0,
+      "explored": 60682252,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "multi_flood": {
+      "queries": 32,
+      "runtime_seconds": 52.212472599814646,
+      "saved": 0,
+      "explored": 18781448,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "exact_static": {
+      "queries": 193,
+      "runtime_seconds": 0.3906996997538954,
+      "saved": 0,
+      "explored": 28986668,
+      "positive_fragments": 9,
+      "added_edges": 0
+    },
+    "whole_trajectory_synthesis": {
+      "queries": 40,
+      "runtime_seconds": 137.3599404002307,
+      "saved": 0,
+      "explored": 2114493482,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "geometry_near_exact_repair": {
+      "queries": 6,
+      "runtime_seconds": 7.063884100178257,
+      "saved": 0,
+      "explored": 0,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "meet_setup_discovery": {
+      "queries": 24,
+      "runtime_seconds": 10.386764200404286,
+      "saved": 0,
+      "explored": 15130624,
+      "positive_fragments": 0,
+      "added_edges": 0
+    },
+    "ordinary_setup_discovery": {
+      "queries": 24,
+      "runtime_seconds": 4.235072799725458,
+      "saved": 0,
+      "explored": 38461440,
+      "positive_fragments": 0,
+      "added_edges": 137
+    },
+    "chord_setup_discovery": {
+      "queries": 24,
+      "runtime_seconds": 11.098353799781762,
+      "saved": 0,
+      "explored": 36558868,
+      "positive_fragments": 0,
+      "added_edges": 0
+    }
+  },
+  "root_regression": {
+    "status": "PASS",
+    "program": [
+      [
+        "T",
+        "T",
+        "-",
+        "-",
+        "-",
+        "-"
+      ]
+    ],
+    "input": "3 7 13 1\n---*-*-*-*---\n--*-O-O-O-*--\n-*-O-O-O-O-*-\n*-O-O-M-O-O-*\n-*-O-O-O-O-*-\n--*-O-O-O-*--\n---*-*-*-*---",
+    "invalid_first": 3324464893824,
+    "valid_second": 3324456505216,
+    "old_length": 0,
+    "fixed_length": 1,
+    "old_seconds": 0.0003122999332845211,
+    "fixed_seconds": 0.013639300013892353
+  },
+  "deep_near": {
+    "status": "INFEASIBLE",
+    "seconds": 2.9224750000284985,
+    "horizon": 5,
+    "copies": 2,
+    "branches": 40105,
+    "root": null,
+    "case": 41,
+    "source": "near_case41_h5_c2_s1412833.json",
+    "method": "deep_geometry_near_repair",
+    "radius": 3
+  },
+  "overlap_free_gains": {
+    "root_bug": 0,
+    "bidirectional_bridge": 0,
+    "macro_chord": 0,
+    "new_cycles": 0,
+    "pose_frontier": 0,
+    "setup": 0,
+    "local_exact_repair": 0
+  },
+  "measured_search_query_seconds": 375.4104163006414,
+  "elapsed_session_minutes_approx": 34
+}

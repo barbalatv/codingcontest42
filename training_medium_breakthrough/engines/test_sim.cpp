@@ -1,0 +1,2 @@
+#include "geometry_library.hpp"
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int n;while(cin>>R>>n){vector<string> rows(2*R+1);for(auto&s:rows)cin>>s;init_geometry(rows,0);T=target.b[0];F=forbid.b[0];for(int e=0;e<6;e++)for(int a=0;a<2;a++)for(int p=0;p<L;p++){int b=p+128*a;rayByte[e][b]=a?rays[p][e].b[0]:0;moveByte[e][b]={b,(p+L-1)%L+128*a,(p+1)%L+128*a,p+128*(1-a)};}Node st;int q[6]={0,5*R,4*R,3*R,2*R,R};for(int e=0;e<6;e++)st.pose|=U(q[e])<<(8*e);for(int t=0;t<n;t++){int a;cin>>a;st=step(st,a);cout<<st.pose<<' '<<st.m<<' '<<st.made<<' ';}cout<<'\n'<<flush;}}
