@@ -112,7 +112,7 @@ bool dualSolve(const vector<string>&rows,const vector<pair<int,int>>&cells,const
       int action=0;
       for(int i=0;i<6;i++){
         int p=((partition[type]>>i)&1)?centres[a].origin[i]:centres[b].origin[i];
-        int d=(p-positions[i]+L/2)%L-L/2;
+        int d=(p-positions[i]+L+L/2)%L-L/2;
         if(d){int op=d>0?2:1;positions[i]=(positions[i]+(d>0?1:L-1))%L;action|=op<<(2*i);}
       }
       history.push_back({node.parent,action});node.parent=(int)history.size()-1;
@@ -145,7 +145,7 @@ bool dualSolve(const vector<string>&rows,const vector<pair<int,int>>&cells,const
       int action=0;for(int i=0;i<6;i++){
         int old=((partition[node.type]>>i)&1)?centres[node.a].origin[i]:centres[node.b].origin[i];
         int now=((partition[node.type]>>i)&1)?centres[a].origin[i]:centres[b].origin[i];
-        int d=(now-old+L/2)%L-L/2;if(d)action|=(d>0?2:1)<<(2*i);
+        int d=(now-old+L+L/2)%L-L/2;if(d)action|=(d>0?2:1)<<(2*i);
       }
       next.action=action;
       if(wantPartial){int value=next.good*120-next.bad*180-next.cost*100;if(value>partialValue){partialValue=value;bestPartial=reconstruct(node.parent);bestPartial.push_back(action);}}
@@ -193,7 +193,7 @@ next_copy:
         next.cost=node.cost+1;scoreNode(next,next.cost);next.action=0;
         for(int i=0;i<6;i++){
           int old=((partition[node.type]>>i)&1)?centres[node.a].origin[i]:centres[node.b].origin[i];
-          int now=((partition[node.type]>>i)&1)?centres[a].origin[i]:centres[b].origin[i];int d=(now-old+L/2)%L-L/2;
+          int now=((partition[node.type]>>i)&1)?centres[a].origin[i]:centres[b].origin[i];int d=(now-old+L+L/2)%L-L/2;
           if(d)next.action|=(d>0?2:1)<<(2*i);
         }
         if(next.good==NT&&next.bad==0){

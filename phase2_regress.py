@@ -67,10 +67,26 @@ def cyclic(case,incumbent,cycle):
     return None
 
 
+def cyclic_free(case,incumbent,pose,cycle):
+    m=Machine(*case);count=case[2]
+    pos=[(pose>>(8*i))&127 for i in range(6)]
+    active=[bool((pose>>(8*i))&128) for i in range(6)]
+    try:
+        while m.pos!=pos:m.emit([m.move(i,p) for i,p in enumerate(pos)])
+        if any(active):m.emit(['T' if a else '-' for a in active])
+        for _ in range(count*3):
+            for line in cycle:
+                m.emit(line)
+                if len(m.program)>=len(incumbent):return None
+    except Done:return m.program
+    return None
+
+
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--file',default='');p.add_argument('--pilot',action='store_true');p.add_argument('--indices',default='')
     p.add_argument('--width',type=int,default=64);p.add_argument('--ms',type=int,default=1000);p.add_argument('--depth',type=int,default=160);p.add_argument('--variant',type=int,default=1)
     p.add_argument('--cycle',action='store_true')
+    p.add_argument('--free-end',action='store_true')
     args=p.parse_args();started=perf_counter();engine=Popen([str(Path(__file__).parent/'phase2_regress.exe')],stdin=PIPE,stdout=PIPE,text=True,bufsize=1)
     try:
         for source in sorted(ROOT.glob('in_*.txt')):
@@ -86,11 +102,12 @@ if __name__=='__main__':
                 case=cases[i];r,pattern,count=case;previous=len(programs[i]);rows=list(map(list,geometry(r)[0]))
                 if args.cycle and count<=1:continue
                 for y,x in pattern:rows[y][x]='M'
-                data=f'{r} 1 100000 {args.width} {args.ms} {args.depth} {args.variant+(10 if args.cycle else 0)}\n'+'\n'.join(map(''.join,rows))+'\n'+str(end_pose(case,programs[i]))+'\n'
+                mode=(20 if args.free_end else 0)+(10 if args.cycle else 0)
+                data=f'{r} 1 100000 {args.width} {args.ms} {args.depth} {args.variant+mode}\n'+'\n'.join(map(''.join,rows))+'\n'+str(end_pose(case,programs[i]))+'\n'
                 engine.stdin.write(data);engine.stdin.flush();result=list(map(int,engine.stdout.readline().split()));assert len(result)>=4,result
                 if result[0]:
                     raw=[tuple(CHARS[(action>>(2*k))&3] for k in range(6)) for action in result[4:]]
-                    candidate=cyclic(case,programs[i],raw) if args.cycle else regenerate(case,raw)
+                    candidate=(cyclic_free(case,programs[i],result[3],raw) if args.free_end else cyclic(case,programs[i],raw)) if args.cycle else regenerate(case,raw)
                     if candidate and len(candidate)<previous:
                         assert verify(r,pattern,candidate)==count,(source.name,i)
                         programs[i]=candidate;atomic_save(target,programs);wins+=1

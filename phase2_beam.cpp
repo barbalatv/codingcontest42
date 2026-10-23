@@ -26,6 +26,11 @@ bool dualSolve(const vector<string>&,const vector<pair<int,int>>&,const vector<v
 #endif
 #ifdef PHASE2_REGRESS
 bool regressSolve(uint64_t,int,int,vector<int>&);
+extern uint64_t regressResultPose;
+extern Bits regressOnes,regressZeros;
+extern bool regressWindow;
+extern uint64_t windowStartPose;
+extern Bits windowStartMatter;
 #endif
 void combos(const State&s,int start,array<Combo,64>&out){
   int p[3][4],a[3][4];
@@ -162,9 +167,16 @@ int main(){
     State state;int initial[6]={0,5*R,4*R,3*R,2*R,R};for(int i=0;i<6;i++)state.pose|=uint64_t(initial[i])<<(8*i);
 #ifdef PHASE2_REGRESS
     uint64_t endPose;cin>>endPose;vector<int> regressProgram;
+    regressWindow=variant>=60;
+    if(regressWindow){
+      cin>>windowStartPose;for(int w=0;w<W;w++)cin>>windowStartMatter.b[w];
+      Bits goal;for(int w=0;w<W;w++)cin>>goal.b[w];
+      NT=0;for(int w=0;w<W;w++){uint64_t relevant=target.b[w]|forbid.b[w];target.b[w]=goal.b[w]&relevant;forbid.b[w]=relevant&~target.b[w];NT+=pc(target.b[w]);}
+    }
     bool regressSuccess=regressSolve(endPose,maxdepth,variant,regressProgram);
     auto regressMillis=chrono::duration_cast<chrono::milliseconds>(Clock::now()-begin).count();
-    cout<<(regressSuccess?regressProgram.size():0)<<' '<<evaluations<<' '<<regressMillis<<' '<<regressSuccess;
+    cout<<(regressSuccess?regressProgram.size():0)<<' '<<evaluations<<' '<<regressMillis<<' '<<(regressSuccess&&variant>=30?regressResultPose:uint64_t(regressSuccess));
+    if(regressSuccess&&variant>=40&&variant<60){for(int w=0;w<W;w++)cout<<' '<<regressOnes.b[w];for(int w=0;w<W;w++)cout<<' '<<regressZeros.b[w];}
     if(regressSuccess)for(int action:regressProgram)cout<<' '<<action;cout<<'\n'<<flush;continue;
 #endif
 #ifdef PHASE2_DUAL
