@@ -26,8 +26,10 @@
 | `selftest.cpp` | **регрессионный тест модели: 540/540 incumbent-программ** |
 | `validate_case.cjs` | независимая проверка программы в оригинальной JS-песочнице |
 | `rtds.cpp` | Residual-Target Directed Search (блочная замена + точная проверка) |
-| `endgame.cpp` | Acceptance-Constrained Endgame Repair: полный перебор 4⁶ совместных действий, допустимая LB |
-| `endgame_results.csv` | 8 кейсов, 324 такта, 0 сокращений |
+| `endgame.cpp` | Acceptance-Constrained Endgame Repair: критерий по счётчику, все 4⁶ действий, LB только для незавершённых |
+| `endgame_selftest.cpp` | **обязательный положительный тест: 2944/2944 границы принятия** |
+| `endgame_results.csv` | 28 кейсов, 2269 тактов, **2 сокращения** |
+| `candidates/` | проверенные кандидаты: large #183 (41→40), large #173 (105→104) |
 | `verifyall.cpp` | перекрёстная проверка модели на 540 ответах |
 
 ## Ключевые числа на текущих ответах
@@ -43,8 +45,10 @@
   проверяется в оригинальной JS-песочнице (`validate_case.cjs`).
 * Строгая JS-проверка (`accepted == K` И `lastAcceptTick == ticks`) показала, что все
   пять «валидных» программ предыдущего коммита **невалидны**: валидных 0 из 46 прогонов.
-* Endgame-repair с полным набором 4096 совместных действий и допустимой нижней
-  границей: 0 сокращений на 8 кейсах / 324 тактах.
+* Endgame-repair **после исправления критерия завершения**: 28 кейсов / 2269 тактов,
+  **2 сокращения** (large #183: 41→40, large #173: 105→104), оба подтверждены
+  строгой JS-проверкой, Python и C++.
+  Положительный тест `endgame_selftest`: 2944/2944 границы принятия распознаются.
 
 ## Воспроизведение
 
@@ -52,6 +56,7 @@
 cd research/2026-10-24-gap-analysis
 python3 bound.py                       # доказанная граница по всем 540 кейсам
 python3 dump.py && g++ -O2 -o selftest selftest.cpp && ./selftest   # 540/540, обязательный гейт
+g++ -O2 -o endgame_selftest endgame_selftest.cpp && ./endgame_selftest  # PASS, перед любым запуском endgame
 python3 dump.py                        # cases.txt
 g++ -O2 -march=native -o geometry geometry.cpp
 LIB=60000 BEAM=8 ./geometry -s 50 167 274 328 351 353 382 401 426 464 522 525 532

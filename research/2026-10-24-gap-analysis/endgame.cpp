@@ -108,18 +108,23 @@ static vector<array<u8,6>>* gAll = nullptr;
 static vector<array<u8,6>>& allActions() {
     static vector<array<u8,6>> ALL;
     if (ALL.empty()) for (int m=0;m<4096;m++) {
-        array<u8,6> a{}; int x=m; bool any=false;
-        for (int i=0;i<6;i++){ a[i]=(u8)(x&3); x>>=2; if(a[i]) any=true; }
-        if (any) ALL.push_back(a);
+        array<u8,6> a{}; int x=m;
+        for (int i=0;i<6;i++){ a[i]=(u8)(x&3); x>>=2; }
+        ALL.push_back(a);      // 4^6 actions; the all-noop line still paints with active beams
     }
     return ALL;
 }
-// true when some single action completes the copy on the very next tick
+// True when some single action completes the copy on the very next tick.
+// NOTE: apply() CLEARS the target when it accepts, so a completed tick must be
+// detected through the counter transition, never by re-checking that the target
+// is still covered (that check can never hold after a successful accept).
+static bool completes(const Inst& in, const St& before, const St& after, int goalCount) {
+    return before.count == goalCount - 1 && after.count == goalCount;
+}
 static bool canFinishInOne(const Inst& in, const St& s, int goalCount, array<u8,6>* which=nullptr) {
     for (const auto& a : allActions()) {
         St t=s; apply(in,t,a.data());
-        if (t.count==goalCount && !common(t.matter,in.forbid) && covers(t.matter,in.target)) {
-            if (which) *which=a; return true; }
+        if (completes(in, s, t, goalCount)) { if (which) *which=a; return true; }
     }
     return false;
 }
@@ -158,28 +163,26 @@ static vector<array<u8,6>> endgameSearch(const Inst& in, const Cover& cv, const 
             static vector<array<u8,6>> ALL;
             if (ALL.empty()) {
                 for (int m=0;m<4096;m++) {
-                    array<u8,6> a{}; int x=m; bool any=false;
-                    for (int i=0;i<6;i++){ a[i]=(u8)(x&3); x>>=2; if(a[i]) any=true; }
-                    if (any) ALL.push_back(a);
+                    array<u8,6> a{}; int x=m;
+                    for (int i=0;i<6;i++){ a[i]=(u8)(x&3); x>>=2; }
+                    ALL.push_back(a);   // 4^6 actions, all-noop included
                 }
             }
             const vector<array<u8,6>>& cand = ALL;
             for (const auto& a : cand) {
-                bool any=false; for(int q=0;q<6;q++) if(a[q]) any=true;
-                if(!any) continue;
                 Node ch; ch.st=s; apply(in, ch.st, a.data());
                 if (ch.st.count > goalCount) continue;
-                bool last = (d==ticks);
+                const bool done = completes(in, s, ch.st, goalCount);
+                const bool last = (d==ticks);
                 if (last) {
-                    // the accept must happen exactly on the final tick
-                    if (ch.st.count != goalCount) continue;
-                    if (common(ch.st.matter, in.forbid)) continue;
-                    if (!covers(ch.st.matter, in.target)) continue;
+                    // the copy must be picked up exactly on the final tick
+                    if (!done) continue;
                 } else {
                     if (ch.st.count != start.count) continue;      // no early accept
+                    // the prune is only meaningful while the copy is still incomplete
+                    score(in,cv,ch);
+                    if (lowerBound(in,cv,ch.st) > remaining) continue;
                 }
-                score(in,cv,ch);
-                if (lowerBound(in,cv,ch.st) > remaining) continue;   // admissible prune
                 ch.par=(int)ni; memcpy(ch.act,a.data(),6);
                 if (last) {
                     vector<array<u8,6>> seq(d);
