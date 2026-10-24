@@ -1,0 +1,89 @@
+{
+  "status": "CORRECTNESS_PASS_BOUNDED_PILOT_NO_GAIN",
+  "regression": "PASS",
+  "positive_controls": 12,
+  "negative_js": 6,
+  "reference_negative_result": "INVALIDATED",
+  "pilot": {
+    "status": "COMPLETED_BOUNDED_PILOT",
+    "cases": 8,
+    "incumbent": 324,
+    "best_ticks": 324,
+    "saved": 0,
+    "best_per_case": {
+      "532": 0,
+      "525": 0,
+      "401": 0,
+      "426": 0,
+      "392": 0,
+      "415": 0,
+      "459": 0,
+      "460": 0
+    },
+    "windows": 56,
+    "timeouts": 43,
+    "terminal_transitions": 0,
+    "reconstructed": 0,
+    "cpu_seconds": 232.40625,
+    "wall_seconds": 233.92042140000007,
+    "protected_files_unchanged": 13
+  },
+  "outcomes": {
+    "NO_TERMINAL_FOUND": 13,
+    "RESOURCE_LIMIT_BEFORE_TERMINAL": 43,
+    "INVALID_START_COPY_COUNT": 0,
+    "TERMINAL_WITHOUT_RECONSTRUCTION": 0,
+    "RECONSTRUCTION_REPLAY_REJECTED": 0,
+    "REJECTED_JS": 0,
+    "VALID_NOT_SHORTER": 0,
+    "INDEPENDENTLY_VALID_SHORTER": 0
+  },
+  "witness": [
+    {
+      "case": 133,
+      "original_horizon": 4,
+      "width": 300,
+      "expanded": 2461696,
+      "lookahead_expanded": 1041664,
+      "depth": 3,
+      "timeout": true,
+      "known_state_rank_before_width_cut": [
+        1,
+        1
+      ],
+      "terminal_found": false,
+      "saved": 0
+    },
+    {
+      "case": 133,
+      "original_horizon": 4,
+      "width": 600,
+      "expanded": 1943808,
+      "lookahead_expanded": 0,
+      "depth": 2,
+      "timeout": true,
+      "known_state_rank_before_width_cut": [
+        1
+      ],
+      "terminal_found": false,
+      "saved": 0
+    },
+    {
+      "case": 133,
+      "original_horizon": 8,
+      "width": 300,
+      "expanded": 587520,
+      "lookahead_expanded": 0,
+      "depth": 2,
+      "timeout": true,
+      "known_state_rank_before_width_cut": [
+        540
+      ],
+      "terminal_found": false,
+      "saved": 0
+    }
+  ],
+  "protected_files": 13,
+  "official_answers_changed": false,
+  "next_decision": "Single-case lookahead-order/width diagnostic; no CP-SAT and no 540 search"
+}

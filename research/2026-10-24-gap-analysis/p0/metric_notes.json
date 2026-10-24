@@ -1,0 +1,5 @@
+{
+  "primary": "Original raw pilot JSON key cpu_seconds came from MSVC clock and must be read as elapsed clock, not measured process CPU. Its aggregate is corrected in pilot_summary.json; original summary retained.",
+  "measured": "pilot_measured case_cpu_seconds comes from Windows GetProcessTimes on each child process, including startup and serialization; per-window reported_clock_seconds retains the native clock result.",
+  "negative_fixture_setup": "CRLF mock input initially failed sandbox parsing; raw failure and CRLF fixture preserved; LF mock used for the actual forbidden-painting negative control."
+}

@@ -1,0 +1,496 @@
+{
+  "fixture": {
+    "local": 5,
+    "global_index": 415,
+    "dataset": "enormous",
+    "case": 16,
+    "K": 2,
+    "ticks": 26,
+    "bank": "reference",
+    "program": [
+      [
+        "B",
+        "-",
+        "-",
+        "-",
+        "F",
+        "F"
+      ],
+      [
+        "-",
+        "-",
+        "F",
+        "-",
+        "-",
+        "F"
+      ],
+      [
+        "B",
+        "-",
+        "T",
+        "-",
+        "F",
+        "T"
+      ],
+      [
+        "-",
+        "F",
+        "F",
+        "B",
+        "B",
+        "F"
+      ],
+      [
+        "B",
+        "T",
+        "F",
+        "B",
+        "F",
+        "F"
+      ],
+      [
+        "T",
+        "F",
+        "T",
+        "-",
+        "F",
+        "B"
+      ],
+      [
+        "B",
+        "-",
+        "F",
+        "-",
+        "F",
+        "T"
+      ],
+      [
+        "B",
+        "-",
+        "T",
+        "T",
+        "T",
+        "T"
+      ],
+      [
+        "F",
+        "-",
+        "F",
+        "F",
+        "B",
+        "B"
+      ],
+      [
+        "F",
+        "F",
+        "T",
+        "F",
+        "F",
+        "B"
+      ],
+      [
+        "-",
+        "-",
+        "T",
+        "T",
+        "F",
+        "B"
+      ],
+      [
+        "F",
+        "F",
+        "B",
+        "T",
+        "T",
+        "F"
+      ],
+      [
+        "T",
+        "F",
+        "T",
+        "-",
+        "B",
+        "B"
+      ],
+      [
+        "-",
+        "F",
+        "T",
+        "-",
+        "B",
+        "B"
+      ],
+      [
+        "F",
+        "F",
+        "-",
+        "B",
+        "T",
+        "-"
+      ],
+      [
+        "B",
+        "T",
+        "B",
+        "B",
+        "B",
+        "B"
+      ],
+      [
+        "B",
+        "-",
+        "-",
+        "-",
+        "-",
+        "-"
+      ],
+      [
+        "B",
+        "T",
+        "T",
+        "F",
+        "F",
+        "F"
+      ],
+      [
+        "B",
+        "B",
+        "T",
+        "F",
+        "F",
+        "-"
+      ],
+      [
+        "T",
+        "B",
+        "F",
+        "-",
+        "T",
+        "F"
+      ],
+      [
+        "T",
+        "B",
+        "T",
+        "-",
+        "B",
+        "F"
+      ],
+      [
+        "B",
+        "B",
+        "F",
+        "T",
+        "T",
+        "B"
+      ],
+      [
+        "F",
+        "-",
+        "F",
+        "B",
+        "-",
+        "F"
+      ],
+      [
+        "F",
+        "B",
+        "T",
+        "T",
+        "-",
+        "F"
+      ],
+      [
+        "F",
+        "-",
+        "B",
+        "B",
+        "F",
+        "F"
+      ],
+      [
+        "T",
+        "B",
+        "-",
+        "T",
+        "B",
+        "F"
+      ]
+    ],
+    "acceptances": [
+      16,
+      26
+    ]
+  },
+  "windows": [
+    {
+      "case": 5,
+      "W": 4,
+      "width": 300,
+      "expanded": 4096,
+      "lookahead_expanded": 0,
+      "pruned_early": 0,
+      "pruned_excess": 0,
+      "pruned_no_final_accept": 0,
+      "pruned_lb": 4096,
+      "duplicates": 0,
+      "beam_truncated": 0,
+      "terminal_transitions": 0,
+      "terminal_depth": 0,
+      "depth": 1,
+      "reconstructed": 0,
+      "timeout": false,
+      "invalid_start": false,
+      "cpp_valid": false,
+      "wall_seconds": 0.0059899,
+      "program": [],
+      "retained": [],
+      "best_missing": [],
+      "reported_clock_seconds": 0.006,
+      "case_process_cpu_seconds": 29.90625,
+      "cpu_measurement": "GetProcessTimes per complete case process",
+      "dataset": "enormous",
+      "official_case": 16,
+      "K": 2,
+      "incumbent": 26,
+      "budget_ms": 5000,
+      "outcome": "NO_TERMINAL_FOUND",
+      "saved": 0
+    },
+    {
+      "case": 5,
+      "W": 5,
+      "width": 300,
+      "expanded": 2461696,
+      "lookahead_expanded": 12487168,
+      "pruned_early": 0,
+      "pruned_excess": 0,
+      "pruned_no_final_accept": 0,
+      "pruned_lb": 2269331,
+      "duplicates": 135542,
+      "beam_truncated": 51757,
+      "terminal_transitions": 0,
+      "terminal_depth": 0,
+      "depth": 3,
+      "reconstructed": 0,
+      "timeout": true,
+      "invalid_start": false,
+      "cpp_valid": false,
+      "wall_seconds": 5.00119,
+      "program": [],
+      "retained": [
+        300,
+        300
+      ],
+      "best_missing": [
+        9,
+        6
+      ],
+      "reported_clock_seconds": 5.001,
+      "case_process_cpu_seconds": 29.90625,
+      "cpu_measurement": "GetProcessTimes per complete case process",
+      "dataset": "enormous",
+      "official_case": 16,
+      "K": 2,
+      "incumbent": 26,
+      "budget_ms": 5000,
+      "outcome": "RESOURCE_LIMIT_BEFORE_TERMINAL",
+      "saved": 0
+    },
+    {
+      "case": 5,
+      "W": 6,
+      "width": 300,
+      "expanded": 2266368,
+      "lookahead_expanded": 0,
+      "pruned_early": 0,
+      "pruned_excess": 0,
+      "pruned_no_final_accept": 0,
+      "pruned_lb": 1569343,
+      "duplicates": 288451,
+      "beam_truncated": 248341,
+      "terminal_transitions": 0,
+      "terminal_depth": 0,
+      "depth": 3,
+      "reconstructed": 0,
+      "timeout": true,
+      "invalid_start": false,
+      "cpp_valid": false,
+      "wall_seconds": 5.0027,
+      "program": [],
+      "retained": [
+        300,
+        300
+      ],
+      "best_missing": [
+        12,
+        8
+      ],
+      "reported_clock_seconds": 5.003,
+      "case_process_cpu_seconds": 29.90625,
+      "cpu_measurement": "GetProcessTimes per complete case process",
+      "dataset": "enormous",
+      "official_case": 16,
+      "K": 2,
+      "incumbent": 26,
+      "budget_ms": 5000,
+      "outcome": "RESOURCE_LIMIT_BEFORE_TERMINAL",
+      "saved": 0
+    },
+    {
+      "case": 5,
+      "W": 7,
+      "width": 300,
+      "expanded": 1337344,
+      "lookahead_expanded": 0,
+      "pruned_early": 0,
+      "pruned_excess": 0,
+      "pruned_no_final_accept": 0,
+      "pruned_lb": 493312,
+      "duplicates": 290641,
+      "beam_truncated": 483927,
+      "terminal_transitions": 0,
+      "terminal_depth": 0,
+      "depth": 3,
+      "reconstructed": 0,
+      "timeout": true,
+      "invalid_start": false,
+      "cpp_valid": false,
+      "wall_seconds": 5.00384,
+      "program": [],
+      "retained": [
+        300,
+        300
+      ],
+      "best_missing": [
+        13,
+        10
+      ],
+      "reported_clock_seconds": 5.004,
+      "case_process_cpu_seconds": 29.90625,
+      "cpu_measurement": "GetProcessTimes per complete case process",
+      "dataset": "enormous",
+      "official_case": 16,
+      "K": 2,
+      "incumbent": 26,
+      "budget_ms": 5000,
+      "outcome": "RESOURCE_LIMIT_BEFORE_TERMINAL",
+      "saved": 0
+    },
+    {
+      "case": 5,
+      "W": 8,
+      "width": 300,
+      "expanded": 910848,
+      "lookahead_expanded": 0,
+      "pruned_early": 0,
+      "pruned_excess": 0,
+      "pruned_no_final_accept": 0,
+      "pruned_lb": 51728,
+      "duplicates": 0,
+      "beam_truncated": 3796,
+      "terminal_transitions": 0,
+      "terminal_depth": 0,
+      "depth": 2,
+      "reconstructed": 0,
+      "timeout": true,
+      "invalid_start": false,
+      "cpp_valid": false,
+      "wall_seconds": 5.00433,
+      "program": [],
+      "retained": [
+        300
+      ],
+      "best_missing": [
+        18
+      ],
+      "reported_clock_seconds": 5.004,
+      "case_process_cpu_seconds": 29.90625,
+      "cpu_measurement": "GetProcessTimes per complete case process",
+      "dataset": "enormous",
+      "official_case": 16,
+      "K": 2,
+      "incumbent": 26,
+      "budget_ms": 5000,
+      "outcome": "RESOURCE_LIMIT_BEFORE_TERMINAL",
+      "saved": 0
+    },
+    {
+      "case": 5,
+      "W": 9,
+      "width": 300,
+      "expanded": 777472,
+      "lookahead_expanded": 0,
+      "pruned_early": 0,
+      "pruned_excess": 0,
+      "pruned_no_final_accept": 0,
+      "pruned_lb": 0,
+      "duplicates": 0,
+      "beam_truncated": 3796,
+      "terminal_transitions": 0,
+      "terminal_depth": 0,
+      "depth": 2,
+      "reconstructed": 0,
+      "timeout": true,
+      "invalid_start": false,
+      "cpp_valid": false,
+      "wall_seconds": 5.0065,
+      "program": [],
+      "retained": [
+        300
+      ],
+      "best_missing": [
+        21
+      ],
+      "reported_clock_seconds": 5.007,
+      "case_process_cpu_seconds": 29.90625,
+      "cpu_measurement": "GetProcessTimes per complete case process",
+      "dataset": "enormous",
+      "official_case": 16,
+      "K": 2,
+      "incumbent": 26,
+      "budget_ms": 5000,
+      "outcome": "RESOURCE_LIMIT_BEFORE_TERMINAL",
+      "saved": 0
+    },
+    {
+      "case": 5,
+      "W": 10,
+      "width": 300,
+      "expanded": 642816,
+      "lookahead_expanded": 0,
+      "pruned_early": 0,
+      "pruned_excess": 0,
+      "pruned_no_final_accept": 0,
+      "pruned_lb": 0,
+      "duplicates": 0,
+      "beam_truncated": 3796,
+      "terminal_transitions": 0,
+      "terminal_depth": 0,
+      "depth": 2,
+      "reconstructed": 0,
+      "timeout": true,
+      "invalid_start": false,
+      "cpp_valid": false,
+      "wall_seconds": 5.00463,
+      "program": [],
+      "retained": [
+        300
+      ],
+      "best_missing": [
+        24
+      ],
+      "reported_clock_seconds": 5.004,
+      "case_process_cpu_seconds": 29.90625,
+      "cpu_measurement": "GetProcessTimes per complete case process",
+      "dataset": "enormous",
+      "official_case": 16,
+      "K": 2,
+      "incumbent": 26,
+      "budget_ms": 5000,
+      "outcome": "RESOURCE_LIMIT_BEFORE_TERMINAL",
+      "saved": 0
+    }
+  ],
+  "case_cpu_seconds": 29.90625
+}

@@ -1,0 +1,71 @@
+# Level 6 gap analysis toolkit
+
+> **P0 audit correction:** the historical endgame `0 savings / 324 ticks` result
+> below is invalid as optimization evidence: both terminal predicates rejected
+> accepted states after target reset, and the claimed 4096-action generator had
+> only 4095 actions. RTDS also did not enforce suffix pose/active compatibility.
+> See [P0_CORRECTNESS_REPORT.md](P0_CORRECTNESS_REPORT.md) and the reproducible
+> `p0/` regression suite and bounded pilot. Historical CSVs are retained unchanged.
+> Current submission answers are 15629 ticks and are unchanged by this repair;
+> the new pilot deliberately uses the historical eight cases / 324 ticks.
+
+Инструменты, исправленная методика и пилотный эксперимент.
+Главный документ — **[REPORT_RU.md](REPORT_RU.md)**.
+
+> Предыдущая версия отчёта выдавала результат случайного семплирования за нижнюю
+> границу и содержала необоснованные прогнозы. Они отозваны; см. §0 отчёта.
+
+## Что здесь есть
+
+| Файл | Назначение |
+|---|---|
+| `REPORT_RU.md` | аудит, исправленная математика, пилотный эксперимент |
+| `bound.py` | **доказанная** граница `U = min(NT, 12+ΣC_a)` → `rigorous_bounds.csv` |
+| `tables.py` | пересборка `headroom.csv` / `worklist.csv` / `summary.json` |
+| `headroom.csv` | 540 кейсов: `rigorous_lb`, `rigorous_slack`, `heuristic_gap` (раздельно!) |
+| `worklist.csv` | кейсы с `heuristic_gap ≥ 10` — только приоритет, не резерв |
+| `pilot_results.csv` | фиксированный пилот: 18 кейсов, 31 прогон, результаты геометрического планировщика |
+| `sim.py` | точная битовая модель, сжатие до `target ∪ skirting` |
+| `dump.py`, `stats.py` | выгрузка кейсов, статистика по кейсам |
+| `brush.cpp`, `brush_seeds.cpp` | ёмкость одной позы; библиотека штампов `(позиции, mask)` |
+| `geometry.cpp` | геометрический планировщик с точной стоимостью переходов (safe/productive) |
+| `geo_beam.cpp` | beam по состояниям материи с точной стоимостью |
+| `cycle_sa.cpp` | SA по блокам (без замыкания), только medium/large с большим K |
+| `cp_copy.py`, `cp_cycle.py`, `cp_plan.py` | CP-SAT: локальные доказательства |
+| `selftest.cpp` | **регрессионный тест модели: 540/540 incumbent-программ** |
+| `validate_case.cjs` | независимая проверка программы в оригинальной JS-песочнице |
+| `rtds.cpp` | Residual-Target Directed Search (блочная замена + точная проверка) |
+| `endgame.cpp` | Acceptance-Constrained Endgame Repair: полный перебор 4⁶ совместных действий, допустимая LB |
+| `endgame_results.csv` | 8 кейсов, 324 такта, 0 сокращений |
+| `verifyall.cpp` | перекрёстная проверка модели на 540 ответах |
+
+## Ключевые числа на текущих ответах
+
+* 15657 тактов, 540 кейсов, 2944 принятия (Python-модель и JS-песочница совпадают).
+* Плотность рисования ≈ 4.1 target-клетки за такт.
+* Доказанная граница: 3378 тактов ⇒ разрыв 12279 (78 %) — граница слаба и **не является**
+  оценкой достижимой экономии.
+* Эвристический разрыв (семплинг) 2107 тактов, но он бывает отрицательным (55 строк) —
+  это оценка приоритета, а не граница.
+* Модель C++ из коммита `6e6e36f` была сломана (`memcpy` из `int[6]` в `u8[6]`):
+  все её результаты отозваны. Теперь `selftest` даёт 540/540, а каждая программа
+  проверяется в оригинальной JS-песочнице (`validate_case.cjs`).
+* Строгая JS-проверка (`accepted == K` И `lastAcceptTick == ticks`) показала, что все
+  пять «валидных» программ предыдущего коммита **невалидны**: валидных 0 из 46 прогонов.
+* Endgame-repair с полным набором 4096 совместных действий и допустимой нижней
+  границей: 0 сокращений на 8 кейсах / 324 тактах.
+
+## Воспроизведение
+
+```bash
+cd research/2026-10-24-gap-analysis
+python3 bound.py                       # доказанная граница по всем 540 кейсам
+python3 dump.py && g++ -O2 -o selftest selftest.cpp && ./selftest   # 540/540, обязательный гейт
+python3 dump.py                        # cases.txt
+g++ -O2 -march=native -o geometry geometry.cpp
+LIB=60000 BEAM=8 ./geometry -s 50 167 274 328 351 353 382 401 426 464 522 525 532
+g++ -O2 -march=native -o geo_beam geo_beam.cpp && W=48 D=6 LIB=200 ./geo_beam 201
+python3 cp_copy.py large 143 3 20      # можно ли скопировать large #144 за 1..3 такта
+```
+
+Требуется `g++`, `python3`, `pip install ortools` (только для `cp_*.py`).
