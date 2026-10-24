@@ -1,0 +1,848 @@
+{
+  "status": "COMPLETED_LOCAL_PASS",
+  "baseline": 15657,
+  "best": 15639,
+  "saved": 18,
+  "improved_cases": 12,
+  "cases_screened": 540,
+  "primary_records": 2700,
+  "total_query_records": 3564,
+  "datasets": {
+    "medium": {
+      "cases": 210,
+      "baseline": 5904,
+      "best": 5904,
+      "saved": 0,
+      "improved_cases": 0
+    },
+    "large": {
+      "cases": 190,
+      "baseline": 5047,
+      "best": 5035,
+      "saved": 12,
+      "improved_cases": 6
+    },
+    "enormous": {
+      "cases": 140,
+      "baseline": 4706,
+      "best": 4700,
+      "saved": 6,
+      "improved_cases": 6
+    }
+  },
+  "coverage": {
+    "medium": {
+      "A": 210,
+      "B": 210,
+      "C": 210,
+      "D": 210,
+      "E": 210
+    },
+    "large": {
+      "A": 190,
+      "B": 190,
+      "C": 190,
+      "D": 190,
+      "E": 190
+    },
+    "enormous": {
+      "A": 140,
+      "B": 140,
+      "C": 140,
+      "D": 140,
+      "E": 140
+    }
+  },
+  "nonoverlapping_attribution": {
+    "Baseline LNS control": {
+      "saved": 2,
+      "cases_improved": 2,
+      "measured_search_cpu_seconds": 320.421875
+    },
+    "Historical pattern transfer": {
+      "saved": 9,
+      "cases_improved": 4,
+      "measured_search_cpu_seconds": 618.859375
+    },
+    "Learned transfer ranking": {
+      "saved": 1,
+      "cases_improved": 1,
+      "measured_search_cpu_seconds": 396.21875
+    },
+    "Composed transformations": {
+      "saved": 4,
+      "cases_improved": 3,
+      "measured_search_cpu_seconds": 396.796875
+    },
+    "Hybrid structural synthesis": {
+      "saved": 2,
+      "cases_improved": 2,
+      "measured_search_cpu_seconds": 398.28125
+    },
+    "Pure Cell-First motif transfer": {
+      "saved": 0,
+      "cases_improved": 0,
+      "measured_search_cpu_seconds": 6.390625
+    }
+  },
+  "primary_comparison": {
+    "A": {
+      "cases": 540,
+      "saved": 2,
+      "improved": 2,
+      "cpu_seconds": 320.421875,
+      "wall_seconds": 327.86972510186024,
+      "evaluations": 1174937732
+    },
+    "B": {
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 318.125,
+      "wall_seconds": 325.9145783003187,
+      "evaluations": 979043273
+    },
+    "C": {
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 317.9375,
+      "wall_seconds": 325.90577279916033,
+      "evaluations": 1005335285
+    },
+    "D": {
+      "cases": 540,
+      "saved": 15,
+      "improved": 9,
+      "cpu_seconds": 318.484375,
+      "wall_seconds": 325.9252166993683,
+      "evaluations": 914706505
+    },
+    "E": {
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 317.96875,
+      "wall_seconds": 326.3816373993177,
+      "evaluations": 1146500156
+    }
+  },
+  "split_comparison": [
+    {
+      "split": "donor_family",
+      "arm": "A",
+      "cases": 40,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 23.953125
+    },
+    {
+      "split": "donor_family",
+      "arm": "B",
+      "cases": 40,
+      "saved": 1,
+      "improved": 1,
+      "cpu_seconds": 23.34375
+    },
+    {
+      "split": "donor_family",
+      "arm": "C",
+      "cases": 40,
+      "saved": 1,
+      "improved": 1,
+      "cpu_seconds": 23.578125
+    },
+    {
+      "split": "donor_family",
+      "arm": "D",
+      "cases": 40,
+      "saved": 3,
+      "improved": 2,
+      "cpu_seconds": 23.859375
+    },
+    {
+      "split": "donor_family",
+      "arm": "E",
+      "cases": 40,
+      "saved": 1,
+      "improved": 1,
+      "cpu_seconds": 23.75
+    },
+    {
+      "split": "heldout_family",
+      "arm": "A",
+      "cases": 461,
+      "saved": 2,
+      "improved": 2,
+      "cpu_seconds": 273.28125
+    },
+    {
+      "split": "heldout_family",
+      "arm": "B",
+      "cases": 461,
+      "saved": 10,
+      "improved": 6,
+      "cpu_seconds": 271.859375
+    },
+    {
+      "split": "heldout_family",
+      "arm": "C",
+      "cases": 461,
+      "saved": 10,
+      "improved": 6,
+      "cpu_seconds": 271.578125
+    },
+    {
+      "split": "heldout_family",
+      "arm": "D",
+      "cases": 461,
+      "saved": 10,
+      "improved": 6,
+      "cpu_seconds": 271.578125
+    },
+    {
+      "split": "heldout_family",
+      "arm": "E",
+      "cases": 461,
+      "saved": 10,
+      "improved": 6,
+      "cpu_seconds": 271.1875
+    },
+    {
+      "split": "ranking_train",
+      "arm": "A",
+      "cases": 39,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 23.1875
+    },
+    {
+      "split": "ranking_train",
+      "arm": "B",
+      "cases": 39,
+      "saved": 2,
+      "improved": 1,
+      "cpu_seconds": 22.921875
+    },
+    {
+      "split": "ranking_train",
+      "arm": "C",
+      "cases": 39,
+      "saved": 2,
+      "improved": 1,
+      "cpu_seconds": 22.78125
+    },
+    {
+      "split": "ranking_train",
+      "arm": "D",
+      "cases": 39,
+      "saved": 2,
+      "improved": 1,
+      "cpu_seconds": 23.046875
+    },
+    {
+      "split": "ranking_train",
+      "arm": "E",
+      "cases": 39,
+      "saved": 2,
+      "improved": 1,
+      "cpu_seconds": 23.03125
+    }
+  ],
+  "stages": [
+    {
+      "stage": "deep",
+      "arm": "B",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 78.328125,
+      "wall_seconds": 79.32499859982636,
+      "evaluations": 272944074
+    },
+    {
+      "stage": "deep",
+      "arm": "C",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 78.28125,
+      "wall_seconds": 79.32941350049805,
+      "evaluations": 266480299
+    },
+    {
+      "stage": "deep",
+      "arm": "D",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 78.3125,
+      "wall_seconds": 79.33792600012384,
+      "evaluations": 232872569
+    },
+    {
+      "stage": "deep",
+      "arm": "E",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 78.59375,
+      "wall_seconds": 79.36548190016765,
+      "evaluations": 268626296
+    },
+    {
+      "stage": "fitted_replay",
+      "arm": "B",
+      "cases": 540,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 187.78125,
+      "wall_seconds": 190.84281839919277,
+      "evaluations": 806043707
+    },
+    {
+      "stage": "ranking_train",
+      "arm": "B",
+      "cases": 36,
+      "saved": 2,
+      "improved": 1,
+      "cpu_seconds": 6.328125,
+      "wall_seconds": 6.649759699590504,
+      "evaluations": 22948852
+    },
+    {
+      "stage": "ranking_train",
+      "arm": "C",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 6.5,
+      "wall_seconds": 6.593161399825476,
+      "evaluations": 23839269
+    },
+    {
+      "stage": "ranking_train",
+      "arm": "D",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 6.375,
+      "wall_seconds": 6.592679699882865,
+      "evaluations": 22653337
+    },
+    {
+      "stage": "ranking_train",
+      "arm": "E",
+      "cases": 72,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 12.921875,
+      "wall_seconds": 13.190807799925096,
+      "evaluations": 35556618
+    },
+    {
+      "stage": "screen",
+      "arm": "A",
+      "cases": 540,
+      "saved": 2,
+      "improved": 2,
+      "cpu_seconds": 320.421875,
+      "wall_seconds": 327.86972510186024,
+      "evaluations": 1174937732
+    },
+    {
+      "stage": "screen",
+      "arm": "B",
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 318.125,
+      "wall_seconds": 325.9145783003187,
+      "evaluations": 979043273
+    },
+    {
+      "stage": "screen",
+      "arm": "C",
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 317.9375,
+      "wall_seconds": 325.90577279916033,
+      "evaluations": 1005335285
+    },
+    {
+      "stage": "screen",
+      "arm": "D",
+      "cases": 540,
+      "saved": 15,
+      "improved": 9,
+      "cpu_seconds": 318.484375,
+      "wall_seconds": 325.9252166993683,
+      "evaluations": 914706505
+    },
+    {
+      "stage": "screen",
+      "arm": "E",
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 317.96875,
+      "wall_seconds": 326.3816373993177,
+      "evaluations": 1146500156
+    }
+  ],
+  "changes": [
+    {
+      "dataset": "large",
+      "case": 27,
+      "before": 52,
+      "after": 50,
+      "saved": 2,
+      "split": "ranking_train",
+      "radius": 8,
+      "K": 3,
+      "before_acceptances": [
+        18,
+        35,
+        52
+      ],
+      "after_acceptances": [
+        18,
+        34,
+        50
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 64,
+      "before": 45,
+      "after": 44,
+      "saved": 1,
+      "split": "heldout_family",
+      "radius": 7,
+      "K": 4,
+      "before_acceptances": [
+        14,
+        25,
+        35,
+        45
+      ],
+      "after_acceptances": [
+        14,
+        24,
+        34,
+        44
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 139,
+      "before": 19,
+      "after": 17,
+      "saved": 2,
+      "split": "heldout_family",
+      "radius": 7,
+      "K": 4,
+      "before_acceptances": [
+        5,
+        10,
+        15,
+        19
+      ],
+      "after_acceptances": [
+        5,
+        9,
+        13,
+        17
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 142,
+      "before": 120,
+      "after": 118,
+      "saved": 2,
+      "split": "donor_family",
+      "radius": 8,
+      "K": 6,
+      "before_acceptances": [
+        23,
+        42,
+        62,
+        81,
+        101,
+        120
+      ],
+      "after_acceptances": [
+        23,
+        42,
+        61,
+        80,
+        99,
+        118
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 169,
+      "before": 52,
+      "after": 48,
+      "saved": 4,
+      "split": "heldout_family",
+      "radius": 6,
+      "K": 5,
+      "before_acceptances": [
+        12,
+        22,
+        32,
+        42,
+        52
+      ],
+      "after_acceptances": [
+        12,
+        21,
+        30,
+        39,
+        48
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 178,
+      "before": 30,
+      "after": 29,
+      "saved": 1,
+      "split": "heldout_family",
+      "radius": 6,
+      "K": 3,
+      "before_acceptances": [
+        11,
+        21,
+        30
+      ],
+      "after_acceptances": [
+        11,
+        20,
+        29
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 8,
+      "before": 51,
+      "after": 50,
+      "saved": 1,
+      "split": "heldout_family",
+      "radius": 9,
+      "K": 2,
+      "before_acceptances": [
+        28,
+        51
+      ],
+      "after_acceptances": [
+        27,
+        50
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 74,
+      "before": 23,
+      "after": 22,
+      "saved": 1,
+      "split": "heldout_family",
+      "radius": 12,
+      "K": 1,
+      "before_acceptances": [
+        23
+      ],
+      "after_acceptances": [
+        22
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 115,
+      "before": 106,
+      "after": 105,
+      "saved": 1,
+      "split": "heldout_family",
+      "radius": 11,
+      "K": 2,
+      "before_acceptances": [
+        55,
+        106
+      ],
+      "after_acceptances": [
+        55,
+        105
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 125,
+      "before": 24,
+      "after": 23,
+      "saved": 1,
+      "split": "donor_family",
+      "radius": 9,
+      "K": 2,
+      "before_acceptances": [
+        13,
+        24
+      ],
+      "after_acceptances": [
+        13,
+        23
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 136,
+      "before": 34,
+      "after": 33,
+      "saved": 1,
+      "split": "heldout_family",
+      "radius": 12,
+      "K": 2,
+      "before_acceptances": [
+        19,
+        34
+      ],
+      "after_acceptances": [
+        19,
+        33
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 138,
+      "before": 26,
+      "after": 25,
+      "saved": 1,
+      "split": "heldout_family",
+      "radius": 10,
+      "K": 2,
+      "before_acceptances": [
+        15,
+        26
+      ],
+      "after_acceptances": [
+        14,
+        25
+      ]
+    }
+  ],
+  "metrics": {
+    "medium": {
+      "before": {
+        "ticks": 5904,
+        "new_target": 24849,
+        "repeated_target": 5877,
+        "h2_target": 30726,
+        "erased_target": 130,
+        "new_skirting": 425,
+        "motion": 18094,
+        "toggles": 6598,
+        "repeat_fraction": 0.19127123608670182
+      },
+      "after": {
+        "ticks": 5904,
+        "new_target": 24849,
+        "repeated_target": 5877,
+        "h2_target": 30726,
+        "erased_target": 130,
+        "new_skirting": 425,
+        "motion": 18094,
+        "toggles": 6598,
+        "repeat_fraction": 0.19127123608670182
+      }
+    },
+    "large": {
+      "before": {
+        "ticks": 5047,
+        "new_target": 20757,
+        "repeated_target": 8641,
+        "h2_target": 29398,
+        "erased_target": 132,
+        "new_skirting": 265,
+        "motion": 17789,
+        "toggles": 3395,
+        "repeat_fraction": 0.293931559970066
+      },
+      "after": {
+        "ticks": 5035,
+        "new_target": 20757,
+        "repeated_target": 8583,
+        "h2_target": 29340,
+        "erased_target": 132,
+        "new_skirting": 262,
+        "motion": 17743,
+        "toggles": 3393,
+        "repeat_fraction": 0.2925357873210634
+      }
+    },
+    "enormous": {
+      "before": {
+        "ticks": 4706,
+        "new_target": 18755,
+        "repeated_target": 11005,
+        "h2_target": 29760,
+        "erased_target": 82,
+        "new_skirting": 171,
+        "motion": 18373,
+        "toggles": 2717,
+        "repeat_fraction": 0.3697916666666667
+      },
+      "after": {
+        "ticks": 4700,
+        "new_target": 18756,
+        "repeated_target": 10927,
+        "h2_target": 29683,
+        "erased_target": 83,
+        "new_skirting": 167,
+        "motion": 18340,
+        "toggles": 2713,
+        "repeat_fraction": 0.36812316814338175
+      }
+    }
+  },
+  "cross_domain": {
+    "cases": 5,
+    "cases_reproduced": 5,
+    "all_three_seeds_success": 5,
+    "queries": 15,
+    "selection_bias": "selected primary transfer winners, not a random estimate of universal success probability"
+  },
+  "fitted_historical_support": {
+    "1": [
+      [
+        "large",
+        43
+      ],
+      [
+        "large",
+        82
+      ],
+      [
+        "large",
+        92
+      ],
+      [
+        "large",
+        110
+      ],
+      [
+        "large",
+        144
+      ],
+      [
+        "large",
+        173
+      ],
+      [
+        "medium",
+        35
+      ]
+    ]
+  },
+  "composition_paths": [
+    {
+      "dataset": "enormous",
+      "case": 8,
+      "arm": "D",
+      "saved": 1,
+      "mask": 5,
+      "scope": "winning graph path tags multiple operator families; controls under same time budget are empirical, not an exhaustive impossibility proof for a single operator"
+    },
+    {
+      "dataset": "enormous",
+      "case": 8,
+      "arm": "E",
+      "saved": 1,
+      "mask": 5,
+      "scope": "winning graph path tags multiple operator families; controls under same time budget are empirical, not an exhaustive impossibility proof for a single operator"
+    },
+    {
+      "dataset": "large",
+      "case": 142,
+      "arm": "D",
+      "saved": 2,
+      "mask": 6,
+      "scope": "winning graph path tags multiple operator families; controls under same time budget are empirical, not an exhaustive impossibility proof for a single operator"
+    }
+  ],
+  "pure_motif_independent_wins": 0,
+  "exact_repair": {
+    "attempts": 12,
+    "statuses": {
+      "INFEASIBLE": 12
+    },
+    "scope": "fixed 4-emitter neighborhoods; no global infeasibility claim"
+  },
+  "operator_totals": {
+    "0": {
+      "query_batches": 2880,
+      "candidates": 222506767,
+      "verified_edges": 262514,
+      "full_valid": 0,
+      "wins": 31,
+      "native_saved": 52,
+      "wall_seconds": 662.7388020000012
+    },
+    "1": {
+      "query_batches": 2340,
+      "candidates": 96321098,
+      "verified_edges": 82635,
+      "full_valid": 0,
+      "wins": 1,
+      "native_saved": 2,
+      "wall_seconds": 299.6723409999995
+    },
+    "2": {
+      "query_batches": 2340,
+      "candidates": 95877988,
+      "verified_edges": 23192,
+      "full_valid": 6474822,
+      "wins": 2,
+      "native_saved": 2,
+      "wall_seconds": 385.6398749999993
+    },
+    "3": {
+      "query_batches": 2340,
+      "candidates": 103351570,
+      "verified_edges": 0,
+      "full_valid": 0,
+      "wins": 0,
+      "native_saved": 0,
+      "wall_seconds": 172.2054889999997
+    },
+    "4": {
+      "query_batches": 612,
+      "candidates": 5979582,
+      "verified_edges": 28240,
+      "full_valid": 0,
+      "wins": 0,
+      "native_saved": 0,
+      "wall_seconds": 291.57084199999997
+    }
+  },
+  "heldout_ranking_advantage": "NOT_ESTABLISHED",
+  "global_optimality": "NOT_PROVEN",
+  "platform_submission": "NOT_PERFORMED",
+  "github_push": "NOT_PERFORMED",
+  "validation": {
+    "status": "PASS",
+    "cases": 540,
+    "ticks": 15639,
+    "cpp": "PASS",
+    "independent_python": "PASS",
+    "original_js": "PASS",
+    "strict_js": "PASS",
+    "primary_arms": "ABCDE_PASS",
+    "protected_files": 6679,
+    "protected_changes": [],
+    "head": "929356266a32982e9924fa0914e6c0488408b656"
+  },
+  "experiment_elapsed_wall_seconds": 2250.9805505275726
+}

@@ -1,0 +1,407 @@
+{
+  "dataset": "large",
+  "case": 82,
+  "index": 0,
+  "source": "training_l6_full540\\checkpoints\\large_82_15_14_C_extended_graph.json",
+  "method": "C_extended_graph",
+  "saved": 1,
+  "seed": 0,
+  "runtime": 0.2627334001008421,
+  "runtime_scope": "logged query wall time; graph timing includes query postprocessing",
+  "before_ticks": 15,
+  "after_ticks": 14,
+  "before_metrics": {
+    "new_target": 88,
+    "repeated_target": 30,
+    "erased_target": 0,
+    "new_skirting": 0,
+    "skirting_tick_cells": 0,
+    "h2_target": 118,
+    "h3_target": 1,
+    "motion": 49,
+    "toggles": 18,
+    "ticks": 15,
+    "target_cells": 22,
+    "copies": 4,
+    "acceptances": [
+      5,
+      8,
+      12,
+      15
+    ],
+    "first_copy": 5,
+    "later_mean": 3.3333333333333335,
+    "repeat_fraction": 0.2542372881355932
+  },
+  "after_metrics": {
+    "new_target": 88,
+    "repeated_target": 28,
+    "erased_target": 0,
+    "new_skirting": 0,
+    "skirting_tick_cells": 0,
+    "h2_target": 116,
+    "h3_target": 1,
+    "motion": 42,
+    "toggles": 16,
+    "ticks": 14,
+    "target_cells": 22,
+    "copies": 4,
+    "acceptances": [
+      4,
+      7,
+      11,
+      14
+    ],
+    "first_copy": 4,
+    "later_mean": 3.3333333333333335,
+    "repeat_fraction": 0.2413793103448276
+  },
+  "taxonomy": [
+    "acceptance_pose_replacement",
+    "cross_acceptance_replanning",
+    "setup_compression"
+  ],
+  "matched_variants": [],
+  "command_edits": [
+    {
+      "kind": "replace",
+      "before": [
+        0,
+        8
+      ],
+      "after": [
+        0,
+        4
+      ]
+    },
+    {
+      "kind": "replace",
+      "before": [
+        9,
+        15
+      ],
+      "after": [
+        5,
+        14
+      ]
+    }
+  ],
+  "alignment": {
+    "cost": 10.742178362573101,
+    "multiple_equal_cost_alignments": false,
+    "physical_correspondence": "heuristic; event/material/beam/pose weighted, not a causal proof",
+    "pairs": [
+      {
+        "before_tick": 1,
+        "after_tick": 1,
+        "kind": "match"
+      },
+      {
+        "before_tick": 2,
+        "after_tick": 2,
+        "kind": "match"
+      },
+      {
+        "before_tick": 3,
+        "after_tick": 3,
+        "kind": "match"
+      },
+      {
+        "before_tick": 4,
+        "after_tick": null,
+        "kind": "delete"
+      },
+      {
+        "before_tick": 5,
+        "after_tick": 4,
+        "kind": "match"
+      },
+      {
+        "before_tick": 6,
+        "after_tick": 5,
+        "kind": "match"
+      },
+      {
+        "before_tick": 7,
+        "after_tick": 6,
+        "kind": "match"
+      },
+      {
+        "before_tick": 8,
+        "after_tick": 7,
+        "kind": "match"
+      },
+      {
+        "before_tick": 9,
+        "after_tick": 8,
+        "kind": "match"
+      },
+      {
+        "before_tick": 10,
+        "after_tick": 9,
+        "kind": "match"
+      },
+      {
+        "before_tick": 11,
+        "after_tick": 10,
+        "kind": "match"
+      },
+      {
+        "before_tick": 12,
+        "after_tick": 11,
+        "kind": "match"
+      },
+      {
+        "before_tick": 13,
+        "after_tick": 12,
+        "kind": "match"
+      },
+      {
+        "before_tick": 14,
+        "after_tick": 13,
+        "kind": "match"
+      },
+      {
+        "before_tick": 15,
+        "after_tick": 14,
+        "kind": "match"
+      }
+    ]
+  },
+  "before_program": [
+    [
+      "B",
+      "F",
+      "B",
+      "B",
+      "F",
+      "B"
+    ],
+    [
+      "T",
+      "T",
+      "T",
+      "T",
+      "T",
+      "T"
+    ],
+    [
+      "B",
+      "T",
+      "F",
+      "T",
+      "F",
+      "-"
+    ],
+    [
+      "-",
+      "F",
+      "-",
+      "F",
+      "F",
+      "B"
+    ],
+    [
+      "F",
+      "T",
+      "-",
+      "T",
+      "B",
+      "F"
+    ],
+    [
+      "-",
+      "B",
+      "B",
+      "B",
+      "B",
+      "-"
+    ],
+    [
+      "-",
+      "F",
+      "F",
+      "F",
+      "F",
+      "-"
+    ],
+    [
+      "B",
+      "T",
+      "-",
+      "T",
+      "F",
+      "B"
+    ],
+    [
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+    ],
+    [
+      "-",
+      "B",
+      "B",
+      "T",
+      "B",
+      "F"
+    ],
+    [
+      "F",
+      "T",
+      "-",
+      "B",
+      "B",
+      "T"
+    ],
+    [
+      "-",
+      "F",
+      "F",
+      "F",
+      "F",
+      "T"
+    ],
+    [
+      "-",
+      "B",
+      "B",
+      "B",
+      "B",
+      "-"
+    ],
+    [
+      "-",
+      "F",
+      "F",
+      "F",
+      "F",
+      "-"
+    ],
+    [
+      "B",
+      "T",
+      "-",
+      "T",
+      "F",
+      "B"
+    ]
+  ],
+  "after_program": [
+    [
+      "T",
+      "B",
+      "T",
+      "B",
+      "T",
+      "F"
+    ],
+    [
+      "B",
+      "T",
+      "F",
+      "T",
+      "B",
+      "T"
+    ],
+    [
+      "-",
+      "B",
+      "-",
+      "F",
+      "B",
+      "B"
+    ],
+    [
+      "B",
+      "B",
+      "F",
+      "T",
+      "T",
+      "-"
+    ],
+    [
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+    ],
+    [
+      "F",
+      "F",
+      "B",
+      "T",
+      "T",
+      "-"
+    ],
+    [
+      "-",
+      "F",
+      "-",
+      "B",
+      "F",
+      "F"
+    ],
+    [
+      "-",
+      "B",
+      "-",
+      "F",
+      "B",
+      "B"
+    ],
+    [
+      "-",
+      "F",
+      "T",
+      "B",
+      "F",
+      "F"
+    ],
+    [
+      "B",
+      "B",
+      "T",
+      "F",
+      "T",
+      "-"
+    ],
+    [
+      "-",
+      "B",
+      "F",
+      "T",
+      "B",
+      "B"
+    ],
+    [
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+    ],
+    [
+      "F",
+      "F",
+      "B",
+      "T",
+      "T",
+      "-"
+    ],
+    [
+      "-",
+      "F",
+      "-",
+      "B",
+      "F",
+      "F"
+    ]
+  ]
+}

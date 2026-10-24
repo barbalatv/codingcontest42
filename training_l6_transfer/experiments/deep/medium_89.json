@@ -1,0 +1,1368 @@
+{
+  "dataset": "medium",
+  "case": 89,
+  "baseline": 9,
+  "arm_order": [
+    "E",
+    "C",
+    "B",
+    "D"
+  ],
+  "rows": [
+    {
+      "dataset": "medium",
+      "case": 89,
+      "arm": "E",
+      "stage": "deep",
+      "split": "heldout_family",
+      "family": "92d5e2aec262afd268b5",
+      "context": "r0_k1",
+      "incumbent": 9,
+      "candidate": null,
+      "saved": 0,
+      "program": null,
+      "seed": 43022056,
+      "budget_ms": 2200,
+      "runtime": 2.20267689996399,
+      "cpu_seconds": 2.1875,
+      "evaluations": 4359809,
+      "queries": [
+        {
+          "runtime": 2.201274999999441,
+          "cpu_seconds": 2.1875,
+          "reported_clock_seconds": 2.201,
+          "evaluations": 4359809,
+          "configurations": 2159609,
+          "native_ms": 2200,
+          "bridges": 0,
+          "near_cost": 6,
+          "near_program": [
+            [
+              "-",
+              "T",
+              "-",
+              "T",
+              "B",
+              "T"
+            ],
+            [
+              "T",
+              "B",
+              "T",
+              "T",
+              "T",
+              "B"
+            ],
+            [
+              "F",
+              "B",
+              "-",
+              "B",
+              "F",
+              "T"
+            ],
+            [
+              "B",
+              "F",
+              "-",
+              "-",
+              "B",
+              "T"
+            ],
+            [
+              "F",
+              "B",
+              "T",
+              "-",
+              "F",
+              "F"
+            ],
+            [
+              "-",
+              "-",
+              "F",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "B",
+              "F",
+              "T",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ]
+          ],
+          "expanded_depth": 5,
+          "birth_conflicts": 48612,
+          "birth_attempts": 48986,
+          "deadline_hit": true,
+          "birth_program": [
+            [
+              "-",
+              "F",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "T",
+              "T",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "B",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "B",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "F",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "F",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "B",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "F",
+              "F",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "F",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "F",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "F",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "B",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "B",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "F",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "F",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "B",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "F",
+              "F",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "F",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "F",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "F",
+              "-",
+              "-",
+              "-",
+              "-"
+            ]
+          ],
+          "pure_discoveries": [
+            {
+              "pose": 4984537126400,
+              "copies": 1,
+              "program": [
+                [
+                  "B",
+                  "B",
+                  "T",
+                  "T",
+                  "B",
+                  "-"
+                ],
+                [
+                  "F",
+                  "T",
+                  "F",
+                  "-",
+                  "T",
+                  "T"
+                ],
+                [
+                  "-",
+                  "B",
+                  "B",
+                  "B",
+                  "F",
+                  "T"
+                ]
+              ]
+            },
+            {
+              "pose": 145722017027584,
+              "copies": 1,
+              "program": [
+                [
+                  "B",
+                  "B",
+                  "T",
+                  "T",
+                  "B",
+                  "-"
+                ],
+                [
+                  "F",
+                  "T",
+                  "F",
+                  "-",
+                  "T",
+                  "T"
+                ],
+                [
+                  "-",
+                  "B",
+                  "T",
+                  "B",
+                  "F",
+                  "-"
+                ]
+              ]
+            },
+            {
+              "pose": 146825764902039,
+              "copies": 1,
+              "program": [
+                [
+                  "B",
+                  "B",
+                  "T",
+                  "T",
+                  "B",
+                  "-"
+                ],
+                [
+                  "F",
+                  "T",
+                  "F",
+                  "-",
+                  "T",
+                  "T"
+                ],
+                [
+                  "-",
+                  "-",
+                  "-",
+                  "F",
+                  "-",
+                  "-"
+                ],
+                [
+                  "F",
+                  "-",
+                  "-",
+                  "F",
+                  "-",
+                  "-"
+                ],
+                [
+                  "T",
+                  "F",
+                  "-",
+                  "F",
+                  "-",
+                  "B"
+                ]
+              ]
+            },
+            {
+              "pose": 145722017027607,
+              "copies": 1,
+              "program": [
+                [
+                  "B",
+                  "B",
+                  "T",
+                  "T",
+                  "B",
+                  "-"
+                ],
+                [
+                  "F",
+                  "T",
+                  "F",
+                  "-",
+                  "T",
+                  "T"
+                ],
+                [
+                  "F",
+                  "B",
+                  "T",
+                  "B",
+                  "F",
+                  "-"
+                ]
+              ]
+            },
+            {
+              "pose": 4978128229250,
+              "copies": 1,
+              "program": [
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "T",
+                  "T"
+                ],
+                [
+                  "-",
+                  "T",
+                  "T",
+                  "B",
+                  "F",
+                  "F"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "B",
+                  "-",
+                  "T"
+                ],
+                [
+                  "T",
+                  "F",
+                  "-",
+                  "B",
+                  "-",
+                  "B"
+                ]
+              ]
+            },
+            {
+              "pose": 145717738902146,
+              "copies": 1,
+              "program": [
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "T",
+                  "T"
+                ],
+                [
+                  "-",
+                  "T",
+                  "T",
+                  "B",
+                  "F",
+                  "F"
+                ],
+                [
+                  "T",
+                  "F",
+                  "T",
+                  "B",
+                  "-",
+                  "B"
+                ],
+                [
+                  "B",
+                  "F",
+                  "-",
+                  "T",
+                  "-",
+                  "-"
+                ]
+              ]
+            },
+            {
+              "pose": 6077639857026,
+              "copies": 1,
+              "program": [
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "T",
+                  "T"
+                ],
+                [
+                  "-",
+                  "T",
+                  "T",
+                  "B",
+                  "F",
+                  "F"
+                ],
+                [
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "T"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "B",
+                  "-",
+                  "B"
+                ],
+                [
+                  "T",
+                  "F",
+                  "-",
+                  "B",
+                  "-",
+                  "B"
+                ]
+              ]
+            },
+            {
+              "pose": 3889270134019,
+              "copies": 1,
+              "program": [
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "T",
+                  "T"
+                ],
+                [
+                  "-",
+                  "T",
+                  "T",
+                  "B",
+                  "F",
+                  "F"
+                ],
+                [
+                  "B",
+                  "B",
+                  "-",
+                  "F",
+                  "B",
+                  "T"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "F",
+                  "B",
+                  "-"
+                ],
+                [
+                  "-",
+                  "-",
+                  "-",
+                  "F",
+                  "-",
+                  "-"
+                ],
+                [
+                  "-",
+                  "-",
+                  "-",
+                  "T",
+                  "-",
+                  "-"
+                ]
+              ]
+            },
+            {
+              "pose": 142973246412162,
+              "copies": 1,
+              "program": [
+                [
+                  "-",
+                  "B",
+                  "-",
+                  "T",
+                  "T",
+                  "T"
+                ],
+                [
+                  "T",
+                  "-",
+                  "T",
+                  "B",
+                  "T",
+                  "F"
+                ],
+                [
+                  "B",
+                  "T",
+                  "-",
+                  "-",
+                  "-",
+                  "F"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "-"
+                ]
+              ]
+            },
+            {
+              "pose": 141871587300738,
+              "copies": 1,
+              "program": [
+                [
+                  "-",
+                  "B",
+                  "-",
+                  "T",
+                  "T",
+                  "T"
+                ],
+                [
+                  "T",
+                  "-",
+                  "T",
+                  "B",
+                  "T",
+                  "F"
+                ],
+                [
+                  "B",
+                  "T",
+                  "-",
+                  "-",
+                  "-",
+                  "F"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "T",
+                  "-",
+                  "F"
+                ]
+              ]
+            },
+            {
+              "pose": 4978094642562,
+              "copies": 1,
+              "program": [
+                [
+                  "-",
+                  "B",
+                  "-",
+                  "T",
+                  "T",
+                  "T"
+                ],
+                [
+                  "T",
+                  "-",
+                  "T",
+                  "B",
+                  "T",
+                  "F"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "F",
+                  "T"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "T",
+                  "T",
+                  "B"
+                ]
+              ]
+            },
+            {
+              "pose": 142964656477570,
+              "copies": 1,
+              "program": [
+                [
+                  "-",
+                  "B",
+                  "-",
+                  "T",
+                  "T",
+                  "T"
+                ],
+                [
+                  "T",
+                  "-",
+                  "T",
+                  "B",
+                  "T",
+                  "F"
+                ],
+                [
+                  "B",
+                  "T",
+                  "-",
+                  "-",
+                  "F",
+                  "F"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "F",
+                  "-"
+                ]
+              ]
+            },
+            {
+              "pose": 142977541379458,
+              "copies": 1,
+              "program": [
+                [
+                  "-",
+                  "B",
+                  "-",
+                  "T",
+                  "T",
+                  "T"
+                ],
+                [
+                  "T",
+                  "-",
+                  "T",
+                  "B",
+                  "T",
+                  "F"
+                ],
+                [
+                  "B",
+                  "T",
+                  "-",
+                  "-",
+                  "B",
+                  "F"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "-"
+                ]
+              ]
+            },
+            {
+              "pose": 582145283074,
+              "copies": 1,
+              "program": [
+                [
+                  "-",
+                  "B",
+                  "-",
+                  "T",
+                  "T",
+                  "T"
+                ],
+                [
+                  "T",
+                  "-",
+                  "T",
+                  "B",
+                  "T",
+                  "F"
+                ],
+                [
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "T"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "F",
+                  "-",
+                  "F"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "F",
+                  "F",
+                  "F"
+                ],
+                [
+                  "T",
+                  "F",
+                  "-",
+                  "F",
+                  "T",
+                  "F"
+                ]
+              ]
+            },
+            {
+              "pose": 143518707225474,
+              "copies": 1,
+              "program": [
+                [
+                  "B",
+                  "F",
+                  "-",
+                  "B",
+                  "T",
+                  "T"
+                ],
+                [
+                  "F",
+                  "F",
+                  "T",
+                  "T",
+                  "F",
+                  "F"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "-"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "-"
+                ],
+                [
+                  "T",
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "F"
+                ]
+              ]
+            },
+            {
+              "pose": 143518707225218,
+              "copies": 1,
+              "program": [
+                [
+                  "B",
+                  "F",
+                  "-",
+                  "B",
+                  "T",
+                  "T"
+                ],
+                [
+                  "F",
+                  "F",
+                  "T",
+                  "T",
+                  "F",
+                  "F"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "-"
+                ],
+                [
+                  "B",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "-"
+                ],
+                [
+                  "T",
+                  "-",
+                  "-",
+                  "-",
+                  "-",
+                  "F"
+                ]
+              ]
+            }
+          ],
+          "winning_operator": -1,
+          "winning_operator_mask": 0,
+          "operators": [
+            {
+              "operator": 0,
+              "candidates": 39696,
+              "verified_edges": 975,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.238271
+            },
+            {
+              "operator": 1,
+              "candidates": 42864,
+              "verified_edges": 226,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.253704
+            },
+            {
+              "operator": 2,
+              "candidates": 34512,
+              "verified_edges": 6,
+              "full_valid": 3372,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.211197
+            },
+            {
+              "operator": 3,
+              "candidates": 53832,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.286664
+            },
+            {
+              "operator": 4,
+              "candidates": 48986,
+              "verified_edges": 12,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 1.196541
+            }
+          ]
+        }
+      ],
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "validation": "NO_SHORTER_PROGRAM",
+      "invalid_candidates": [],
+      "predicted_weights": [
+        0.923830037380656,
+        0.9692662460192352,
+        0.8311390723188252,
+        1.2757646442812838,
+        1.1495935748776265
+      ],
+      "incumbent_structure_used": true
+    },
+    {
+      "dataset": "medium",
+      "case": 89,
+      "arm": "C",
+      "stage": "deep",
+      "split": "heldout_family",
+      "family": "92d5e2aec262afd268b5",
+      "context": "r0_k1",
+      "incumbent": 9,
+      "candidate": null,
+      "saved": 0,
+      "program": null,
+      "seed": 43022056,
+      "budget_ms": 2200,
+      "runtime": 2.2012323000235483,
+      "cpu_seconds": 2.203125,
+      "evaluations": 3362375,
+      "queries": [
+        {
+          "runtime": 2.2006735999602824,
+          "cpu_seconds": 2.203125,
+          "reported_clock_seconds": 2.2,
+          "evaluations": 3362375,
+          "configurations": 0,
+          "native_ms": 2200,
+          "bridges": 0,
+          "near_cost": 1000000000,
+          "near_program": [],
+          "expanded_depth": 0,
+          "birth_conflicts": 0,
+          "birth_attempts": 0,
+          "deadline_hit": true,
+          "birth_program": [],
+          "pure_discoveries": [],
+          "winning_operator": -1,
+          "winning_operator_mask": 0,
+          "operators": [
+            {
+              "operator": 0,
+              "candidates": 269112,
+              "verified_edges": 11,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.575389
+            },
+            {
+              "operator": 1,
+              "candidates": 279576,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.547697
+            },
+            {
+              "operator": 2,
+              "candidates": 237480,
+              "verified_edges": 8,
+              "full_valid": 23518,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.521415
+            },
+            {
+              "operator": 3,
+              "candidates": 365617,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.48665
+            },
+            {
+              "operator": 4,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            }
+          ]
+        }
+      ],
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "validation": "NO_SHORTER_PROGRAM",
+      "invalid_candidates": [],
+      "predicted_weights": [
+        0.923830037380656,
+        0.9692662460192352,
+        0.8311390723188252,
+        1.2757646442812838,
+        1.1495935748776265
+      ],
+      "incumbent_structure_used": true
+    },
+    {
+      "dataset": "medium",
+      "case": 89,
+      "arm": "B",
+      "stage": "deep",
+      "split": "heldout_family",
+      "family": "92d5e2aec262afd268b5",
+      "context": "r0_k1",
+      "incumbent": 9,
+      "candidate": null,
+      "saved": 0,
+      "program": null,
+      "seed": 43022056,
+      "budget_ms": 2200,
+      "runtime": 2.2012113999808207,
+      "cpu_seconds": 2.203125,
+      "evaluations": 4064843,
+      "queries": [
+        {
+          "runtime": 2.2006438999669626,
+          "cpu_seconds": 2.203125,
+          "reported_clock_seconds": 2.2,
+          "evaluations": 4064843,
+          "configurations": 0,
+          "native_ms": 2200,
+          "bridges": 0,
+          "near_cost": 1000000000,
+          "near_program": [],
+          "expanded_depth": 0,
+          "birth_conflicts": 0,
+          "birth_attempts": 0,
+          "deadline_hit": true,
+          "birth_program": [],
+          "pure_discoveries": [],
+          "winning_operator": -1,
+          "winning_operator_mask": 0,
+          "operators": [
+            {
+              "operator": 0,
+              "candidates": 318552,
+              "verified_edges": 11,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.622506
+            },
+            {
+              "operator": 1,
+              "candidates": 318533,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.563023
+            },
+            {
+              "operator": 2,
+              "candidates": 318528,
+              "verified_edges": 8,
+              "full_valid": 31661,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.626304
+            },
+            {
+              "operator": 3,
+              "candidates": 318528,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.381153
+            },
+            {
+              "operator": 4,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            }
+          ]
+        }
+      ],
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "validation": "NO_SHORTER_PROGRAM",
+      "invalid_candidates": [],
+      "predicted_weights": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "incumbent_structure_used": true
+    },
+    {
+      "dataset": "medium",
+      "case": 89,
+      "arm": "D",
+      "stage": "deep",
+      "split": "heldout_family",
+      "family": "92d5e2aec262afd268b5",
+      "context": "r0_k1",
+      "incumbent": 9,
+      "candidate": null,
+      "saved": 0,
+      "program": null,
+      "seed": 43022056,
+      "budget_ms": 2200,
+      "runtime": 2.2013765000738204,
+      "cpu_seconds": 2.15625,
+      "evaluations": 1427010,
+      "queries": [
+        {
+          "runtime": 2.2008144999854267,
+          "cpu_seconds": 2.15625,
+          "reported_clock_seconds": 2.201,
+          "evaluations": 1427010,
+          "configurations": 0,
+          "native_ms": 2200,
+          "bridges": 0,
+          "near_cost": 1000000000,
+          "near_program": [],
+          "expanded_depth": 0,
+          "birth_conflicts": 0,
+          "birth_attempts": 0,
+          "deadline_hit": true,
+          "birth_program": [],
+          "pure_discoveries": [],
+          "winning_operator": -1,
+          "winning_operator_mask": 0,
+          "operators": [
+            {
+              "operator": 0,
+              "candidates": 127320,
+              "verified_edges": 682,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.531087
+            },
+            {
+              "operator": 1,
+              "candidates": 132480,
+              "verified_edges": 175,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.534608
+            },
+            {
+              "operator": 2,
+              "candidates": 116328,
+              "verified_edges": 7,
+              "full_valid": 11727,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.475091
+            },
+            {
+              "operator": 3,
+              "candidates": 179040,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.629586
+            },
+            {
+              "operator": 4,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            }
+          ]
+        }
+      ],
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "validation": "NO_SHORTER_PROGRAM",
+      "invalid_candidates": [],
+      "predicted_weights": [
+        0.923830037380656,
+        0.9692662460192352,
+        0.8311390723188252,
+        1.2757646442812838,
+        1.1495935748776265
+      ],
+      "incumbent_structure_used": true
+    }
+  ]
+}

@@ -1,0 +1,585 @@
+{
+  "dataset": "large",
+  "case": 172,
+  "index": 0,
+  "source": "training_l6_full540\\checkpoints\\large_172_24_23_A_continuation4.json",
+  "method": "A_continuation4",
+  "saved": 1,
+  "seed": 12423428,
+  "runtime": 2.481026399997063,
+  "runtime_scope": "logged query wall time; graph timing includes query postprocessing",
+  "before_ticks": 24,
+  "after_ticks": 23,
+  "before_metrics": {
+    "new_target": 123,
+    "repeated_target": 76,
+    "erased_target": 3,
+    "new_skirting": 0,
+    "skirting_tick_cells": 0,
+    "h2_target": 199,
+    "h3_target": 6,
+    "motion": 81,
+    "toggles": 16,
+    "ticks": 24,
+    "target_cells": 30,
+    "copies": 4,
+    "acceptances": [
+      7,
+      12,
+      18,
+      24
+    ],
+    "first_copy": 7,
+    "later_mean": 5.666666666666667,
+    "repeat_fraction": 0.38190954773869346
+  },
+  "after_metrics": {
+    "new_target": 121,
+    "repeated_target": 58,
+    "erased_target": 1,
+    "new_skirting": 0,
+    "skirting_tick_cells": 0,
+    "h2_target": 179,
+    "h3_target": 5,
+    "motion": 76,
+    "toggles": 24,
+    "ticks": 23,
+    "target_cells": 30,
+    "copies": 4,
+    "acceptances": [
+      7,
+      12,
+      18,
+      23
+    ],
+    "first_copy": 7,
+    "later_mean": 5.333333333333333,
+    "repeat_fraction": 0.3240223463687151
+  },
+  "taxonomy": [
+    "acceptance_pose_replacement",
+    "cross_acceptance_replanning",
+    "terminal_shortcut"
+  ],
+  "matched_variants": [],
+  "command_edits": [
+    {
+      "kind": "replace",
+      "before": [
+        14,
+        24
+      ],
+      "after": [
+        14,
+        23
+      ]
+    }
+  ],
+  "alignment": {
+    "cost": 3.632630204036738,
+    "multiple_equal_cost_alignments": false,
+    "physical_correspondence": "heuristic; event/material/beam/pose weighted, not a causal proof",
+    "pairs": [
+      {
+        "before_tick": 1,
+        "after_tick": 1,
+        "kind": "match"
+      },
+      {
+        "before_tick": 2,
+        "after_tick": 2,
+        "kind": "match"
+      },
+      {
+        "before_tick": 3,
+        "after_tick": 3,
+        "kind": "match"
+      },
+      {
+        "before_tick": 4,
+        "after_tick": 4,
+        "kind": "match"
+      },
+      {
+        "before_tick": 5,
+        "after_tick": 5,
+        "kind": "match"
+      },
+      {
+        "before_tick": 6,
+        "after_tick": 6,
+        "kind": "match"
+      },
+      {
+        "before_tick": 7,
+        "after_tick": 7,
+        "kind": "match"
+      },
+      {
+        "before_tick": 8,
+        "after_tick": 8,
+        "kind": "match"
+      },
+      {
+        "before_tick": 9,
+        "after_tick": 9,
+        "kind": "match"
+      },
+      {
+        "before_tick": 10,
+        "after_tick": 10,
+        "kind": "match"
+      },
+      {
+        "before_tick": 11,
+        "after_tick": 11,
+        "kind": "match"
+      },
+      {
+        "before_tick": 12,
+        "after_tick": 12,
+        "kind": "match"
+      },
+      {
+        "before_tick": 13,
+        "after_tick": 13,
+        "kind": "match"
+      },
+      {
+        "before_tick": 14,
+        "after_tick": 14,
+        "kind": "match"
+      },
+      {
+        "before_tick": 15,
+        "after_tick": 15,
+        "kind": "match"
+      },
+      {
+        "before_tick": 16,
+        "after_tick": 16,
+        "kind": "match"
+      },
+      {
+        "before_tick": 17,
+        "after_tick": 17,
+        "kind": "match"
+      },
+      {
+        "before_tick": 18,
+        "after_tick": 18,
+        "kind": "match"
+      },
+      {
+        "before_tick": 19,
+        "after_tick": 19,
+        "kind": "match"
+      },
+      {
+        "before_tick": 20,
+        "after_tick": 20,
+        "kind": "match"
+      },
+      {
+        "before_tick": 21,
+        "after_tick": 21,
+        "kind": "match"
+      },
+      {
+        "before_tick": 22,
+        "after_tick": 22,
+        "kind": "match"
+      },
+      {
+        "before_tick": 23,
+        "after_tick": null,
+        "kind": "delete"
+      },
+      {
+        "before_tick": 24,
+        "after_tick": 23,
+        "kind": "match"
+      }
+    ]
+  },
+  "before_program": [
+    [
+      "F",
+      "B",
+      "T",
+      "T",
+      "B",
+      "F"
+    ],
+    [
+      "T",
+      "T",
+      "-",
+      "-",
+      "T",
+      "T"
+    ],
+    [
+      "F",
+      "-",
+      "F",
+      "-",
+      "B",
+      "-"
+    ],
+    [
+      "T",
+      "-",
+      "F",
+      "-",
+      "B",
+      "F"
+    ],
+    [
+      "F",
+      "B",
+      "B",
+      "F",
+      "F",
+      "T"
+    ],
+    [
+      "-",
+      "B",
+      "B",
+      "B",
+      "F",
+      "-"
+    ],
+    [
+      "T",
+      "-",
+      "B",
+      "-",
+      "F",
+      "T"
+    ],
+    [
+      "-",
+      "-",
+      "B",
+      "-",
+      "-",
+      "B"
+    ],
+    [
+      "T",
+      "-",
+      "F",
+      "-",
+      "B",
+      "B"
+    ],
+    [
+      "B",
+      "F",
+      "-",
+      "-",
+      "B",
+      "B"
+    ],
+    [
+      "T",
+      "F",
+      "-",
+      "F",
+      "-",
+      "-"
+    ],
+    [
+      "T",
+      "-",
+      "B",
+      "B",
+      "B",
+      "B"
+    ],
+    [
+      "T",
+      "F",
+      "B",
+      "-",
+      "F",
+      "F"
+    ],
+    [
+      "-",
+      "B",
+      "F",
+      "-",
+      "F",
+      "F"
+    ],
+    [
+      "B",
+      "-",
+      "F",
+      "F",
+      "B",
+      "B"
+    ],
+    [
+      "B",
+      "-",
+      "B",
+      "T",
+      "B",
+      "B"
+    ],
+    [
+      "-",
+      "B",
+      "F",
+      "B",
+      "F",
+      "F"
+    ],
+    [
+      "B",
+      "B",
+      "-",
+      "-",
+      "-",
+      "F"
+    ],
+    [
+      "-",
+      "-",
+      "-",
+      "T",
+      "-",
+      "-"
+    ],
+    [
+      "F",
+      "F",
+      "-",
+      "F",
+      "-",
+      "B"
+    ],
+    [
+      "F",
+      "F",
+      "-",
+      "-",
+      "F",
+      "B"
+    ],
+    [
+      "F",
+      "-",
+      "-",
+      "-",
+      "B",
+      "F"
+    ],
+    [
+      "F",
+      "F",
+      "B",
+      "B",
+      "B",
+      "F"
+    ],
+    [
+      "F",
+      "B",
+      "-",
+      "-",
+      "F",
+      "-"
+    ]
+  ],
+  "after_program": [
+    [
+      "F",
+      "B",
+      "T",
+      "T",
+      "B",
+      "F"
+    ],
+    [
+      "T",
+      "T",
+      "-",
+      "-",
+      "T",
+      "T"
+    ],
+    [
+      "F",
+      "-",
+      "F",
+      "-",
+      "B",
+      "-"
+    ],
+    [
+      "T",
+      "-",
+      "F",
+      "-",
+      "B",
+      "F"
+    ],
+    [
+      "F",
+      "B",
+      "B",
+      "F",
+      "F",
+      "T"
+    ],
+    [
+      "-",
+      "B",
+      "B",
+      "B",
+      "F",
+      "-"
+    ],
+    [
+      "T",
+      "-",
+      "B",
+      "-",
+      "F",
+      "T"
+    ],
+    [
+      "-",
+      "-",
+      "B",
+      "-",
+      "-",
+      "B"
+    ],
+    [
+      "T",
+      "-",
+      "F",
+      "-",
+      "B",
+      "B"
+    ],
+    [
+      "B",
+      "F",
+      "-",
+      "-",
+      "B",
+      "B"
+    ],
+    [
+      "T",
+      "F",
+      "-",
+      "F",
+      "-",
+      "-"
+    ],
+    [
+      "T",
+      "-",
+      "B",
+      "B",
+      "B",
+      "B"
+    ],
+    [
+      "T",
+      "F",
+      "B",
+      "-",
+      "F",
+      "F"
+    ],
+    [
+      "-",
+      "B",
+      "F",
+      "-",
+      "F",
+      "F"
+    ],
+    [
+      "B",
+      "-",
+      "F",
+      "T",
+      "B",
+      "B"
+    ],
+    [
+      "B",
+      "-",
+      "B",
+      "B",
+      "B",
+      "B"
+    ],
+    [
+      "B",
+      "B",
+      "F",
+      "F",
+      "F",
+      "F"
+    ],
+    [
+      "-",
+      "B",
+      "-",
+      "T",
+      "-",
+      "F"
+    ],
+    [
+      "-",
+      "-",
+      "-",
+      "-",
+      "-",
+      "-"
+    ],
+    [
+      "F",
+      "F",
+      "T",
+      "T",
+      "B",
+      "B"
+    ],
+    [
+      "F",
+      "F",
+      "T",
+      "B",
+      "F",
+      "B"
+    ],
+    [
+      "F",
+      "T",
+      "B",
+      "T",
+      "F",
+      "F"
+    ],
+    [
+      "T",
+      "T",
+      "B",
+      "T",
+      "F",
+      "-"
+    ]
+  ]
+}

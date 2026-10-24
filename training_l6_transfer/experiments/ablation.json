@@ -1,0 +1,334 @@
+{
+  "primary": {
+    "A": {
+      "cases": 540,
+      "saved": 2,
+      "improved": 2,
+      "cpu_seconds": 320.421875,
+      "wall_seconds": 327.86972510186024,
+      "evaluations": 1174937732
+    },
+    "B": {
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 318.125,
+      "wall_seconds": 325.9145783003187,
+      "evaluations": 979043273
+    },
+    "C": {
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 317.9375,
+      "wall_seconds": 325.90577279916033,
+      "evaluations": 1005335285
+    },
+    "D": {
+      "cases": 540,
+      "saved": 15,
+      "improved": 9,
+      "cpu_seconds": 318.484375,
+      "wall_seconds": 325.9252166993683,
+      "evaluations": 914706505
+    },
+    "E": {
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 317.96875,
+      "wall_seconds": 326.3816373993177,
+      "evaluations": 1146500156
+    }
+  },
+  "splits": [
+    {
+      "split": "donor_family",
+      "arm": "A",
+      "cases": 40,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 23.953125
+    },
+    {
+      "split": "donor_family",
+      "arm": "B",
+      "cases": 40,
+      "saved": 1,
+      "improved": 1,
+      "cpu_seconds": 23.34375
+    },
+    {
+      "split": "donor_family",
+      "arm": "C",
+      "cases": 40,
+      "saved": 1,
+      "improved": 1,
+      "cpu_seconds": 23.578125
+    },
+    {
+      "split": "donor_family",
+      "arm": "D",
+      "cases": 40,
+      "saved": 3,
+      "improved": 2,
+      "cpu_seconds": 23.859375
+    },
+    {
+      "split": "donor_family",
+      "arm": "E",
+      "cases": 40,
+      "saved": 1,
+      "improved": 1,
+      "cpu_seconds": 23.75
+    },
+    {
+      "split": "heldout_family",
+      "arm": "A",
+      "cases": 461,
+      "saved": 2,
+      "improved": 2,
+      "cpu_seconds": 273.28125
+    },
+    {
+      "split": "heldout_family",
+      "arm": "B",
+      "cases": 461,
+      "saved": 10,
+      "improved": 6,
+      "cpu_seconds": 271.859375
+    },
+    {
+      "split": "heldout_family",
+      "arm": "C",
+      "cases": 461,
+      "saved": 10,
+      "improved": 6,
+      "cpu_seconds": 271.578125
+    },
+    {
+      "split": "heldout_family",
+      "arm": "D",
+      "cases": 461,
+      "saved": 10,
+      "improved": 6,
+      "cpu_seconds": 271.578125
+    },
+    {
+      "split": "heldout_family",
+      "arm": "E",
+      "cases": 461,
+      "saved": 10,
+      "improved": 6,
+      "cpu_seconds": 271.1875
+    },
+    {
+      "split": "ranking_train",
+      "arm": "A",
+      "cases": 39,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 23.1875
+    },
+    {
+      "split": "ranking_train",
+      "arm": "B",
+      "cases": 39,
+      "saved": 2,
+      "improved": 1,
+      "cpu_seconds": 22.921875
+    },
+    {
+      "split": "ranking_train",
+      "arm": "C",
+      "cases": 39,
+      "saved": 2,
+      "improved": 1,
+      "cpu_seconds": 22.78125
+    },
+    {
+      "split": "ranking_train",
+      "arm": "D",
+      "cases": 39,
+      "saved": 2,
+      "improved": 1,
+      "cpu_seconds": 23.046875
+    },
+    {
+      "split": "ranking_train",
+      "arm": "E",
+      "cases": 39,
+      "saved": 2,
+      "improved": 1,
+      "cpu_seconds": 23.03125
+    }
+  ],
+  "stages": [
+    {
+      "stage": "deep",
+      "arm": "B",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 78.328125,
+      "wall_seconds": 79.32499859982636,
+      "evaluations": 272944074
+    },
+    {
+      "stage": "deep",
+      "arm": "C",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 78.28125,
+      "wall_seconds": 79.32941350049805,
+      "evaluations": 266480299
+    },
+    {
+      "stage": "deep",
+      "arm": "D",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 78.3125,
+      "wall_seconds": 79.33792600012384,
+      "evaluations": 232872569
+    },
+    {
+      "stage": "deep",
+      "arm": "E",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 78.59375,
+      "wall_seconds": 79.36548190016765,
+      "evaluations": 268626296
+    },
+    {
+      "stage": "fitted_replay",
+      "arm": "B",
+      "cases": 540,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 187.78125,
+      "wall_seconds": 190.84281839919277,
+      "evaluations": 806043707
+    },
+    {
+      "stage": "ranking_train",
+      "arm": "B",
+      "cases": 36,
+      "saved": 2,
+      "improved": 1,
+      "cpu_seconds": 6.328125,
+      "wall_seconds": 6.649759699590504,
+      "evaluations": 22948852
+    },
+    {
+      "stage": "ranking_train",
+      "arm": "C",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 6.5,
+      "wall_seconds": 6.593161399825476,
+      "evaluations": 23839269
+    },
+    {
+      "stage": "ranking_train",
+      "arm": "D",
+      "cases": 36,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 6.375,
+      "wall_seconds": 6.592679699882865,
+      "evaluations": 22653337
+    },
+    {
+      "stage": "ranking_train",
+      "arm": "E",
+      "cases": 72,
+      "saved": 0,
+      "improved": 0,
+      "cpu_seconds": 12.921875,
+      "wall_seconds": 13.190807799925096,
+      "evaluations": 35556618
+    },
+    {
+      "stage": "screen",
+      "arm": "A",
+      "cases": 540,
+      "saved": 2,
+      "improved": 2,
+      "cpu_seconds": 320.421875,
+      "wall_seconds": 327.86972510186024,
+      "evaluations": 1174937732
+    },
+    {
+      "stage": "screen",
+      "arm": "B",
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 318.125,
+      "wall_seconds": 325.9145783003187,
+      "evaluations": 979043273
+    },
+    {
+      "stage": "screen",
+      "arm": "C",
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 317.9375,
+      "wall_seconds": 325.90577279916033,
+      "evaluations": 1005335285
+    },
+    {
+      "stage": "screen",
+      "arm": "D",
+      "cases": 540,
+      "saved": 15,
+      "improved": 9,
+      "cpu_seconds": 318.484375,
+      "wall_seconds": 325.9252166993683,
+      "evaluations": 914706505
+    },
+    {
+      "stage": "screen",
+      "arm": "E",
+      "cases": 540,
+      "saved": 13,
+      "improved": 8,
+      "cpu_seconds": 317.96875,
+      "wall_seconds": 326.3816373993177,
+      "evaluations": 1146500156
+    }
+  ],
+  "composition_paths": [
+    {
+      "dataset": "enormous",
+      "case": 8,
+      "arm": "D",
+      "saved": 1,
+      "mask": 5,
+      "scope": "winning graph path tags multiple operator families; controls under same time budget are empirical, not an exhaustive impossibility proof for a single operator"
+    },
+    {
+      "dataset": "enormous",
+      "case": 8,
+      "arm": "E",
+      "saved": 1,
+      "mask": 5,
+      "scope": "winning graph path tags multiple operator families; controls under same time budget are empirical, not an exhaustive impossibility proof for a single operator"
+    },
+    {
+      "dataset": "large",
+      "case": 142,
+      "arm": "D",
+      "saved": 2,
+      "mask": 6,
+      "scope": "winning graph path tags multiple operator families; controls under same time budget are empirical, not an exhaustive impossibility proof for a single operator"
+    }
+  ]
+}

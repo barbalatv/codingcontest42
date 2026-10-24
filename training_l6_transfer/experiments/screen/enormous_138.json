@@ -1,0 +1,2508 @@
+{
+  "dataset": "enormous",
+  "case": 138,
+  "baseline": 26,
+  "arm_order": [
+    "B",
+    "C",
+    "D",
+    "A",
+    "E"
+  ],
+  "rows": [
+    {
+      "dataset": "enormous",
+      "case": 138,
+      "arm": "B",
+      "stage": "screen",
+      "split": "heldout_family",
+      "family": "909955c20486db13d1a6",
+      "context": "r2_k1",
+      "incumbent": 26,
+      "candidate": 25,
+      "saved": 1,
+      "program": [
+        [
+          "-",
+          "-",
+          "F",
+          "B",
+          "B",
+          "-"
+        ],
+        [
+          "B",
+          "F",
+          "F",
+          "B",
+          "B",
+          "B"
+        ],
+        [
+          "B",
+          "T",
+          "F",
+          "B",
+          "B",
+          "F"
+        ],
+        [
+          "B",
+          "-",
+          "T",
+          "B",
+          "T",
+          "B"
+        ],
+        [
+          "B",
+          "-",
+          "-",
+          "B",
+          "B",
+          "-"
+        ],
+        [
+          "B",
+          "-",
+          "-",
+          "T",
+          "B",
+          "-"
+        ],
+        [
+          "B",
+          "B",
+          "B",
+          "B",
+          "B",
+          "-"
+        ],
+        [
+          "T",
+          "B",
+          "F",
+          "F",
+          "-",
+          "-"
+        ],
+        [
+          "-",
+          "F",
+          "F",
+          "F",
+          "F",
+          "T"
+        ],
+        [
+          "F",
+          "-",
+          "F",
+          "B",
+          "-",
+          "F"
+        ],
+        [
+          "F",
+          "F",
+          "-",
+          "-",
+          "F",
+          "F"
+        ],
+        [
+          "F",
+          "T",
+          "-",
+          "B",
+          "F",
+          "F"
+        ],
+        [
+          "F",
+          "T",
+          "F",
+          "T",
+          "F",
+          "B"
+        ],
+        [
+          "F",
+          "B",
+          "-",
+          "T",
+          "B",
+          "-"
+        ],
+        [
+          "B",
+          "F",
+          "-",
+          "T",
+          "F",
+          "-"
+        ],
+        [
+          "F",
+          "B",
+          "-",
+          "-",
+          "B",
+          "-"
+        ],
+        [
+          "F",
+          "B",
+          "B",
+          "T",
+          "-",
+          "-"
+        ],
+        [
+          "-",
+          "B",
+          "B",
+          "-",
+          "B",
+          "B"
+        ],
+        [
+          "F",
+          "B",
+          "B",
+          "F",
+          "F",
+          "B"
+        ],
+        [
+          "-",
+          "F",
+          "F",
+          "F",
+          "-",
+          "B"
+        ],
+        [
+          "F",
+          "F",
+          "F",
+          "F",
+          "T",
+          "B"
+        ],
+        [
+          "B",
+          "F",
+          "F",
+          "B",
+          "T",
+          "F"
+        ],
+        [
+          "B",
+          "T",
+          "B",
+          "T",
+          "F",
+          "-"
+        ],
+        [
+          "B",
+          "B",
+          "-",
+          "-",
+          "B",
+          "F"
+        ],
+        [
+          "-",
+          "T",
+          "T",
+          "T",
+          "B",
+          "F"
+        ]
+      ],
+      "seed": 42488769,
+      "budget_ms": 600,
+      "runtime": 0.6055810999823734,
+      "cpu_seconds": 0.609375,
+      "evaluations": 1979670,
+      "queries": [
+        {
+          "runtime": 0.6026501000160351,
+          "cpu_seconds": 0.609375,
+          "reported_clock_seconds": 0.6,
+          "evaluations": 1979670,
+          "configurations": 0,
+          "native_ms": 600,
+          "bridges": 0,
+          "near_cost": 1000000000,
+          "near_program": [],
+          "expanded_depth": 0,
+          "birth_conflicts": 0,
+          "birth_attempts": 0,
+          "deadline_hit": true,
+          "birth_program": [],
+          "pure_discoveries": [],
+          "winning_operator": 2,
+          "winning_operator_mask": 4,
+          "operators": [
+            {
+              "operator": 0,
+              "candidates": 39840,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.16145
+            },
+            {
+              "operator": 1,
+              "candidates": 39840,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.170382
+            },
+            {
+              "operator": 2,
+              "candidates": 39817,
+              "verified_edges": 10,
+              "full_valid": 1904,
+              "wins": 1,
+              "native_saved": 1,
+              "wall_seconds": 0.201773
+            },
+            {
+              "operator": 3,
+              "candidates": 39816,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.064805
+            },
+            {
+              "operator": 4,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            }
+          ]
+        }
+      ],
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "validation": "CPP_INTERNAL_PYTHON_PASS",
+      "invalid_candidates": [],
+      "predicted_weights": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "incumbent_structure_used": true
+    },
+    {
+      "dataset": "enormous",
+      "case": 138,
+      "arm": "C",
+      "stage": "screen",
+      "split": "heldout_family",
+      "family": "909955c20486db13d1a6",
+      "context": "r2_k1",
+      "incumbent": 26,
+      "candidate": 25,
+      "saved": 1,
+      "program": [
+        [
+          "-",
+          "-",
+          "F",
+          "B",
+          "B",
+          "-"
+        ],
+        [
+          "B",
+          "F",
+          "F",
+          "B",
+          "B",
+          "B"
+        ],
+        [
+          "B",
+          "T",
+          "F",
+          "B",
+          "B",
+          "F"
+        ],
+        [
+          "B",
+          "-",
+          "T",
+          "B",
+          "T",
+          "B"
+        ],
+        [
+          "B",
+          "-",
+          "-",
+          "B",
+          "B",
+          "-"
+        ],
+        [
+          "B",
+          "-",
+          "-",
+          "T",
+          "B",
+          "-"
+        ],
+        [
+          "B",
+          "B",
+          "B",
+          "B",
+          "B",
+          "-"
+        ],
+        [
+          "T",
+          "B",
+          "F",
+          "F",
+          "-",
+          "-"
+        ],
+        [
+          "-",
+          "F",
+          "F",
+          "B",
+          "F",
+          "F"
+        ],
+        [
+          "F",
+          "-",
+          "F",
+          "F",
+          "-",
+          "T"
+        ],
+        [
+          "F",
+          "F",
+          "-",
+          "-",
+          "F",
+          "F"
+        ],
+        [
+          "F",
+          "T",
+          "-",
+          "B",
+          "F",
+          "F"
+        ],
+        [
+          "F",
+          "T",
+          "F",
+          "T",
+          "F",
+          "B"
+        ],
+        [
+          "F",
+          "B",
+          "-",
+          "-",
+          "B",
+          "-"
+        ],
+        [
+          "B",
+          "F",
+          "-",
+          "-",
+          "F",
+          "-"
+        ],
+        [
+          "F",
+          "B",
+          "-",
+          "-",
+          "B",
+          "-"
+        ],
+        [
+          "F",
+          "B",
+          "B",
+          "T",
+          "-",
+          "-"
+        ],
+        [
+          "-",
+          "B",
+          "B",
+          "-",
+          "B",
+          "B"
+        ],
+        [
+          "F",
+          "B",
+          "B",
+          "F",
+          "F",
+          "B"
+        ],
+        [
+          "-",
+          "F",
+          "F",
+          "F",
+          "-",
+          "B"
+        ],
+        [
+          "F",
+          "F",
+          "F",
+          "F",
+          "T",
+          "B"
+        ],
+        [
+          "B",
+          "F",
+          "F",
+          "B",
+          "T",
+          "F"
+        ],
+        [
+          "B",
+          "T",
+          "B",
+          "T",
+          "F",
+          "-"
+        ],
+        [
+          "B",
+          "B",
+          "-",
+          "-",
+          "B",
+          "F"
+        ],
+        [
+          "-",
+          "T",
+          "T",
+          "T",
+          "B",
+          "F"
+        ]
+      ],
+      "seed": 42488769,
+      "budget_ms": 600,
+      "runtime": 0.6065434999763966,
+      "cpu_seconds": 0.609375,
+      "evaluations": 2174889,
+      "queries": [
+        {
+          "runtime": 0.6027219999814406,
+          "cpu_seconds": 0.609375,
+          "reported_clock_seconds": 0.6,
+          "evaluations": 2174889,
+          "configurations": 0,
+          "native_ms": 600,
+          "bridges": 0,
+          "near_cost": 1000000000,
+          "near_program": [],
+          "expanded_depth": 0,
+          "birth_conflicts": 0,
+          "birth_attempts": 0,
+          "deadline_hit": true,
+          "birth_program": [],
+          "pure_discoveries": [],
+          "winning_operator": 2,
+          "winning_operator_mask": 4,
+          "operators": [
+            {
+              "operator": 0,
+              "candidates": 106244,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.453664
+            },
+            {
+              "operator": 1,
+              "candidates": 10824,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.048704
+            },
+            {
+              "operator": 2,
+              "candidates": 12000,
+              "verified_edges": 9,
+              "full_valid": 599,
+              "wins": 1,
+              "native_saved": 1,
+              "wall_seconds": 0.065996
+            },
+            {
+              "operator": 3,
+              "candidates": 12168,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.020543
+            },
+            {
+              "operator": 4,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            }
+          ]
+        }
+      ],
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "validation": "CPP_INTERNAL_PYTHON_PASS",
+      "invalid_candidates": [],
+      "predicted_weights": [
+        3.0043152056551707,
+        0.33353881931691287,
+        0.3325347680438534,
+        0.32961120698406254,
+        0.3325347680438534
+      ],
+      "incumbent_structure_used": true
+    },
+    {
+      "dataset": "enormous",
+      "case": 138,
+      "arm": "D",
+      "stage": "screen",
+      "split": "heldout_family",
+      "family": "909955c20486db13d1a6",
+      "context": "r2_k1",
+      "incumbent": 26,
+      "candidate": null,
+      "saved": 0,
+      "program": null,
+      "seed": 42488769,
+      "budget_ms": 600,
+      "runtime": 0.605541400029324,
+      "cpu_seconds": 0.59375,
+      "evaluations": 1999645,
+      "queries": [
+        {
+          "runtime": 0.6022647999925539,
+          "cpu_seconds": 0.59375,
+          "reported_clock_seconds": 0.6,
+          "evaluations": 1999645,
+          "configurations": 0,
+          "native_ms": 600,
+          "bridges": 0,
+          "near_cost": 1000000000,
+          "near_program": [],
+          "expanded_depth": 0,
+          "birth_conflicts": 0,
+          "birth_attempts": 0,
+          "deadline_hit": true,
+          "birth_program": [],
+          "pure_discoveries": [],
+          "winning_operator": -1,
+          "winning_operator_mask": 0,
+          "operators": [
+            {
+              "operator": 0,
+              "candidates": 112999,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.446071
+            },
+            {
+              "operator": 1,
+              "candidates": 12216,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.051437
+            },
+            {
+              "operator": 2,
+              "candidates": 12480,
+              "verified_edges": 8,
+              "full_valid": 587,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.067336
+            },
+            {
+              "operator": 3,
+              "candidates": 12984,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.02352
+            },
+            {
+              "operator": 4,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            }
+          ]
+        }
+      ],
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "validation": "NO_SHORTER_PROGRAM",
+      "invalid_candidates": [],
+      "predicted_weights": [
+        3.0043152056551707,
+        0.33353881931691287,
+        0.3325347680438534,
+        0.32961120698406254,
+        0.3325347680438534
+      ],
+      "incumbent_structure_used": true
+    },
+    {
+      "dataset": "enormous",
+      "case": 138,
+      "arm": "A",
+      "stage": "screen",
+      "split": "heldout_family",
+      "family": "909955c20486db13d1a6",
+      "context": "r2_k1",
+      "incumbent": 26,
+      "candidate": null,
+      "saved": 0,
+      "program": null,
+      "seed": 42488769,
+      "budget_ms": 600,
+      "runtime": 0.6088095000013709,
+      "cpu_seconds": 0.609375,
+      "evaluations": 1974575,
+      "queries": [
+        {
+          "runtime": 0.30222529999446124,
+          "cpu_seconds": 0.296875,
+          "reported_clock_seconds": 0.3,
+          "evaluations": 943775,
+          "configurations": 10167,
+          "native_ms": 300,
+          "bridges": 0,
+          "near_cost": 7,
+          "near_program": [
+            [
+              "B",
+              "-",
+              "F",
+              "B",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "B",
+              "F",
+              "B",
+              "T",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "F",
+              "B",
+              "B",
+              "B"
+            ],
+            [
+              "B",
+              "-",
+              "T",
+              "B",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "T",
+              "-",
+              "B",
+              "B",
+              "F"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "B",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "F",
+              "B",
+              "T",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "B",
+              "F",
+              "F",
+              "-",
+              "B"
+            ],
+            [
+              "-",
+              "F",
+              "F",
+              "F",
+              "F",
+              "T"
+            ],
+            [
+              "F",
+              "-",
+              "F",
+              "B",
+              "-",
+              "F"
+            ],
+            [
+              "F",
+              "F",
+              "-",
+              "-",
+              "F",
+              "F"
+            ],
+            [
+              "F",
+              "T",
+              "-",
+              "B",
+              "F",
+              "F"
+            ],
+            [
+              "F",
+              "T",
+              "F",
+              "T",
+              "F",
+              "B"
+            ],
+            [
+              "F",
+              "B",
+              "-",
+              "T",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "T",
+              "T",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "F",
+              "T",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "F",
+              "B",
+              "-",
+              "T",
+              "B",
+              "-"
+            ],
+            [
+              "F",
+              "B",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "B",
+              "B",
+              "-",
+              "B",
+              "B"
+            ],
+            [
+              "F",
+              "B",
+              "B",
+              "F",
+              "F",
+              "B"
+            ],
+            [
+              "-",
+              "T",
+              "F",
+              "F",
+              "-",
+              "B"
+            ],
+            [
+              "F",
+              "T",
+              "T",
+              "F",
+              "T",
+              "B"
+            ],
+            [
+              "B",
+              "B",
+              "F",
+              "B",
+              "F",
+              "B"
+            ],
+            [
+              "B",
+              "B",
+              "-",
+              "T",
+              "-",
+              "B"
+            ],
+            [
+              "T",
+              "F",
+              "-",
+              "B",
+              "T",
+              "-"
+            ]
+          ],
+          "expanded_depth": 0,
+          "birth_conflicts": 0,
+          "birth_attempts": 0,
+          "deadline_hit": true,
+          "birth_program": [],
+          "pure_discoveries": [],
+          "winning_operator": -1,
+          "winning_operator_mask": 0,
+          "operators": [
+            {
+              "operator": 0,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            },
+            {
+              "operator": 1,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            },
+            {
+              "operator": 2,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            },
+            {
+              "operator": 3,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            },
+            {
+              "operator": 4,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            }
+          ]
+        },
+        {
+          "runtime": 0.3016135999932885,
+          "cpu_seconds": 0.296875,
+          "reported_clock_seconds": 0.3,
+          "evaluations": 1030800,
+          "configurations": 10871,
+          "native_ms": 300,
+          "bridges": 0,
+          "near_cost": 6,
+          "near_program": [
+            [
+              "B",
+              "-",
+              "T",
+              "B",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "F",
+              "F",
+              "B",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "F",
+              "B",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "F",
+              "B",
+              "T",
+              "F"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "B",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "T",
+              "-",
+              "T",
+              "B",
+              "B"
+            ],
+            [
+              "B",
+              "B",
+              "B",
+              "B",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "B",
+              "F",
+              "F",
+              "-",
+              "B"
+            ],
+            [
+              "-",
+              "F",
+              "F",
+              "F",
+              "F",
+              "T"
+            ],
+            [
+              "F",
+              "-",
+              "F",
+              "B",
+              "-",
+              "F"
+            ],
+            [
+              "F",
+              "F",
+              "-",
+              "-",
+              "F",
+              "F"
+            ],
+            [
+              "F",
+              "T",
+              "-",
+              "B",
+              "F",
+              "F"
+            ],
+            [
+              "F",
+              "T",
+              "F",
+              "T",
+              "F",
+              "B"
+            ],
+            [
+              "F",
+              "B",
+              "-",
+              "T",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "T",
+              "T",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "F",
+              "T",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "F",
+              "B",
+              "-",
+              "T",
+              "B",
+              "-"
+            ],
+            [
+              "F",
+              "B",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "B",
+              "B",
+              "-",
+              "B",
+              "B"
+            ],
+            [
+              "T",
+              "B",
+              "F",
+              "F",
+              "F",
+              "B"
+            ],
+            [
+              "-",
+              "B",
+              "T",
+              "F",
+              "B",
+              "F"
+            ],
+            [
+              "-",
+              "B",
+              "T",
+              "T",
+              "-",
+              "B"
+            ],
+            [
+              "B",
+              "F",
+              "B",
+              "F",
+              "B",
+              "T"
+            ],
+            [
+              "-",
+              "F",
+              "B",
+              "B",
+              "-",
+              "B"
+            ],
+            [
+              "-",
+              "T",
+              "-",
+              "-",
+              "B",
+              "T"
+            ]
+          ],
+          "expanded_depth": 0,
+          "birth_conflicts": 0,
+          "birth_attempts": 0,
+          "deadline_hit": true,
+          "birth_program": [],
+          "pure_discoveries": [],
+          "winning_operator": -1,
+          "winning_operator_mask": 0,
+          "operators": [
+            {
+              "operator": 0,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            },
+            {
+              "operator": 1,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            },
+            {
+              "operator": 2,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            },
+            {
+              "operator": 3,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            },
+            {
+              "operator": 4,
+              "candidates": 0,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.0
+            }
+          ]
+        }
+      ],
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "validation": "NO_SHORTER_PROGRAM",
+      "invalid_candidates": [],
+      "predicted_weights": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "incumbent_structure_used": true
+    },
+    {
+      "dataset": "enormous",
+      "case": 138,
+      "arm": "E",
+      "stage": "screen",
+      "split": "heldout_family",
+      "family": "909955c20486db13d1a6",
+      "context": "r2_k1",
+      "incumbent": 26,
+      "candidate": null,
+      "saved": 0,
+      "program": null,
+      "seed": 42488769,
+      "budget_ms": 600,
+      "runtime": 0.6058251999784261,
+      "cpu_seconds": 0.609375,
+      "evaluations": 1818404,
+      "queries": [
+        {
+          "runtime": 0.6028841000515968,
+          "cpu_seconds": 0.609375,
+          "reported_clock_seconds": 0.6,
+          "evaluations": 1818404,
+          "configurations": 207429,
+          "native_ms": 600,
+          "bridges": 0,
+          "near_cost": 136,
+          "near_program": [
+            [
+              "-",
+              "-",
+              "B",
+              "T",
+              "-",
+              "B"
+            ],
+            [
+              "-",
+              "T",
+              "-",
+              "F",
+              "-",
+              "B"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "F",
+              "B",
+              "T"
+            ],
+            [
+              "B",
+              "-",
+              "T",
+              "-",
+              "B",
+              "T"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "T",
+              "-",
+              "F"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "-",
+              "F"
+            ],
+            [
+              "F",
+              "F",
+              "-",
+              "F",
+              "B",
+              "F"
+            ],
+            [
+              "B",
+              "F",
+              "-",
+              "B",
+              "F",
+              "F"
+            ],
+            [
+              "F",
+              "B",
+              "-",
+              "T",
+              "T",
+              "F"
+            ],
+            [
+              "T",
+              "T",
+              "T",
+              "B",
+              "B",
+              "T"
+            ],
+            [
+              "-",
+              "-",
+              "B",
+              "-",
+              "-",
+              "B"
+            ],
+            [
+              "T",
+              "F",
+              "B",
+              "F",
+              "B",
+              "-"
+            ],
+            [
+              "F",
+              "F",
+              "B",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "T",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "T",
+              "T",
+              "T",
+              "T",
+              "B",
+              "B"
+            ],
+            [
+              "F",
+              "T",
+              "F",
+              "B",
+              "B",
+              "T"
+            ],
+            [
+              "B",
+              "-",
+              "F",
+              "B",
+              "F",
+              "B"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "F",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "B",
+              "F",
+              "-",
+              "B",
+              "B"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "T",
+              "-",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "F",
+              "F",
+              "F",
+              "-"
+            ],
+            [
+              "B",
+              "T",
+              "F",
+              "F",
+              "F",
+              "F"
+            ],
+            [
+              "T",
+              "T",
+              "F",
+              "F",
+              "F",
+              "F"
+            ],
+            [
+              "T",
+              "-",
+              "F",
+              "F",
+              "F",
+              "B"
+            ],
+            [
+              "B",
+              "F",
+              "T",
+              "F",
+              "F",
+              "T"
+            ]
+          ],
+          "expanded_depth": 1,
+          "birth_conflicts": 228029,
+          "birth_attempts": 3840,
+          "deadline_hit": true,
+          "birth_program": [
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "T",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "F",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "T",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "B",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "B",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ],
+            [
+              "-",
+              "-",
+              "-",
+              "-",
+              "F",
+              "-"
+            ]
+          ],
+          "pure_discoveries": [],
+          "winning_operator": -1,
+          "winning_operator_mask": 0,
+          "operators": [
+            {
+              "operator": 0,
+              "candidates": 35640,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.136701
+            },
+            {
+              "operator": 1,
+              "candidates": 3984,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.016617
+            },
+            {
+              "operator": 2,
+              "candidates": 4128,
+              "verified_edges": 8,
+              "full_valid": 222,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.024966
+            },
+            {
+              "operator": 3,
+              "candidates": 4032,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.007074
+            },
+            {
+              "operator": 4,
+              "candidates": 3840,
+              "verified_edges": 0,
+              "full_valid": 0,
+              "wins": 0,
+              "native_saved": 0,
+              "wall_seconds": 0.41036
+            }
+          ]
+        }
+      ],
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "validation": "NO_SHORTER_PROGRAM",
+      "invalid_candidates": [],
+      "predicted_weights": [
+        3.0043152056551707,
+        0.33353881931691287,
+        0.3325347680438534,
+        0.32961120698406254,
+        0.3325347680438534
+      ],
+      "incumbent_structure_used": true
+    }
+  ]
+}
