@@ -3,7 +3,11 @@
 //
 //   node validate_case.cjs <dataset> <caseNumber1based> <programFile>
 //
-// prints JSON: {dataset, case, ticks, accepted, required, pass}
+// Enforces BOTH contest conditions:
+//   accepted == K                     (exactly the required number of copies)
+//   lastAcceptTick == programLength   (no commands after the K-th pickup)
+//
+// prints JSON: {dataset, case, ticks, accepted, required, lastAcceptTick, pass}
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
@@ -51,17 +55,24 @@ api.parseHexSolution(gameState, program);
 assert.equal(gameState.inputParseErrors.length, 0, JSON.stringify(gameState.inputParseErrors));
 assert.equal(gameState.solutionParseErrors.length, 0, JSON.stringify(gameState.solutionParseErrors));
 api.resetEmitterIndices();
-for (let tick = 0; tick < gameState.program.length; tick++) api.applyEmitterStep(tick);
+
+// Track the accepted count AFTER EVERY tick - the previous version declared
+// lastAccept but never computed it, so a program that reached K early and then
+// kept running would still pass.
+let lastAcceptTick = -1;
+let prevAccepted = 0;
+for (let tick = 0; tick < gameState.program.length; tick++) {
+  api.applyEmitterStep(tick);
+  if (gameState.acceptedPatterns > prevAccepted) {
+    lastAcceptTick = tick + 1;                 // 1-based tick of the K-th pickup
+    prevAccepted = gameState.acceptedPatterns;
+  }
+}
 const accepted = gameState.acceptedPatterns;
 const required = gameState.pattern.count;
-// the contest rule: no commands after the K-th pickup
-let lastAccept = -1;
-for (let tick = 0; tick < gameState.program.length; tick++) {
-  const before = tick === 0 ? 0 : gameState.precomputedStates[tick - 1]?.acceptedPatterns ?? 0;
-  if (accepted > 0) break;
-}
+const ticks = gameState.program.length;
+const pass = accepted === required && lastAcceptTick === ticks;
 console.log(JSON.stringify({
-  dataset, case: Number(caseNumber), ticks: gameState.program.length,
-  accepted, required, pass: accepted === required,
+  dataset, case: Number(caseNumber), ticks, accepted, required, lastAcceptTick, pass,
 }));
-process.exit(accepted === required ? 0 : 1);
+process.exit(pass ? 0 : 1);
