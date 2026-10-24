@@ -65,6 +65,12 @@ static inline void apply(const Inst& in, St& s, const u8* act) {
     }
 }
 
+// NOTE: positions are u8[6] while Inst::init is int[6] - copy element-wise, never memcpy.
+static inline void setInit(St& s, const Inst& in) {
+    for (int i=0;i<6;i++) s.pos[i] = (u8)in.init[i];
+    s.active = 0; memset(&s.matter, 0, sizeof(Mask)); s.count = 0;
+}
+
 struct Rng { u64 s; Rng(u64 x):s(x?x:88172645463325252ull){}
     inline u64 n(){ s^=s<<13; s^=s>>7; s^=s<<17; return s; }
     inline int i(int m){ return (int)(n()%(u64)m); } };
@@ -155,7 +161,7 @@ int main(int argc, char** argv) {
         }
         auto t0 = chrono::steady_clock::now();
         // ---- planning loop
-        St s{}; memcpy(s.pos, in.init, 6); s.active=0; memset(&s.matter,0,sizeof(Mask)); s.count=0;
+        St s{}; setInit(s, in);
         int ticks = 0; int accepted = 0;
         vector<array<u8,6>> program;
         int stall = 0;

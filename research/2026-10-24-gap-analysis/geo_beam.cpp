@@ -1,6 +1,13 @@
-// Geometry-first planning with exact transition costs, stage 5 of the audit plan:
-// beam search over (matter state) where every move is a real configuration reached by
-// a real command sequence whose tick cost is computed exactly.
+// Geometry-first beam search - corrected version.
+//
+// Fixes for the four defects reported in the audit of the first implementation:
+//   1. candidates are ranked by a heuristic on the residual, not by cost alone
+//   2. states after an accept are KEPT (matter is empty there; they start the next copy)
+//   3. the dedupe key covers the FULL state: all matter words, all six positions,
+//      the active mask and the accept count
+//   4. the solution is reconstructed through parent links and validated exactly
+//      before it is emitted; the goal is the full K copies, not the first accept
+//
 // g++ -O2 -march=native -o geo_beam geo_beam.cpp
 #include <bits/stdc++.h>
 using namespace std;
@@ -13,19 +20,29 @@ static inline int pc(const Mask&a){ int s=0; for(int i=0;i<NW;i++) s+=__builtin_
 static inline bool covers(const Mask&a,const Mask&b){ for(int i=0;i<NW;i++) if((a.w[i]&b.w[i])!=b.w[i]) return false; return true; }
 static inline bool common(const Mask&a,const Mask&b){ for(int i=0;i<NW;i++) if(a.w[i]&b.w[i]) return true; return false; }
 
-struct Inst { int r,K,nrel,L,curL; int init[6]; Mask target,forbid; vector<array<Mask,6>> rays; string ds; int idx; };
+struct Inst {
+    int r,K,nrel,L,curL; string ds; int idx;
+    int init[6]; Mask target, forbid;
+    vector<array<Mask,6>> rays;
+};
 static vector<Inst> load(const string& path) {
     ifstream f(path); string line; vector<Inst> out;
     while (getline(f,line)) { if(line.empty()) continue; istringstream ss(line); string tag; ss>>tag;
         if(tag=="case"){ Inst in; ss>>in.ds>>in.idx>>in.r>>in.K>>in.nrel>>in.L; in.L=6*in.r; in.rays.assign(in.L,{}); in.curL=0; out.push_back(in);}
         else if(tag=="cur"){int v; ss>>v; out.back().curL=v;}
+        else if(tag=="prog"){ int v; while(ss>>v){} }
         else if(tag=="init"){for(int i=0;i<6;i++) ss>>out.back().init[i];}
         else if(tag=="target"){for(int i=0;i<NW;i++) ss>>out.back().target.w[i];}
         else if(tag=="forbid"){for(int i=0;i<NW;i++) ss>>out.back().forbid.w[i];}
         else if(tag=="ray"){int p,d; ss>>p>>d; for(int i=0;i<NW;i++) ss>>out.back().rays[p][d].w[i];}
     } return out;
 }
+
 struct St { u8 pos[6]; u8 active; Mask matter; int count; };
+static inline void setInit(St& s, const Inst& in) {
+    for (int i=0;i<6;i++) s.pos[i]=(u8)in.init[i];
+    s.active=0; memset(&s.matter,0,sizeof(Mask)); s.count=0;
+}
 static inline void apply(const Inst& in, St& s, const u8* act) {
     for (int i=0;i<6;i++) { int a=act[i];
         if(a==1) s.pos[i]=(u8)((s.pos[i]+in.L-1)%in.L);
@@ -38,13 +55,19 @@ static inline void apply(const Inst& in, St& s, const u8* act) {
     if (covers(s.matter,in.target) && !common(s.matter,in.forbid)) {
         s.count++; for (int k=0;k<NW;k++) s.matter.w[k]&=~in.target.w[k]; }
 }
-struct Rng { u64 s; Rng(u64 x):s(x?x:88172645463325252ull){} inline u64 n(){s^=s<<13;s^=s>>7;s^=s<<17;return s;} inline int i(int m){return (int)(n()%(u64)m);} };
+static inline bool sameState(const St&a,const St&b){
+    if (a.active!=b.active || a.count!=b.count) return false;
+    for (int i=0;i<6;i++) if (a.pos[i]!=b.pos[i]) return false;
+    for (int k=0;k<NW;k++) if (a.matter.w[k]!=b.matter.w[k]) return false;
+    return true;
+}
+struct Rng { u64 s; Rng(u64 x):s(x?x:88172645463325252ull){}
+    inline u64 n(){ s^=s<<13; s^=s>>7; s^=s<<17; return s; }
+    inline int i(int m){ return (int)(n()%(u64)m); } };
 
 struct Config { array<u8,6> pos; u8 mask; };
+static inline int dist1(int a,int b,int L){ int d=(b-a)%L; if(d<0)d+=L; if(d>L/2)d-=L; return abs(d); }
 
-static int dist1(int a,int b,int L){ int d=(b-a)%L; if(d<0)d+=L; if(d>L/2)d-=L; return abs(d); }
-
-// exact tick cost + token sequence to reach the configuration and fire it once
 static int build_steps(const Inst& in, const St& s, const Config& g, vector<array<u8,6>>& out) {
     int d[6], L=1;
     for (int i=0;i<6;i++){ d[i]=dist1(s.pos[i],g.pos[i],in.L);
@@ -61,21 +84,25 @@ static int build_steps(const Inst& in, const St& s, const Config& g, vector<arra
     return L;
 }
 
-int main(int argc,char**argv){
-    auto insts=load("cases.txt");
+struct Node {
+    St st; int g=0; int par=-1; int cfg=-1; int key=0;
+    vector<array<u8,6>> steps;          // steps taken to reach this node
+};
+
+int main(int argc, char** argv) {
+    auto insts = load("cases.txt");
     int width = getenv("W")?atoi(getenv("W")):64;
-    int depth = getenv("D")?atoi(getenv("D")):8;
-    int libN  = getenv("LIB")?atoi(getenv("LIB")):300;
-    vector<int> want; for(int a=1;a<argc;a++) want.push_back(atoi(argv[a]));
-    fprintf(stderr,"loaded %zu  width=%d depth=%d libN=%d\n", insts.size(), width, depth, libN);
+    int maxSteps = getenv("STEPS")?atoi(getenv("STEPS")):40;   // number of configurations fired
+    int libN = getenv("LIB")?atoi(getenv("LIB")):300;
+    vector<int> want; for (int a=1;a<argc;a++) want.push_back(atoi(argv[a]));
+    fprintf(stderr,"loaded %zu width=%d maxConfigs=%d libN=%d\n", insts.size(), width, maxSteps, libN);
     for (int ci : want) {
         const Inst& in = insts[ci];
         int nT = pc(in.target);
         Rng rng(0x77777ull*(ci+11));
-        // --- library: sample poses, keep the useful ones
         vector<Config> lib; vector<int> gain;
         set<array<u64,3>> seen;
-        for (int s=0;s<60000 && (int)lib.size()<libN*4;s++) {
+        for (int s=0; s<80000 && (int)lib.size()<libN*4; s++) {
             Config c; Mask one{},two{},three{};
             c.mask=(s%6==0)?(u8)(1+rng.i(63)):(u8)63;
             for(int i=0;i<6;i++){ c.pos[i]=(u8)rng.i(in.L); if(!((c.mask>>i)&1))continue;
@@ -84,7 +111,7 @@ int main(int argc,char**argv){
             Mask h2; for(int k=0;k<NW;k++) h2.w[k]=two.w[k]&~three.w[k];
             int f=0,g=0;
             for(int k=0;k<NW;k++){ g+=__builtin_popcountll(h2.w[k]&in.target.w[k]); f+=__builtin_popcountll(h2.w[k]&in.forbid.w[k]); }
-            if(f||g<2) continue;
+            if(f||g<1) continue;
             array<u64,3> key{c.pos[0]+256ull*c.pos[1]+65536ull*c.pos[2], c.pos[3]+256ull*c.pos[4]+65536ull*c.pos[5], c.mask};
             if(!seen.insert(key).second) continue;
             lib.push_back(c); gain.push_back(g);
@@ -97,45 +124,75 @@ int main(int argc,char**argv){
             lib.swap(l2); gain.swap(g2);
         }
         auto t0=chrono::steady_clock::now();
-        St s0{}; memcpy(s0.pos,in.init,6); s0.active=0; memset(&s0.matter,0,sizeof(Mask)); s0.count=0;
-        struct Node { St st; int cost; int par; int cfg; vector<array<u8,6>> steps; };
+        St s0{}; setInit(s0, in);
+        vector<vector<Node>> layers;
         vector<Node> cur, nxt;
-        Node root; root.st=s0; root.cost=0; root.par=-1; root.cfg=-1;
-        cur.push_back(root);
-        int bestTotal=INT_MAX; vector<array<u8,6>> bestProg;
-        for (int d=0; d<depth && !cur.empty(); d++) {
+        Node root; root.st=s0; root.g=0; root.par=-1;
+        layers.push_back({root}); cur.push_back(root);
+        vector<array<u8,6>> best;
+        for (int step=0; step<maxSteps && best.empty(); step++) {
             nxt.clear();
-            for (auto& nd : cur) for (int j=0;j<(int)lib.size();j++) {
-                vector<array<u8,6>> steps; int cost=build_steps(in, nd.st, lib[j], steps);
-                Node ch; ch.st=nd.st; for(auto&a:steps) apply(in,ch.st,a.data());
-                ch.cost=nd.cost+cost; ch.cfg=j; ch.steps=steps;
-                if (ch.st.count>0) {
-                    if (nd.cost+cost < bestTotal) { bestTotal=nd.cost+cost; bestProg.clear();
-                        // rebuild program: walk the ancestor chain is not stored; keep incremental
+            for (size_t ni=0; ni<cur.size(); ni++) {
+                for (int j=0;j<(int)lib.size();j++) {
+                    vector<array<u8,6>> steps; int cost=build_steps(in, cur[ni].st, lib[j], steps);
+                    Node ch; ch.st=cur[ni].st;
+                    for (auto& a : steps) apply(in, ch.st, a.data());
+                    ch.g = cur[ni].g + cost; ch.par=(int)ni; ch.cfg=j; ch.steps=steps;
+                    // (2) keep post-accept states: matter is empty there, that is the
+                    //     natural start of the next copy - do NOT filter them out
+                    int missing=0, skirt=0;
+                    for(int k=0;k<NW;k++){
+                        missing += __builtin_popcountll(in.target.w[k] & ~ch.st.matter.w[k]);
+                        skirt   += __builtin_popcountll(in.forbid.w[k] & ch.st.matter.w[k]);
                     }
+                    // (1) rank by a residual heuristic, not by cost
+                    ch.key = (in.K - ch.st.count)*10000 + missing*10 + skirt*30 + ch.g;
+                    nxt.push_back(ch);
                 }
-                int painted=0; for(int k=0;k<NW;k++) painted+=__builtin_popcountll(ch.st.matter.w[k]&in.target.w[k]);
-                if (painted==0) continue;                       // no progress
-                nxt.push_back(ch);
             }
-            // dedupe by matter+pose, keep cheapest
-            sort(nxt.begin(),nxt.end(),[](const Node&a,const Node&b){return a.cost<b.cost;});
-            vector<Node> keep;
-            set<array<u64,2>> seenN;
-            for (auto& n : nxt) {
-                array<u64,2> key{ n.st.matter.w[0]^ (u64)n.st.pos[0]<<56, n.st.matter.w[1]^ (u64)n.st.pos[1]<<56 };
-                if (!seenN.insert(key).second) continue;
-                if ((int)keep.size()<width) keep.push_back(n);
-                if ((int)keep.size()>=width) break;
+            if (nxt.empty()) break;
+            // (4) goal is the FULL K copies
+            int hit=-1;
+            for (size_t i=0;i<nxt.size();i++) if (nxt[i].st.count >= in.K) { hit=(int)i; break; }
+            if (hit>=0) {
+                // reconstruct through the layers
+                vector<array<u8,6>> seq;
+                int idx=hit;
+                for (int t=step+1; t>=1; t--) {
+                    const Node& n = (t==step+1) ? nxt[idx] : layers[t][idx];
+                    seq.insert(seq.begin(), n.steps.begin(), n.steps.end());
+                    idx = n.par;
+                }
+                // (4) exact validation before emitting anything
+                St v{}; setInit(v, in); int lastAcc=-1, prev=0;
+                for (size_t t=0;t<seq.size();t++){ apply(in, v, seq[t].data());
+                    if (v.count>prev){ prev=v.count; lastAcc=(int)t+1; } }
+                if (v.count==in.K && lastAcc==(int)seq.size()) best=seq;
+                break;
             }
-            cur.swap(keep);
+            // (3) dedupe on the FULL state
+            sort(nxt.begin(), nxt.end(), [](const Node&a,const Node&b){
+                if (a.key!=b.key) return a.key<b.key;
+                if (a.st.count!=b.st.count) return a.st.count>b.st.count;
+                for (int i=0;i<6;i++) if (a.st.pos[i]!=b.st.pos[i]) return a.st.pos[i]<b.st.pos[i];
+                if (a.st.active!=b.st.active) return a.st.active<b.st.active;
+                for (int k=0;k<NW;k++) if (a.st.matter.w[k]!=b.st.matter.w[k]) return a.st.matter.w[k]<b.st.matter.w[k];
+                return false; });
+            nxt.erase(unique(nxt.begin(), nxt.end(), [](const Node&a,const Node&b){ return sameState(a.st,b.st); }), nxt.end());
+            if ((int)nxt.size()>width) nxt.resize(width);
+            layers.push_back(nxt); cur.swap(nxt);
         }
-        // report the best painted state at the last depth (no accept found means no valid plan)
-        int bestPainted=0; for (auto& n : cur) { int p=0; for(int k=0;k<NW;k++) p+=__builtin_popcountll(n.st.matter.w[k]&in.target.w[k]); bestPainted=max(bestPainted,p); }
         double ms=chrono::duration<double,milli>(chrono::steady_clock::now()-t0).count();
-        printf("case %d %s#%d nT=%d K=%d curL=%d lib=%zu plan=%s painted=%d/%d ms=%.0f\n",
-               ci, in.ds.c_str(), in.idx, nT, in.K, in.curL, lib.size(),
-               bestTotal==INT_MAX?"none":to_string(bestTotal).c_str(), bestPainted, nT, ms);
+        printf("case %d %s#%d nT=%d K=%d curL=%d plan=%d %s ms=%.0f\n",
+               ci, in.ds.c_str(), in.idx, nT, in.K, in.curL, (int)best.size(),
+               best.empty()?"none":(best.size()<in.curL?"BEATS":"longer"), ms);
         fflush(stdout);
+        if (!best.empty() && getenv("DUMP")) {
+            char fn[64]; snprintf(fn,sizeof fn,"gb_%d.txt",ci);
+            FILE* f=fopen(fn,"w");
+            for (auto& a : best) { for(int q=0;q<6;q++) fprintf(f,"%c ","-FBT"[a[q]]); fprintf(f,"\n"); }
+            fclose(f);
+        }
     }
+    return 0;
 }

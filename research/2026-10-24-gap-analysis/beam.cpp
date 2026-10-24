@@ -127,7 +127,7 @@ int main(int argc, char** argv){
     for (int i=from;i<min(to,(int)insts.size());i++){
         const Inst& in = insts[i];
         auto t0=chrono::steady_clock::now();
-        St s{}; memcpy(s.pos, in.init, 6); s.active=0; memset(&s.matter,0,sizeof(Mask)); s.count=0;
+        St s{}; setInit(s, in);
         long long ev=0;
         vector<array<u8,6>> prog;
         bool bad=false;
