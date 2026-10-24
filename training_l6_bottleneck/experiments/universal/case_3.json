@@ -1,0 +1,1176 @@
+{
+  "case": 3,
+  "stage": "universal",
+  "rows": [
+    {
+      "dataset": "enormous",
+      "case": 3,
+      "method": "whole_standard_beam",
+      "seed": 6520274,
+      "width": 16,
+      "budget_ms": 1000,
+      "incumbent": 13,
+      "candidate": null,
+      "saved": 0,
+      "valid": false,
+      "program": null,
+      "error": null,
+      "weights": {},
+      "dynamic": 0,
+      "cap": 0,
+      "mode": 3,
+      "context": {
+        "start": [
+          [
+            0,
+            55,
+            44,
+            33,
+            22,
+            11
+          ],
+          0,
+          0,
+          0
+        ],
+        "copies": 1,
+        "horizon": 12,
+        "prefix": [],
+        "suffix": [],
+        "hint": [
+          [
+            "B",
+            "B",
+            "F",
+            "-",
+            "B",
+            "B"
+          ],
+          [
+            "-",
+            "B",
+            "F",
+            "T",
+            "B",
+            "T"
+          ],
+          [
+            "B",
+            "B",
+            "F",
+            "T",
+            "B",
+            "F"
+          ],
+          [
+            "B",
+            "T",
+            "F",
+            "B",
+            "B",
+            "F"
+          ],
+          [
+            "B",
+            "B",
+            "-",
+            "-",
+            "B",
+            "F"
+          ],
+          [
+            "T",
+            "F",
+            "T",
+            "T",
+            "T",
+            "F"
+          ],
+          [
+            "B",
+            "F",
+            "-",
+            "F",
+            "-",
+            "B"
+          ],
+          [
+            "B",
+            "-",
+            "-",
+            "B",
+            "-",
+            "B"
+          ],
+          [
+            "B",
+            "F",
+            "T",
+            "T",
+            "B",
+            "B"
+          ],
+          [
+            "F",
+            "F",
+            "-",
+            "T",
+            "-",
+            "B"
+          ],
+          [
+            "-",
+            "T",
+            "-",
+            "-",
+            "T",
+            "B"
+          ],
+          [
+            "F",
+            "-",
+            "T",
+            "B",
+            "T",
+            "B"
+          ],
+          [
+            "B",
+            "T",
+            "B",
+            "-",
+            "B",
+            "F"
+          ]
+        ],
+        "goal": null,
+        "a": 0,
+        "b": 13
+      },
+      "near_program": [
+        [
+          "F",
+          "T",
+          "T",
+          "T",
+          "T",
+          "B"
+        ],
+        [
+          "T",
+          "T",
+          "-",
+          "F",
+          "B",
+          "T"
+        ],
+        [
+          "F",
+          "B",
+          "B",
+          "-",
+          "-",
+          "B"
+        ],
+        [
+          "-",
+          "B",
+          "-",
+          "F",
+          "-",
+          "B"
+        ],
+        [
+          "F",
+          "B",
+          "B",
+          "T",
+          "B",
+          "-"
+        ],
+        [
+          "F",
+          "T",
+          "F",
+          "-",
+          "-",
+          "-"
+        ],
+        [
+          "F",
+          "B",
+          "B",
+          "F",
+          "B",
+          "F"
+        ],
+        [
+          "-",
+          "B",
+          "-",
+          "T",
+          "T",
+          "F"
+        ],
+        [
+          "F",
+          "T",
+          "F",
+          "T",
+          "T",
+          "F"
+        ],
+        [
+          "F",
+          "F",
+          "B",
+          "F",
+          "T",
+          "B"
+        ],
+        [
+          "F",
+          "-",
+          "B",
+          "F",
+          "F",
+          "B"
+        ],
+        [
+          "-",
+          "-",
+          "-",
+          "T",
+          "-",
+          "B"
+        ]
+      ],
+      "near_diagnostics": {
+        "kind": "UNFINISHED_TRAJECTORY",
+        "accepted": 0,
+        "missing_target": [
+          259,
+          288
+        ],
+        "dirty_skirting": [
+          260
+        ],
+        "destroyed_in_last_five": [],
+        "second_emitter_distance": {
+          "259": 1,
+          "288": 2
+        },
+        "defects": 3,
+        "state": [
+          [
+            58,
+            59,
+            47,
+            28,
+            24,
+            14
+          ],
+          45,
+          2187784786731122128466989154203542988797039022689062373652040419471777246025535900427160394580103169,
+          0
+        ],
+        "required_copies": 1
+      },
+      "wall_seconds": 0.8298316999571398,
+      "cpu_seconds": 0.796875,
+      "reported_cpu_seconds": 0.829,
+      "evaluations": 158793,
+      "configurations": 2407184,
+      "native_ms": 828,
+      "bridges": 0,
+      "near_cost": 10,
+      "expanded_depth": 11,
+      "deadline_hit": false,
+      "selection_digest": 8157873119511671084,
+      "configuration_digest": 8164897942736115983,
+      "python_cpu_seconds": 0.0,
+      "total_wall_seconds": 0.8317329999990761,
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 512,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "stage": "universal",
+      "near_diagnostics_version": 2
+    },
+    {
+      "dataset": "enormous",
+      "case": 3,
+      "method": "whole_weighted_200",
+      "seed": 6520274,
+      "width": 16,
+      "budget_ms": 1000,
+      "incumbent": 13,
+      "candidate": null,
+      "saved": 0,
+      "valid": false,
+      "program": null,
+      "error": null,
+      "weights": {
+        "60": 200,
+        "76": 200,
+        "77": 200,
+        "94": 200,
+        "111": 200,
+        "128": 200,
+        "129": 200,
+        "146": 200,
+        "147": 200,
+        "185": 200,
+        "186": 200,
+        "206": 200,
+        "225": 200,
+        "271": 200,
+        "272": 200,
+        "273": 200
+      },
+      "dynamic": 0,
+      "cap": 0,
+      "mode": 3,
+      "context": {
+        "start": [
+          [
+            0,
+            55,
+            44,
+            33,
+            22,
+            11
+          ],
+          0,
+          0,
+          0
+        ],
+        "copies": 1,
+        "horizon": 12,
+        "prefix": [],
+        "suffix": [],
+        "hint": [
+          [
+            "B",
+            "B",
+            "F",
+            "-",
+            "B",
+            "B"
+          ],
+          [
+            "-",
+            "B",
+            "F",
+            "T",
+            "B",
+            "T"
+          ],
+          [
+            "B",
+            "B",
+            "F",
+            "T",
+            "B",
+            "F"
+          ],
+          [
+            "B",
+            "T",
+            "F",
+            "B",
+            "B",
+            "F"
+          ],
+          [
+            "B",
+            "B",
+            "-",
+            "-",
+            "B",
+            "F"
+          ],
+          [
+            "T",
+            "F",
+            "T",
+            "T",
+            "T",
+            "F"
+          ],
+          [
+            "B",
+            "F",
+            "-",
+            "F",
+            "-",
+            "B"
+          ],
+          [
+            "B",
+            "-",
+            "-",
+            "B",
+            "-",
+            "B"
+          ],
+          [
+            "B",
+            "F",
+            "T",
+            "T",
+            "B",
+            "B"
+          ],
+          [
+            "F",
+            "F",
+            "-",
+            "T",
+            "-",
+            "B"
+          ],
+          [
+            "-",
+            "T",
+            "-",
+            "-",
+            "T",
+            "B"
+          ],
+          [
+            "F",
+            "-",
+            "T",
+            "B",
+            "T",
+            "B"
+          ],
+          [
+            "B",
+            "T",
+            "B",
+            "-",
+            "B",
+            "F"
+          ]
+        ],
+        "goal": null,
+        "a": 0,
+        "b": 13
+      },
+      "near_program": [
+        [
+          "-",
+          "T",
+          "T",
+          "T",
+          "T",
+          "F"
+        ],
+        [
+          "F",
+          "T",
+          "-",
+          "F",
+          "T",
+          "T"
+        ],
+        [
+          "T",
+          "B",
+          "F",
+          "B",
+          "F",
+          "T"
+        ],
+        [
+          "F",
+          "B",
+          "F",
+          "B",
+          "F",
+          "B"
+        ],
+        [
+          "F",
+          "T",
+          "F",
+          "B",
+          "F",
+          "-"
+        ],
+        [
+          "F",
+          "-",
+          "-",
+          "T",
+          "T",
+          "B"
+        ],
+        [
+          "F",
+          "T",
+          "B",
+          "B",
+          "T",
+          "T"
+        ],
+        [
+          "F",
+          "B",
+          "F",
+          "B",
+          "-",
+          "F"
+        ],
+        [
+          "-",
+          "T",
+          "F",
+          "-",
+          "-",
+          "F"
+        ]
+      ],
+      "near_diagnostics": {
+        "kind": "UNFINISHED_TRAJECTORY",
+        "accepted": 0,
+        "missing_target": [
+          30,
+          44,
+          202,
+          259,
+          271,
+          272
+        ],
+        "dirty_skirting": [
+          260
+        ],
+        "destroyed_in_last_five": [],
+        "second_emitter_distance": {
+          "30": 2,
+          "44": 1,
+          "202": 1,
+          "259": 2,
+          "271": 2,
+          "272": 2
+        },
+        "defects": 7,
+        "state": [
+          [
+            60,
+            58,
+            40,
+            37,
+            19,
+            10
+          ],
+          39,
+          2187784786731619440320566163454976283884488040232751936923485272638859895728216276945524723711741953,
+          0
+        ],
+        "required_copies": 1
+      },
+      "wall_seconds": 1.0031718000536785,
+      "cpu_seconds": 0.984375,
+      "reported_cpu_seconds": 1.002,
+      "evaluations": 119211,
+      "configurations": 2304160,
+      "native_ms": 1001,
+      "bridges": 0,
+      "near_cost": 22,
+      "expanded_depth": 7,
+      "deadline_hit": true,
+      "selection_digest": 3737029172678848702,
+      "configuration_digest": 16643723956597706855,
+      "python_cpu_seconds": 0.0,
+      "total_wall_seconds": 1.0057168999919668,
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 512,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "stage": "universal",
+      "near_diagnostics_version": 2
+    },
+    {
+      "dataset": "enormous",
+      "case": 3,
+      "method": "tail_standard_beam",
+      "seed": 6520275,
+      "width": 16,
+      "budget_ms": 1000,
+      "incumbent": 13,
+      "candidate": null,
+      "saved": 0,
+      "valid": false,
+      "program": null,
+      "error": null,
+      "weights": {},
+      "dynamic": 0,
+      "cap": 0,
+      "mode": 3,
+      "context": {
+        "start": [
+          [
+            2,
+            58,
+            41,
+            33,
+            25,
+            11
+          ],
+          32,
+          93536104789177786765035829293842113257979682750464,
+          0
+        ],
+        "copies": 1,
+        "horizon": 9,
+        "prefix": [
+          [
+            "B",
+            "B",
+            "F",
+            "-",
+            "B",
+            "B"
+          ],
+          [
+            "-",
+            "B",
+            "F",
+            "T",
+            "B",
+            "T"
+          ],
+          [
+            "B",
+            "B",
+            "F",
+            "T",
+            "B",
+            "F"
+          ]
+        ],
+        "suffix": [],
+        "hint": [
+          [
+            "B",
+            "T",
+            "F",
+            "B",
+            "B",
+            "F"
+          ],
+          [
+            "B",
+            "B",
+            "-",
+            "-",
+            "B",
+            "F"
+          ],
+          [
+            "T",
+            "F",
+            "T",
+            "T",
+            "T",
+            "F"
+          ],
+          [
+            "B",
+            "F",
+            "-",
+            "F",
+            "-",
+            "B"
+          ],
+          [
+            "B",
+            "-",
+            "-",
+            "B",
+            "-",
+            "B"
+          ],
+          [
+            "B",
+            "F",
+            "T",
+            "T",
+            "B",
+            "B"
+          ],
+          [
+            "F",
+            "F",
+            "-",
+            "T",
+            "-",
+            "B"
+          ],
+          [
+            "-",
+            "T",
+            "-",
+            "-",
+            "T",
+            "B"
+          ],
+          [
+            "F",
+            "-",
+            "T",
+            "B",
+            "T",
+            "B"
+          ],
+          [
+            "B",
+            "T",
+            "B",
+            "-",
+            "B",
+            "F"
+          ]
+        ],
+        "goal": null,
+        "a": 3,
+        "b": 13
+      },
+      "near_program": [
+        [
+          "-",
+          "T",
+          "T",
+          "-",
+          "B",
+          "F"
+        ],
+        [
+          "T",
+          "B",
+          "B",
+          "-",
+          "T",
+          "T"
+        ],
+        [
+          "F",
+          "F",
+          "F",
+          "F",
+          "B",
+          "T"
+        ],
+        [
+          "B",
+          "F",
+          "-",
+          "T",
+          "B",
+          "B"
+        ],
+        [
+          "B",
+          "-",
+          "-",
+          "-",
+          "-",
+          "B"
+        ],
+        [
+          "T",
+          "F",
+          "F",
+          "T",
+          "T",
+          "T"
+        ],
+        [
+          "F",
+          "F",
+          "-",
+          "-",
+          "B",
+          "T"
+        ],
+        [
+          "T",
+          "F",
+          "B",
+          "T",
+          "T",
+          "B"
+        ],
+        [
+          "B",
+          "F",
+          "T",
+          "-",
+          "T",
+          "F"
+        ]
+      ],
+      "near_diagnostics": {
+        "kind": "UNFINISHED_TRAJECTORY",
+        "accepted": 0,
+        "missing_target": [
+          30,
+          44,
+          147,
+          271,
+          288
+        ],
+        "dirty_skirting": [
+          183
+        ],
+        "destroyed_in_last_five": [],
+        "second_emitter_distance": {
+          "30": 3,
+          "44": 3,
+          "147": 1,
+          "271": 3,
+          "288": 3
+        },
+        "defects": 6,
+        "state": [
+          [
+            3,
+            53,
+            41,
+            32,
+            29,
+            12
+          ],
+          43,
+          22767040599979620836536711155300010393749510570121950438308948604579941421777158144,
+          0
+        ],
+        "required_copies": 1
+      },
+      "wall_seconds": 0.5812217999482527,
+      "cpu_seconds": 0.578125,
+      "reported_cpu_seconds": 0.58,
+      "evaluations": 110550,
+      "configurations": 1556288,
+      "native_ms": 579,
+      "bridges": 0,
+      "near_cost": 19,
+      "expanded_depth": 8,
+      "deadline_hit": false,
+      "selection_digest": 6571457531302619712,
+      "configuration_digest": 1418507468768904278,
+      "python_cpu_seconds": 0.015625,
+      "total_wall_seconds": 0.5840578000061214,
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 512,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "stage": "universal",
+      "near_diagnostics_version": 2
+    },
+    {
+      "dataset": "enormous",
+      "case": 3,
+      "method": "tail_weighted_200",
+      "seed": 6520275,
+      "width": 16,
+      "budget_ms": 1000,
+      "incumbent": 13,
+      "candidate": null,
+      "saved": 0,
+      "valid": false,
+      "program": null,
+      "error": null,
+      "weights": {
+        "60": 200,
+        "76": 200,
+        "77": 200,
+        "94": 200,
+        "111": 200,
+        "128": 200,
+        "129": 200,
+        "146": 200,
+        "147": 200,
+        "185": 200,
+        "186": 200,
+        "206": 200,
+        "225": 200,
+        "271": 200,
+        "272": 200,
+        "273": 200
+      },
+      "dynamic": 0,
+      "cap": 0,
+      "mode": 3,
+      "context": {
+        "start": [
+          [
+            2,
+            58,
+            41,
+            33,
+            25,
+            11
+          ],
+          32,
+          93536104789177786765035829293842113257979682750464,
+          0
+        ],
+        "copies": 1,
+        "horizon": 9,
+        "prefix": [
+          [
+            "B",
+            "B",
+            "F",
+            "-",
+            "B",
+            "B"
+          ],
+          [
+            "-",
+            "B",
+            "F",
+            "T",
+            "B",
+            "T"
+          ],
+          [
+            "B",
+            "B",
+            "F",
+            "T",
+            "B",
+            "F"
+          ]
+        ],
+        "suffix": [],
+        "hint": [
+          [
+            "B",
+            "T",
+            "F",
+            "B",
+            "B",
+            "F"
+          ],
+          [
+            "B",
+            "B",
+            "-",
+            "-",
+            "B",
+            "F"
+          ],
+          [
+            "T",
+            "F",
+            "T",
+            "T",
+            "T",
+            "F"
+          ],
+          [
+            "B",
+            "F",
+            "-",
+            "F",
+            "-",
+            "B"
+          ],
+          [
+            "B",
+            "-",
+            "-",
+            "B",
+            "-",
+            "B"
+          ],
+          [
+            "B",
+            "F",
+            "T",
+            "T",
+            "B",
+            "B"
+          ],
+          [
+            "F",
+            "F",
+            "-",
+            "T",
+            "-",
+            "B"
+          ],
+          [
+            "-",
+            "T",
+            "-",
+            "-",
+            "T",
+            "B"
+          ],
+          [
+            "F",
+            "-",
+            "T",
+            "B",
+            "T",
+            "B"
+          ],
+          [
+            "B",
+            "T",
+            "B",
+            "-",
+            "B",
+            "F"
+          ]
+        ],
+        "goal": null,
+        "a": 3,
+        "b": 13
+      },
+      "near_program": [
+        [
+          "-",
+          "T",
+          "T",
+          "-",
+          "B",
+          "F"
+        ],
+        [
+          "T",
+          "B",
+          "B",
+          "F",
+          "T",
+          "T"
+        ],
+        [
+          "B",
+          "T",
+          "F",
+          "T",
+          "B",
+          "T"
+        ],
+        [
+          "T",
+          "B",
+          "-",
+          "-",
+          "B",
+          "B"
+        ],
+        [
+          "B",
+          "T",
+          "-",
+          "-",
+          "-",
+          "B"
+        ],
+        [
+          "B",
+          "B",
+          "-",
+          "T",
+          "B",
+          "B"
+        ],
+        [
+          "T",
+          "B",
+          "F",
+          "B",
+          "T",
+          "B"
+        ],
+        [
+          "T",
+          "-",
+          "B",
+          "B",
+          "-",
+          "F"
+        ],
+        [
+          "-",
+          "-",
+          "B",
+          "T",
+          "-",
+          "F"
+        ]
+      ],
+      "near_diagnostics": {
+        "kind": "UNFINISHED_TRAJECTORY",
+        "accepted": 0,
+        "missing_target": [
+          30,
+          44,
+          243,
+          288
+        ],
+        "dirty_skirting": [
+          221
+        ],
+        "destroyed_in_last_five": [],
+        "second_emitter_distance": {
+          "30": 4,
+          "44": 3,
+          "243": 2,
+          "288": 3
+        },
+        "defects": 5,
+        "state": [
+          [
+            5,
+            62,
+            42,
+            34,
+            29,
+            12
+          ],
+          46,
+          17100415401218864888355097931870787440191141204119883463049767669586227585046055523726018155118592,
+          0
+        ],
+        "required_copies": 1
+      },
+      "wall_seconds": 0.6444779000012204,
+      "cpu_seconds": 0.640625,
+      "reported_cpu_seconds": 0.642,
+      "evaluations": 110702,
+      "configurations": 1570992,
+      "native_ms": 642,
+      "bridges": 0,
+      "near_cost": 16,
+      "expanded_depth": 8,
+      "deadline_hit": false,
+      "selection_digest": 11369708911298378647,
+      "configuration_digest": 10812709356016732711,
+      "python_cpu_seconds": 0.0,
+      "total_wall_seconds": 0.6467432000208646,
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 512,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "stage": "universal",
+      "near_diagnostics_version": 2
+    }
+  ]
+}

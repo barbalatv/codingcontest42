@@ -1,0 +1,311 @@
+{
+  "case": 68,
+  "rows": [
+    {
+      "dataset": "enormous",
+      "case": 68,
+      "method": "standard_beam_plus_LNS",
+      "seed": 7429180,
+      "width": 16,
+      "budget_ms": 1500,
+      "incumbent": 13,
+      "candidate": null,
+      "saved": 0,
+      "valid": false,
+      "program": null,
+      "rejected_program": null,
+      "error": null,
+      "weights": {},
+      "dynamic": 0,
+      "cap": 0,
+      "mode": 7,
+      "context": {
+        "start": [
+          [
+            4,
+            49,
+            37,
+            27,
+            21,
+            2
+          ],
+          63,
+          1853125795864668363281756570010001775978404811080848995266605109573312281837568,
+          0
+        ],
+        "copies": 1,
+        "horizon": 3,
+        "prefix": [
+          [
+            "B",
+            "B",
+            "F",
+            "F",
+            "B",
+            "F"
+          ],
+          [
+            "B",
+            "B",
+            "F",
+            "F",
+            "B",
+            "F"
+          ],
+          [
+            "B",
+            "-",
+            "-",
+            "F",
+            "-",
+            "F"
+          ],
+          [
+            "B",
+            "-",
+            "-",
+            "-",
+            "-",
+            "F"
+          ],
+          [
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "F"
+          ],
+          [
+            "T",
+            "T",
+            "-",
+            "T",
+            "T",
+            "T"
+          ],
+          [
+            "-",
+            "F",
+            "T",
+            "-",
+            "F",
+            "F"
+          ],
+          [
+            "B",
+            "F",
+            "-",
+            "T",
+            "T",
+            "F"
+          ],
+          [
+            "F",
+            "F",
+            "F",
+            "T",
+            "T",
+            "F"
+          ]
+        ],
+        "suffix": [],
+        "hint": [
+          [
+            "-",
+            "-",
+            "-",
+            "-",
+            "-",
+            "-"
+          ],
+          [
+            "B",
+            "B",
+            "B",
+            "T",
+            "T",
+            "B"
+          ],
+          [
+            "F",
+            "B",
+            "-",
+            "T",
+            "B",
+            "B"
+          ],
+          [
+            "-",
+            "B",
+            "T",
+            "-",
+            "T",
+            "B"
+          ]
+        ],
+        "goal": null,
+        "a": 9,
+        "b": 13
+      },
+      "near_program": [
+        [
+          "F",
+          "-",
+          "-",
+          "F",
+          "-",
+          "-"
+        ],
+        [
+          "T",
+          "B",
+          "B",
+          "F",
+          "-",
+          "B"
+        ],
+        [
+          "B",
+          "F",
+          "-",
+          "B",
+          "T",
+          "-"
+        ]
+      ],
+      "near_diagnostics": {
+        "kind": "UNFINISHED_TRAJECTORY",
+        "accepted": 0,
+        "missing_target": [
+          25,
+          187
+        ],
+        "dirty_skirting": [],
+        "destroyed_in_last_five": [],
+        "second_emitter_distance": {
+          "25": 2,
+          "187": 1
+        },
+        "defects": 2,
+        "state": [
+          [
+            4,
+            49,
+            38,
+            26,
+            21,
+            3
+          ],
+          46,
+          1853125795864879129276426222877821573342573147410077255567199282333124722167808,
+          0
+        ],
+        "required_copies": 1
+      },
+      "wall_seconds": 1.5010047999676317,
+      "cpu_seconds": 1.5,
+      "reported_cpu_seconds": 1.5,
+      "evaluations": 3274233,
+      "configurations": 359964,
+      "native_ms": 1500,
+      "bridges": 0,
+      "near_cost": 6,
+      "expanded_depth": 0,
+      "deadline_hit": true,
+      "selection_digest": 0,
+      "configuration_digest": 0,
+      "python_cpu_seconds": 0.0,
+      "total_wall_seconds": 1.5028840999584645,
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "stage": "repair",
+      "source": "experiments\\universal\\case_68.json",
+      "prefix_source_method": "tail_standard_beam",
+      "prefix_source_weighted": false,
+      "prefix_source_record": "experiments\\universal\\case_68.json",
+      "original_method_label": "weighted_beam_plus_LNS",
+      "near_diagnostics_version": 2
+    },
+    {
+      "case": 68,
+      "method": "exact_repair",
+      "stage": "repair",
+      "source": "experiments\\universal\\case_68.json",
+      "window": 3,
+      "all_six_emitters": true,
+      "seed": 7429183,
+      "width": null,
+      "budget_ms": 2000,
+      "incumbent": 13,
+      "candidate": null,
+      "saved": 0,
+      "valid": false,
+      "program": null,
+      "error": null,
+      "evaluations": 0,
+      "cpu_seconds": 0.4375,
+      "wall_seconds": 0.4490057999501005,
+      "solver": {
+        "status": "INFEASIBLE",
+        "seconds": 0.4486401000758633,
+        "horizon": 3,
+        "copies": 1,
+        "branches": 0,
+        "root": null
+      },
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "near_source": "tail_standard_beam",
+      "prefix_source_method": "tail_standard_beam",
+      "prefix_source_weighted": false,
+      "prefix_source_record": "experiments\\universal\\case_68.json"
+    },
+    {
+      "case": 68,
+      "method": "exact_repair",
+      "stage": "repair",
+      "source": "experiments\\universal\\case_68.json",
+      "window": 5,
+      "all_six_emitters": true,
+      "seed": 7429185,
+      "width": null,
+      "budget_ms": 2000,
+      "incumbent": 13,
+      "candidate": null,
+      "saved": 0,
+      "valid": false,
+      "program": null,
+      "error": null,
+      "evaluations": 0,
+      "cpu_seconds": 0.484375,
+      "wall_seconds": 0.4881408999208361,
+      "solver": {
+        "status": "INFEASIBLE",
+        "seconds": 0.48779419995844364,
+        "horizon": 3,
+        "copies": 1,
+        "branches": 0,
+        "root": null
+      },
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "near_source": "tail_standard_beam",
+      "prefix_source_method": "tail_standard_beam",
+      "prefix_source_weighted": false,
+      "prefix_source_record": "experiments\\universal\\case_68.json"
+    }
+  ]
+}

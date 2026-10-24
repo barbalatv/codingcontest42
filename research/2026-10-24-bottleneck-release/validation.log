@@ -1,0 +1,50 @@
+answer_level-6_0-example.txt: SANDBOX_LOCAL_PASS, 3 cases, 43 ticks
+answer_level-6_1-small.txt: SANDBOX_LOCAL_PASS, 10 cases, 109 ticks
+answer_level-6_2-medium.txt: SANDBOX_LOCAL_PASS, 210 cases, 5904 ticks
+answer_level-6_3-large.txt: SANDBOX_LOCAL_PASS, 190 cases, 5035 ticks
+answer_level-6_4-enormous.txt: SANDBOX_LOCAL_PASS, 140 cases, 4690 ticks
+
+medium: SANDBOX_LOCAL_PASS 210 cases 5904 ticks
+large: SANDBOX_LOCAL_PASS 190 cases 5035 ticks
+enormous: SANDBOX_LOCAL_PASS 140 cases 4690 ticks
+{
+  "status": "LOCAL_PASS",
+  "datasets": {
+    "medium": {
+      "cases": 210,
+      "ticks": 5904,
+      "sha256": "f13b7dbe8fdae5e448798d3d11daa4ac30a6f1e04e68eb4fcc9d6f68ea0d2dd4"
+    },
+    "large": {
+      "cases": 190,
+      "ticks": 5035,
+      "sha256": "f01b72474deadba59f79a38aa53a75e96714be72cd44f9657c4dc56483e7ed6f"
+    },
+    "enormous": {
+      "cases": 140,
+      "ticks": 4690,
+      "sha256": "ca6ea372a282a127e54cf42a8f60c063cc03498a265933b700ffae7f1932f068"
+    }
+  },
+  "total_ticks": 15629,
+  "cases": 540,
+  "cpp": "PASS",
+  "python_sim": "PASS",
+  "solve_l5_verify": "PASS",
+  "original_js": "PASS",
+  "strict_js": "PASS",
+  "zip": "BYTE_IDENTICAL",
+  "research_manifest_files": 441,
+  "protected_changes": [
+    ".gitattributes",
+    "level-6\\answer_level-6_3-large.txt",
+    "level-6\\answer_level-6_4-enormous.txt"
+  ],
+  "allowed_changes": [
+    ".gitattributes",
+    "level-6\\answer_level-6_2-medium.txt",
+    "level-6\\answer_level-6_3-large.txt",
+    "level-6\\answer_level-6_4-enormous.txt"
+  ],
+  "platform_submission": "NOT_PERFORMED"
+}

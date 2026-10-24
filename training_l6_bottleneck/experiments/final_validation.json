@@ -1,0 +1,133 @@
+{
+  "status": "PASS",
+  "datasets": {
+    "medium": {
+      "cases": 210,
+      "baseline": 5904,
+      "best": 5904,
+      "sha256": "f13b7dbe8fdae5e448798d3d11daa4ac30a6f1e04e68eb4fcc9d6f68ea0d2dd4"
+    },
+    "large": {
+      "cases": 190,
+      "baseline": 5035,
+      "best": 5035,
+      "sha256": "f01b72474deadba59f79a38aa53a75e96714be72cd44f9657c4dc56483e7ed6f"
+    },
+    "enormous": {
+      "cases": 140,
+      "baseline": 4700,
+      "best": 4690,
+      "sha256": "ca6ea372a282a127e54cf42a8f60c063cc03498a265933b700ffae7f1932f068"
+    }
+  },
+  "improved": [
+    {
+      "dataset": "enormous",
+      "case": 6,
+      "old": 43,
+      "new": 41,
+      "saved": 2,
+      "acceptances": [
+        23,
+        41
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 9,
+      "old": 52,
+      "new": 51,
+      "saved": 1,
+      "acceptances": [
+        28,
+        51
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 25,
+      "old": 23,
+      "new": 22,
+      "saved": 1,
+      "acceptances": [
+        22
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 30,
+      "old": 38,
+      "new": 37,
+      "saved": 1,
+      "acceptances": [
+        37
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 37,
+      "old": 66,
+      "new": 65,
+      "saved": 1,
+      "acceptances": [
+        35,
+        65
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 40,
+      "old": 36,
+      "new": 35,
+      "saved": 1,
+      "acceptances": [
+        35
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 72,
+      "old": 29,
+      "new": 28,
+      "saved": 1,
+      "acceptances": [
+        28
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 112,
+      "old": 32,
+      "new": 31,
+      "saved": 1,
+      "acceptances": [
+        31
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 125,
+      "old": 23,
+      "new": 22,
+      "saved": 1,
+      "acceptances": [
+        13,
+        22
+      ]
+    }
+  ],
+  "cpp": "ALL_TICKS_RELEVANT_MATTER_PASS",
+  "python_sim": "PASS",
+  "solve_l5_verify": "PASS",
+  "original_js": {
+    "status": "ORIGINAL_JS_ALL_TICK_TRACE_PASS",
+    "cases": 540,
+    "ticks": 15629,
+    "accepted_copies": 2944,
+    "source_sha256": "93acf10dd18f751be2664359aeabdb3b10ff29973039659a9386ad97e921ed02"
+  },
+  "protected_files": 8464,
+  "protected_changes": [],
+  "wall_seconds": 12.417847400065511,
+  "platform_acceptance": "NOT_SUBMITTED"
+}

@@ -1,0 +1,428 @@
+{
+  "status": "LOCAL_PASS",
+  "baseline": {
+    "medium": 5904,
+    "large": 5035,
+    "enormous": 4700
+  },
+  "best": {
+    "medium": 5904,
+    "large": 5035,
+    "enormous": 4690
+  },
+  "total_before": 15639,
+  "total_after": 15629,
+  "saved": 10,
+  "enormous_screened": 140,
+  "improved_cases": 9,
+  "diagnostics": {
+    "cases": 140,
+    "copies": 210,
+    "total_program_ticks": 4700,
+    "sparse_tail_copies": 52,
+    "sparse_tail_cases": 49,
+    "focused_candidate_copies": 46,
+    "focused_candidate_cases": 44,
+    "late_clean_copies": 47,
+    "late_churn_copies": 26,
+    "late_rebuild_copies": 26,
+    "median_late_final_cells": 16.0,
+    "mean_late_final_cells": 16.662,
+    "median_last_tick_new": 3.0,
+    "mean_last_tick_new": 3.271,
+    "mean_late_creation_events": 16.681,
+    "first_before_tail_rebuilt_copies": 26,
+    "first_in_tail_rebuilt_copies": 4,
+    "cleanup_tail_cases": 48,
+    "dense_finale_cases": 118
+  },
+  "stages": {
+    "deep": {
+      "cases": 12,
+      "queries": 72,
+      "cpu_seconds": 76.219,
+      "request_wall_seconds": 77.638,
+      "valid_shorter_queries": 2
+    },
+    "dynamic": {
+      "cases": 8,
+      "queries": 48,
+      "cpu_seconds": 25.5,
+      "request_wall_seconds": 25.984,
+      "valid_shorter_queries": 2
+    },
+    "iterative": {
+      "cases": 8,
+      "queries": 192,
+      "cpu_seconds": 100.062,
+      "request_wall_seconds": 101.905,
+      "valid_shorter_queries": 10
+    },
+    "modes": {
+      "cases": 8,
+      "queries": 64,
+      "cpu_seconds": 57.203,
+      "request_wall_seconds": 58.448,
+      "valid_shorter_queries": 3
+    },
+    "pilot": {
+      "cases": 61,
+      "queries": 305,
+      "cpu_seconds": 298.734,
+      "request_wall_seconds": 303.082,
+      "valid_shorter_queries": 0
+    },
+    "pilot_v1": {
+      "cases": 61,
+      "queries": 305,
+      "cpu_seconds": 300.469,
+      "request_wall_seconds": 303.676,
+      "valid_shorter_queries": 0
+    },
+    "repair": {
+      "cases": 24,
+      "queries": 70,
+      "cpu_seconds": 97.625,
+      "request_wall_seconds": 98.913,
+      "valid_shorter_queries": 10
+    },
+    "universal": {
+      "cases": 140,
+      "queries": 560,
+      "cpu_seconds": 416.375,
+      "request_wall_seconds": 422.929,
+      "valid_shorter_queries": 0
+    }
+  },
+  "algorithm_marginal_saved": {
+    "Weighted Beam + LNS": 2,
+    "Standard Beam + LNS": 4,
+    "Weighted Beam": 1,
+    "Iterative EMA": 1,
+    "Cell-Assignment LNS": 2
+  },
+  "algorithm_cpu_seconds": {
+    "Standard Beam": 368.469,
+    "Weighted Beam": 806.156,
+    "Dynamic weights": 17.109,
+    "Iterative EMA": 53.266,
+    "Cell-Assignment LNS": 29.562,
+    "Standard Beam + LNS": 19.172,
+    "Exact Repair": 71.172,
+    "Weighted Beam + LNS": 7.281
+  },
+  "queries": 1616,
+  "class_results": [
+    [
+      "Sparse Tail",
+      49,
+      9,
+      10
+    ],
+    [
+      "Cleanup Tail",
+      48,
+      1,
+      2
+    ],
+    [
+      "Dense Finale",
+      118,
+      4,
+      5
+    ]
+  ],
+  "validation": {
+    "status": "PASS",
+    "datasets": {
+      "medium": {
+        "cases": 210,
+        "baseline": 5904,
+        "best": 5904,
+        "sha256": "f13b7dbe8fdae5e448798d3d11daa4ac30a6f1e04e68eb4fcc9d6f68ea0d2dd4"
+      },
+      "large": {
+        "cases": 190,
+        "baseline": 5035,
+        "best": 5035,
+        "sha256": "f01b72474deadba59f79a38aa53a75e96714be72cd44f9657c4dc56483e7ed6f"
+      },
+      "enormous": {
+        "cases": 140,
+        "baseline": 4700,
+        "best": 4690,
+        "sha256": "ca6ea372a282a127e54cf42a8f60c063cc03498a265933b700ffae7f1932f068"
+      }
+    },
+    "improved": [
+      {
+        "dataset": "enormous",
+        "case": 6,
+        "old": 43,
+        "new": 41,
+        "saved": 2,
+        "acceptances": [
+          23,
+          41
+        ]
+      },
+      {
+        "dataset": "enormous",
+        "case": 9,
+        "old": 52,
+        "new": 51,
+        "saved": 1,
+        "acceptances": [
+          28,
+          51
+        ]
+      },
+      {
+        "dataset": "enormous",
+        "case": 25,
+        "old": 23,
+        "new": 22,
+        "saved": 1,
+        "acceptances": [
+          22
+        ]
+      },
+      {
+        "dataset": "enormous",
+        "case": 30,
+        "old": 38,
+        "new": 37,
+        "saved": 1,
+        "acceptances": [
+          37
+        ]
+      },
+      {
+        "dataset": "enormous",
+        "case": 37,
+        "old": 66,
+        "new": 65,
+        "saved": 1,
+        "acceptances": [
+          35,
+          65
+        ]
+      },
+      {
+        "dataset": "enormous",
+        "case": 40,
+        "old": 36,
+        "new": 35,
+        "saved": 1,
+        "acceptances": [
+          35
+        ]
+      },
+      {
+        "dataset": "enormous",
+        "case": 72,
+        "old": 29,
+        "new": 28,
+        "saved": 1,
+        "acceptances": [
+          28
+        ]
+      },
+      {
+        "dataset": "enormous",
+        "case": 112,
+        "old": 32,
+        "new": 31,
+        "saved": 1,
+        "acceptances": [
+          31
+        ]
+      },
+      {
+        "dataset": "enormous",
+        "case": 125,
+        "old": 23,
+        "new": 22,
+        "saved": 1,
+        "acceptances": [
+          13,
+          22
+        ]
+      }
+    ],
+    "cpp": "ALL_TICKS_RELEVANT_MATTER_PASS",
+    "python_sim": "PASS",
+    "solve_l5_verify": "PASS",
+    "original_js": {
+      "status": "ORIGINAL_JS_ALL_TICK_TRACE_PASS",
+      "cases": 540,
+      "ticks": 15629,
+      "accepted_copies": 2944,
+      "source_sha256": "93acf10dd18f751be2664359aeabdb3b10ff29973039659a9386ad97e921ed02"
+    },
+    "protected_files": 8464,
+    "protected_changes": [],
+    "wall_seconds": 12.417847400065511,
+    "platform_acceptance": "NOT_SUBMITTED"
+  },
+  "claim": "Measured improvement only relative to frozen per-case best-of-local baseline; no platform submission.",
+  "ema_rounding": "floor(decay_numerator*(w-100)/10), then +100 current bottleneck bonus, clamp at 500",
+  "geometry": {
+    "radius": {
+      "sparse": 10.776,
+      "other": 10.319
+    },
+    "K": {
+      "sparse": 1.612,
+      "other": 1.44
+    },
+    "target_cells": {
+      "sparse": 109.673,
+      "other": 80.044
+    },
+    "target_density": {
+      "sparse": 0.346,
+      "other": 0.285
+    },
+    "boundary_ratio": {
+      "sparse": 0.953,
+      "other": 0.97
+    },
+    "max_ray_target": {
+      "sparse": 12.449,
+      "other": 11.286
+    }
+  },
+  "accepted_productivity": {
+    "before": {
+      "mean_tail_creation_events": 11.231,
+      "mean_late_first_cells": 11.231,
+      "mean_late_final_cells": 11.231,
+      "mean_copy_ticks": 26.308
+    },
+    "after": {
+      "mean_tail_creation_events": 12.692,
+      "mean_late_first_cells": 12.692,
+      "mean_late_final_cells": 12.692,
+      "mean_copy_ticks": 25.538
+    }
+  },
+  "acceptance_changes": [
+    [
+      6,
+      2,
+      43,
+      41,
+      [
+        23,
+        43
+      ],
+      [
+        23,
+        41
+      ]
+    ],
+    [
+      9,
+      2,
+      52,
+      51,
+      [
+        28,
+        52
+      ],
+      [
+        28,
+        51
+      ]
+    ],
+    [
+      25,
+      1,
+      23,
+      22,
+      [
+        23
+      ],
+      [
+        22
+      ]
+    ],
+    [
+      30,
+      1,
+      38,
+      37,
+      [
+        38
+      ],
+      [
+        37
+      ]
+    ],
+    [
+      37,
+      2,
+      66,
+      65,
+      [
+        35,
+        66
+      ],
+      [
+        35,
+        65
+      ]
+    ],
+    [
+      40,
+      1,
+      36,
+      35,
+      [
+        36
+      ],
+      [
+        35
+      ]
+    ],
+    [
+      72,
+      1,
+      29,
+      28,
+      [
+        29
+      ],
+      [
+        28
+      ]
+    ],
+    [
+      112,
+      1,
+      32,
+      31,
+      [
+        32
+      ],
+      [
+        31
+      ]
+    ],
+    [
+      125,
+      2,
+      23,
+      22,
+      [
+        13,
+        23
+      ],
+      [
+        13,
+        22
+      ]
+    ]
+  ]
+}

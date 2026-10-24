@@ -1,0 +1,445 @@
+{
+  "case": 62,
+  "rows": [
+    {
+      "dataset": "enormous",
+      "case": 62,
+      "method": "standard_beam_plus_LNS",
+      "seed": 7428358,
+      "width": 16,
+      "budget_ms": 1500,
+      "incumbent": 24,
+      "candidate": null,
+      "saved": 0,
+      "valid": false,
+      "program": null,
+      "rejected_program": null,
+      "error": null,
+      "weights": {},
+      "dynamic": 0,
+      "cap": 0,
+      "mode": 7,
+      "context": {
+        "start": [
+          [
+            6,
+            60,
+            39,
+            36,
+            25,
+            8
+          ],
+          59,
+          1569295511240885083817392251910632533239631077429229576067832911982011969466972241920,
+          0
+        ],
+        "copies": 1,
+        "horizon": 9,
+        "prefix": [
+          [
+            "B",
+            "T",
+            "F",
+            "T",
+            "B",
+            "F"
+          ],
+          [
+            "T",
+            "-",
+            "T",
+            "-",
+            "-",
+            "T"
+          ],
+          [
+            "-",
+            "B",
+            "F",
+            "B",
+            "-",
+            "-"
+          ],
+          [
+            "B",
+            "B",
+            "F",
+            "F",
+            "T",
+            "F"
+          ],
+          [
+            "B",
+            "B",
+            "-",
+            "-",
+            "B",
+            "F"
+          ],
+          [
+            "B",
+            "F",
+            "F",
+            "B",
+            "-",
+            "F"
+          ],
+          [
+            "B",
+            "F",
+            "F",
+            "F",
+            "F",
+            "F"
+          ],
+          [
+            "F",
+            "-",
+            "-",
+            "B",
+            "F",
+            "B"
+          ],
+          [
+            "F",
+            "B",
+            "T",
+            "B",
+            "F",
+            "F"
+          ],
+          [
+            "-",
+            "B",
+            "-",
+            "B",
+            "B",
+            "F"
+          ],
+          [
+            "B",
+            "B",
+            "-",
+            "B",
+            "B",
+            "B"
+          ],
+          [
+            "B",
+            "B",
+            "-",
+            "F",
+            "-",
+            "B"
+          ],
+          [
+            "B",
+            "B",
+            "T",
+            "T",
+            "B",
+            "-"
+          ],
+          [
+            "-",
+            "F",
+            "T",
+            "T",
+            "B",
+            "B"
+          ]
+        ],
+        "suffix": [],
+        "hint": [
+          [
+            "-",
+            "F",
+            "B",
+            "B",
+            "B",
+            "B"
+          ],
+          [
+            "T",
+            "-",
+            "T",
+            "-",
+            "B",
+            "B"
+          ],
+          [
+            "T",
+            "F",
+            "F",
+            "F",
+            "-",
+            "T"
+          ],
+          [
+            "T",
+            "B",
+            "F",
+            "F",
+            "F",
+            "-"
+          ],
+          [
+            "F",
+            "-",
+            "T",
+            "F",
+            "-",
+            "T"
+          ],
+          [
+            "T",
+            "B",
+            "T",
+            "F",
+            "B",
+            "B"
+          ],
+          [
+            "-",
+            "B",
+            "B",
+            "F",
+            "-",
+            "-"
+          ],
+          [
+            "F",
+            "-",
+            "T",
+            "T",
+            "B",
+            "-"
+          ],
+          [
+            "F",
+            "T",
+            "-",
+            "-",
+            "-",
+            "B"
+          ],
+          [
+            "F",
+            "-",
+            "-",
+            "-",
+            "T",
+            "B"
+          ]
+        ],
+        "goal": null,
+        "a": 14,
+        "b": 24
+      },
+      "near_program": [
+        [
+          "-",
+          "F",
+          "F",
+          "B",
+          "B",
+          "B"
+        ],
+        [
+          "F",
+          "B",
+          "T",
+          "B",
+          "B",
+          "B"
+        ],
+        [
+          "F",
+          "B",
+          "-",
+          "-",
+          "B",
+          "B"
+        ],
+        [
+          "-",
+          "F",
+          "-",
+          "F",
+          "F",
+          "F"
+        ],
+        [
+          "F",
+          "F",
+          "B",
+          "-",
+          "F",
+          "T"
+        ],
+        [
+          "-",
+          "F",
+          "-",
+          "F",
+          "B",
+          "B"
+        ],
+        [
+          "B",
+          "B",
+          "F",
+          "F",
+          "F",
+          "B"
+        ],
+        [
+          "F",
+          "F",
+          "F",
+          "F",
+          "-",
+          "B"
+        ],
+        [
+          "F",
+          "B",
+          "-",
+          "-",
+          "B",
+          "T"
+        ]
+      ],
+      "near_diagnostics": {
+        "kind": "UNFINISHED_TRAJECTORY",
+        "accepted": 0,
+        "missing_target": [
+          180
+        ],
+        "dirty_skirting": [],
+        "destroyed_in_last_five": [],
+        "second_emitter_distance": {
+          "180": 2
+        },
+        "defects": 1,
+        "state": [
+          [
+            2,
+            59,
+            37,
+            34,
+            27,
+            13
+          ],
+          63,
+          410142893842398425464380240288821669445042061695991388477356949371676325846794209089621898314121216,
+          0
+        ],
+        "required_copies": 1
+      },
+      "wall_seconds": 1.5014836000045761,
+      "cpu_seconds": 1.453125,
+      "reported_cpu_seconds": 1.5,
+      "evaluations": 4384089,
+      "configurations": 115110,
+      "native_ms": 1500,
+      "bridges": 0,
+      "near_cost": 3,
+      "expanded_depth": 0,
+      "deadline_hit": true,
+      "selection_digest": 0,
+      "configuration_digest": 0,
+      "python_cpu_seconds": 0.0,
+      "total_wall_seconds": 1.5044469999847934,
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "stage": "repair",
+      "source": "experiments\\universal\\case_62.json",
+      "prefix_source_method": "tail_standard_beam",
+      "prefix_source_weighted": false,
+      "prefix_source_record": "experiments\\universal\\case_62.json",
+      "original_method_label": "weighted_beam_plus_LNS",
+      "near_diagnostics_version": 2
+    },
+    {
+      "case": 62,
+      "method": "exact_repair",
+      "stage": "repair",
+      "source": "experiments\\universal\\case_62.json",
+      "window": 3,
+      "all_six_emitters": true,
+      "seed": 7428361,
+      "width": null,
+      "budget_ms": 2000,
+      "incumbent": 24,
+      "candidate": null,
+      "saved": 0,
+      "valid": false,
+      "program": null,
+      "error": null,
+      "evaluations": 0,
+      "cpu_seconds": 0.8125,
+      "wall_seconds": 0.81554789992515,
+      "solver": {
+        "status": "INFEASIBLE",
+        "seconds": 0.8146440000273287,
+        "horizon": 3,
+        "copies": 1,
+        "branches": 0,
+        "root": null
+      },
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "near_source": "tail_standard_beam",
+      "prefix_source_method": "tail_standard_beam",
+      "prefix_source_weighted": false,
+      "prefix_source_record": "experiments\\universal\\case_62.json"
+    },
+    {
+      "case": 62,
+      "method": "exact_repair",
+      "stage": "repair",
+      "source": "experiments\\universal\\case_62.json",
+      "window": 5,
+      "all_six_emitters": true,
+      "seed": 7428363,
+      "width": null,
+      "budget_ms": 2000,
+      "incumbent": 24,
+      "candidate": null,
+      "saved": 0,
+      "valid": false,
+      "program": null,
+      "error": null,
+      "evaluations": 0,
+      "cpu_seconds": 2.4375,
+      "wall_seconds": 2.4832926000235602,
+      "solver": {
+        "status": "INFEASIBLE",
+        "seconds": 2.4824998999247327,
+        "horizon": 5,
+        "copies": 1,
+        "branches": 0,
+        "root": null
+      },
+      "memory_policy": {
+        "applied": true,
+        "process_memory_mb": 1024,
+        "error": 0,
+        "child_inheritance": true
+      },
+      "near_source": "tail_standard_beam",
+      "prefix_source_method": "tail_standard_beam",
+      "prefix_source_weighted": false,
+      "prefix_source_record": "experiments\\universal\\case_62.json"
+    }
+  ]
+}
