@@ -125,13 +125,15 @@ From repository root, with Python, Node and either g++ or the installed MSVC C++
 ```powershell
 python -B research/2026-10-24-gap-analysis/p0/run.py
 python -B research/2026-10-24-gap-analysis/p0/run.py --pilot --measured --budget-ms 5000
+# Fresh isolated search rather than resume cached evidence:
+python -B research/2026-10-24-gap-analysis/p0/run.py --pilot --run-name reproduction1 --budget-ms 5000
 cd research/2026-10-24-gap-analysis/p0
 ./witness_probe.exe > witness_probe.jsonl
 cd ../../..
 python -B research/2026-10-24-gap-analysis/p0/report.py
 ```
 
-On Linux the compiled program is `./witness_probe` (without .exe). Frozen cases, reference answer files, fixtures, build hashes/logs, raw and normalized results are included. Completed pilot cases are resumed, not silently rerun; the configuration must match. `primary_engine.cpp` preserves the exact source used by the first bounded run; the final engine adds an optional observational witness-rank field which is unused in ordinary searches. Physics body equality is asserted against both archived engines.
+On Linux the compiled program is `./witness_probe` (without .exe). Frozen cases, reference answer files, fixtures, build hashes/logs, raw and normalized results are included. Completed pilot cases are resumed, not silently rerun; the configuration must match. Use a new --run-name for a fresh isolated search without overwriting recorded evidence. `primary_engine.cpp` preserves the exact source used by the first bounded run; the final engine adds an optional observational witness-rank field which is unused in ordinary searches. Physics body equality is asserted against both archived engines.
 
 ## GIT STATE
 

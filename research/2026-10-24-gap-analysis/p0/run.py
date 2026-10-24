@@ -76,10 +76,10 @@ def regress(fixtures):
         assert body(a)==body(b)
     gate=dict(status='PASS',legacy_false_negatives=len(legacy),positive_controls=controls,negative_js=negative,negative_cpp=raw[0],rtds=rt[0],transition_physics='UNCHANGED',protected_files=verify_protected())
     save(BASE/'regression.json',gate);print('REGRESSION PASS 12 positives, 6 exact JS negatives, synthetic forbidden/early/excess controls, RTDS, dedup, reconstruction',flush=True)
-def pilot(fixtures,budget_ms,measured=False):
+def pilot(fixtures,budget_ms,measured=False,run_name=None):
     assert json.loads((BASE/'regression.json').read_text())['status']=='PASS'
     config=dict(indices=[f['global_index'] for f in fixtures[:8]],incumbent_ticks=sum(f['ticks'] for f in fixtures[:8]),WMIN=4,WMAX=10,WIDTH=300,actions=4096,seed='NONE_DETERMINISTIC_FULL_ACTIONS_AND_STATE_TIEBREAK',window_budget_ms=budget_ms,legacy_parameters='defaults recovered; original environment not recorded; deadline is an explicit new bound',expansion_scope='ONLY_HISTORICAL_8_CASES')
-    stem='pilot_measured' if measured else 'pilot';config_path=BASE/f'{stem}_config.json'
+    stem=run_name or ('pilot_measured' if measured else 'pilot');config_path=BASE/f'{stem}_config.json'
     if config_path.exists():assert json.loads(config_path.read_text())==config
     else:save(config_path,config)
     output=BASE/stem;output.mkdir(exist_ok=True)
@@ -105,6 +105,7 @@ def pilot(fixtures,budget_ms,measured=False):
     cpu_values=[json.loads(p.read_text()).get('case_cpu_seconds') for p in output.glob('case_*.json')]
     save(BASE/f'{stem}_summary.json',dict(status='COMPLETED_BOUNDED_PILOT',cases=8,incumbent=324,best_ticks=324-sum(best.values()),saved=sum(best.values()),best_per_case=best,windows=len(allrows),timeouts=sum(r['timeout'] for r in allrows),terminal_transitions=sum(r['terminal_transitions'] for r in allrows),reconstructed=sum(r['reconstructed'] for r in allrows),cpu_seconds=sum(cpu_values) if all(v is not None for v in cpu_values) else None,wall_seconds=sum(r['wall_seconds'] for r in allrows),protected_files_unchanged=protected))
 if __name__=='__main__':
-    ap=argparse.ArgumentParser();ap.add_argument('--pilot',action='store_true');ap.add_argument('--measured',action='store_true');ap.add_argument('--budget-ms',type=int,default=5000);args=ap.parse_args()
+    ap=argparse.ArgumentParser();ap.add_argument('--pilot',action='store_true');ap.add_argument('--measured',action='store_true');ap.add_argument('--budget-ms',type=int,default=5000);ap.add_argument('--run-name',help='New isolated result name for a fresh search; existing names resume');args=ap.parse_args()
+    if args.run_name and (not args.run_name.replace('_','').replace('-','').isalnum() or not args.run_name.isascii()):ap.error('run-name must contain only ASCII letters, digits, underscore or hyphen')
     build();fixtures=json.loads((BASE/'fixtures.json').read_text());regress(fixtures)
-    if args.pilot:pilot(fixtures,args.budget_ms,args.measured)
+    if args.pilot:pilot(fixtures,args.budget_ms,args.measured,args.run_name)
