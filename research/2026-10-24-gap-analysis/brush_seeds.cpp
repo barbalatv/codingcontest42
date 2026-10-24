@@ -26,8 +26,9 @@ int main(int argc,char**argv){
     for(int k=from;k<min(to,(int)insts.size());k++){
         const Inst& in=insts[k];
         Rng rng(0x5DEECE66Dull*(k+7));
-        vector<pair<int,array<int,6>>> best;   // (covered, pose)
-        set<array<int,6>> seen;
+        struct Seed { int cover; array<int,6> pose; int mask; };
+        vector<Seed> best;                     // (covered, pose, activeMask)
+        set<array<int,7>> seen;
         int maskLim = 64;
         for(int s=0;s<samples;s++){
             array<int,6> pose;
@@ -46,17 +47,16 @@ int main(int argc,char**argv){
             int other=pc(h2)-t;
             if(other) continue;                       // every double-hit cell must be useful
             if(t<3) continue;
-            if(seen.count(pose)) continue;
-            seen.insert(pose);
-            best.push_back({t,pose});
+            array<int,7> key{pose[0],pose[1],pose[2],pose[3],pose[4],pose[5],act};
+            if(!seen.insert(key).second) continue;
+            best.push_back({t,pose,act});
         }
-        sort(best.begin(),best.end(),[](auto&a,auto&b){return a.first>b.first;});
-        printf("case %d nT=%d brush=%d need=%d\n", k, pc(in.target), best.empty()?0:best[0].first,
-               best.empty()?0:(pc(in.target)+best[0].first-1)/best[0].first);
+        sort(best.begin(),best.end(),[](const Seed&a,const Seed&b){return a.cover>b.cover;});
+        printf("case %d nT=%d best_sampled_brush=%d\n", k, pc(in.target), best.empty()?0:best[0].cover);
         for(int j=0;j<(int)min((size_t)topN,best.size());j++)
-            printf("   cover=%3d pose %d %d %d %d %d %d\n", best[j].first,
-                   best[j].second[0],best[j].second[1],best[j].second[2],
-                   best[j].second[3],best[j].second[4],best[j].second[5]);
+            printf("   cover=%3d mask=%d/%06d pose %d %d %d %d %d %d\n", best[j].cover,
+                   best[j].mask, (int)(best[j].mask), best[j].pose[0],best[j].pose[1],best[j].pose[2],
+                   best[j].pose[3],best[j].pose[4],best[j].pose[5]);
         fflush(stdout);
     }
 }
