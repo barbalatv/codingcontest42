@@ -1,0 +1,118 @@
+// Universal cell-first scheduler, C++20. Geometry masks are supplied by the
+// audited repository geometry; acceptance and all temporal transitions live here.
+#include <algorithm>
+#include <array>
+#include <bit>
+#include <chrono>
+#include <cmath>
+#include <cstdint>
+#include <iostream>
+#include <numeric>
+#include <random>
+#include <unordered_map>
+#include <unordered_set>
+#include <vector>
+using namespace std;
+using U=uint64_t;using Clock=chrono::steady_clock;
+constexpr int MW=8;
+struct Bits {array<U,MW>b{};bool operator==(const Bits&)const=default;};
+int R,L,W,NT,K,H,WIDTH,MODE,SEED;Bits target,skirt;
+array<array<Bits,256>,6> ray;
+array<array<array<int,4>,256>,6> nextByte;
+vector<array<int,6>> origin;
+vector<int> targetCells,skirtCells;
+Clock::time_point deadline;mt19937 rng;long long evaluations,configurations,bridges;
+U mix(U x){x^=x>>30;x*=0xbf58476d1ce4e5b9ULL;x^=x>>27;x*=0x94d049bb133111ebULL;return x^(x>>31);}
+int pc(U x){return popcount(x);}
+bool isset(const Bits&a,int c){return (a.b[c/64]>>(c%64))&1;}
+struct Effect{Bits one,two,three;};
+struct State{U pose=0;Bits m;int made=0;};
+struct Node{State s;int parent=-1,score=0;vector<int>seq;};
+struct History{int parent;vector<int>seq;};
+vector<History> history;
+vector<int> bestProgram;vector<pair<U,vector<int>>> found;
+vector<U> referencePoses;U goalPose;State startState;
+Effect effect(U pose){Effect v;for(int e=0;e<6;e++){auto&r=ray[e][(pose>>(8*e))&255];for(int w=0;w<W;w++){v.three.b[w]|=v.two.b[w]&r.b[w];v.two.b[w]|=v.one.b[w]&r.b[w];v.one.b[w]|=r.b[w];}}return v;}
+bool applyEffect(State&s,const Effect&v){bool ok=true;for(int w=0;w<W;w++){s.m.b[w]=(s.m.b[w]|v.two.b[w])&~v.three.b[w];ok&=(s.m.b[w]&target.b[w])==target.b[w]&&!(s.m.b[w]&skirt.b[w]);}if(ok){s.m=Bits();s.made++;}return ok;}
+State step(State s,int action){U q=0;for(int e=0;e<6;e++)q|=U(nextByte[e][(s.pose>>(8*e))&255][(action>>(2*e))&3])<<(8*e);s.pose=q;applyEffect(s,effect(q));evaluations++;return s;}
+int distance(U a,U b){int d=0;for(int e=0;e<6;e++){int p=(a>>(8*e))&127,q=(b>>(8*e))&127,v=abs(p-q);d=max(d,min(v,L-v)+int(((a^b)>>(8*e+7))&1));}return d;}
+int byteDistance(int a,int b){int d=abs((a&127)-(b&127));return min(d,L-d)+int((a&128)!=(b&128));}
+U fingerprint(const State&s){U h=mix(s.pose)^mix(s.made+391);for(int w=0;w<W;w++)h^=mix(s.m.b[w]+w*31337ULL);return h;}
+vector<int> recover(int parent,const vector<int>&seq){vector<vector<int>>chunks={seq};for(int p=parent;p>=0;p=history[p].parent)chunks.push_back(history[p].seq);vector<int>out;for(auto it=chunks.rbegin();it!=chunks.rend();it++)out.insert(out.end(),it->begin(),it->end());return out;}
+bool save(const vector<int>&p){State s=startState;for(int t=0;t<(int)p.size();t++){s=step(s,p[t]);if(s.made>=K){if(s.made!=K||(goalPose!=UINT64_MAX&&s.pose!=goalPose))return false;vector<int>q(p.begin(),p.begin()+t+1);if(bestProgram.empty()||q.size()<bestProgram.size())bestProgram=q;if(found.size()<32)found.push_back({s.pose,q});return true;}}return false;}
+int stateScore(const State&s,int variant){int good=0,bad=0,potential=0;auto v=effect(s.pose);for(int w=0;w<W;w++){good+=pc(s.m.b[w]&target.b[w]);bad+=pc(s.m.b[w]&skirt.b[w]);potential+=pc(v.one.b[w]&target.b[w]&~s.m.b[w]);}
+ int score=s.made*(NT*200+200)+good*200-bad*(variant%3==0?140:variant%3==1?250:380)+potential*9;
+ // Distance-to-cell is a lookahead heuristic, never a claimed lower bound.
+ vector<int>missing;for(int c:targetCells)if(!isset(s.m,c))missing.push_back(c);
+ int penalty=0;for(int j=0;j<min(8,(int)missing.size());j++){int c=missing[(j*missing.size())/min(8,(int)missing.size())];int a=999,b=999;for(int e=0;e<6;e++){int d=byteDistance((s.pose>>(8*e))&255,origin[c][e]+128);if(d<a){b=a;a=d;}else b=min(b,d);}penalty+=b;}
+ score-=penalty*4;if(goalPose!=UINT64_MAX)score-=distance(s.pose,goalPose)*28;return score;}
+void keep(vector<Node>&pool,Node n,int cap){auto cmp=[](const Node&a,const Node&b){return a.score>b.score;};if((int)pool.size()<cap){pool.push_back(move(n));push_heap(pool.begin(),pool.end(),cmp);}else if(n.score>pool.front().score){pop_heap(pool.begin(),pool.end(),cmp);pool.back()=move(n);push_heap(pool.begin(),pool.end(),cmp);}}
+void prune(vector<Node>&pool){sort(pool.begin(),pool.end(),[](const Node&a,const Node&b){return a.score>b.score;});unordered_set<U>seen,boards;array<int,7>activities{};vector<Node>out;for(int pass=0;pass<3&&(int)out.size()<WIDTH;pass++)for(auto&n:pool){if((int)out.size()>=WIDTH)break;U h=fingerprint(n.s);if(seen.count(h))continue;U bh=mix(n.s.made+391);for(int w=0;w<W;w++)bh^=mix(n.s.m.b[w]+w*31337ULL);int active=0;for(int e=0;e<6;e++)active+=((n.s.pose>>(8*e+7))&1);if(pass==0&&(boards.count(bh)||activities[active]>=max(2,WIDTH/5)))continue;if(pass==1&&activities[active]>=max(4,WIDTH/3))continue;seen.insert(h);boards.insert(bh);activities[active]++;history.push_back({n.parent,n.seq});n.parent=int(history.size())-1;n.seq.clear();out.push_back(move(n));}pool=move(out);}
+int snapshotScore(const State&s,U pose){auto v=effect(pose);int score=0;for(int w=0;w<W;w++){U h2=v.two.b[w]&~v.three.b[w],m=s.m.b[w];score+=pc(h2&target.b[w]&~m)*100+pc(v.three.b[w]&skirt.b[w]&m)*110-pc(v.three.b[w]&target.b[w]&m)*85-pc(h2&skirt.b[w]&~m)*70-pc(v.three.b[w]&target.b[w])*8;}return score;}
+// Master: assign an unmet cell to any of its fifteen possible emitter pairs.
+// Remaining emitters are joint clippers or useful rays, with reachability built in.
+vector<U> configurationsFrom(const State&s,int D,bool chordOnly){vector<pair<int,U>>pool;unordered_set<U>seen;vector<int>cells;
+ for(int c:targetCells)if(!isset(s.m,c))cells.push_back(c);
+ if(cells.empty())cells=targetCells;
+ shuffle(cells.begin(),cells.end(),rng);if(cells.size()>10)cells.resize(10);
+ for(int c:skirtCells)if(isset(s.m,c)&&cells.size()<14)cells.push_back(c);
+ int attempts=0;
+ for(int c:cells){array<int,15>pairs; iota(pairs.begin(),pairs.end(),0);shuffle(pairs.begin(),pairs.end(),rng);int ix=0;
+ vector<pair<int,int>>ee;for(int a=0;a<6;a++)for(int b=a+1;b<6;b++)ee.push_back({a,b});
+ for(int z:pairs){auto[a,b]=ee[z];if(chordOnly&&b!=a+3)continue;
+  int aa=origin[c][a]+128,bb=origin[c][b]+128;
+  if(byteDistance((s.pose>>(8*a))&255,aa)>D||byteDistance((s.pose>>(8*b))&255,bb)>D)continue;
+  U pose=(s.pose&~((255ULL<<(8*a))|(255ULL<<(8*b))))|(U(aa)<<(8*a))|(U(bb)<<(8*b));
+  // Coordinate subproblem on physically reachable ray choices. Non-pair rays
+  // can mask dirty cells or build another group; inactive rays keep their pose.
+  for(int pass=0;pass<2;pass++)for(int j=0;j<6;j++){int e=(j+SEED+pass)%6;if(e==a||e==b)continue;int before=(s.pose>>(8*e))&255;vector<int>options={before,before^128};
+   for(int delta=-D;delta<=D;delta++){int p=((before&127)+delta+L)%L;options.push_back(p+(before&128));if(abs(delta)+1<=D)options.push_back(p+((before&128)^128));}
+   int best=snapshotScore(s,pose);U chosen=pose;
+   for(int q:options){if(byteDistance(before,q)>D)continue;U next=(pose&~(255ULL<<(8*e)))|(U(q)<<(8*e));int value=snapshotScore(s,next);configurations++;if(value>best||(value==best&&(rng()%9==0))){best=value;chosen=next;}}pose=chosen;
+  }
+  if(seen.insert(pose).second)pool.push_back({snapshotScore(s,pose),pose});
+  if(++attempts>=36)break;
+ }if(attempts>=36)break;}
+ sort(pool.rbegin(),pool.rend());vector<U>out;for(int i=0;i<min(12,(int)pool.size());i++)out.push_back(pool[i].second);
+ for(U q:referencePoses)if(distance(s.pose,q)<=D&&out.size()<16)out.push_back(q);
+ return out;}
+vector<int> schedule(U start,U finish,int D,int timing){vector<int>out(D);for(int e=0;e<6;e++){int a=(start>>(8*e))&255,b=(finish>>(8*e))&255;int d=((b&127)-(a&127)+L+L/2)%L-L/2;vector<int>ops(abs(d),d>0?2:1);if((a&128)!=(b&128)){if((timing+e)%2==0)ops.insert(ops.begin(),3);else ops.push_back(3);}if((int)ops.size()>D)return {};int slack=D-int(ops.size()),off=timing==0?0:timing==1?slack:int(rng()%(slack+1));for(int j=0;j<(int)ops.size();j++)out[j+off]|=ops[j]<<(2*e);}return out;}
+void submit(const Node&parent,const vector<int>&seq,int t,vector<vector<Node>>&layers,int cap){if(seq.empty())return;State s=parent.s;vector<int>prefix;for(int a:seq){s=step(s,a);prefix.push_back(a);if(s.made>=K){if(s.made==K&&(goalPose==UINT64_MAX||s.pose==goalPose))save(recover(parent.parent,prefix));return;}}Node n;n.s=s;n.parent=parent.parent;n.seq=seq;n.score=stateScore(s,SEED);keep(layers[t+seq.size()],move(n),cap);}
+struct Triple {U pose=0;Effect v;int action=0;};
+array<Triple,64> triples(U pose,int first){array<Triple,64>out{};for(int code=0;code<64;code++){auto&z=out[code];for(int j=0;j<3;j++){int e=first+j,op=(code>>(2*j))&3,b=nextByte[e][(pose>>(8*e))&255][op];z.pose|=U(b)<<(8*e);z.action|=op<<(2*e);auto&r=ray[e][b];for(int w=0;w<W;w++){z.v.three.b[w]|=z.v.two.b[w]&r.b[w];z.v.two.b[w]|=z.v.one.b[w]&r.b[w];z.v.one.b[w]|=r.b[w];}}}return out;}
+void commandExpand(const Node&parent,int t,vector<vector<Node>>&layers,int cap,bool exhaustive){auto aa=triples(parent.s.pose,0),bb=triples(parent.s.pose,3);for(auto&a:aa)for(auto&b:bb){if(!exhaustive&&((rng()&7)!=0))continue;if((++evaluations&4095)==0&&Clock::now()>=deadline)return;Effect v;for(int w=0;w<W;w++){v.one.b[w]=a.v.one.b[w]|b.v.one.b[w];v.two.b[w]=a.v.two.b[w]|b.v.two.b[w]|(a.v.one.b[w]&b.v.one.b[w]);v.three.b[w]=a.v.three.b[w]|b.v.three.b[w]|(a.v.two.b[w]&b.v.one.b[w])|(a.v.one.b[w]&b.v.two.b[w]);}State s=parent.s;s.pose=a.pose|b.pose;bool accepted=applyEffect(s,v);vector<int>seq={a.action|b.action};if(s.made>=K){if(accepted&&s.made==K&&(goalPose==UINT64_MAX||s.pose==goalPose))save(recover(parent.parent,seq));continue;}Node n;n.s=s;n.parent=parent.parent;n.seq=seq;n.score=stateScore(s,SEED);keep(layers[t+1],move(n),cap);}}
+void forward(){history.clear();vector<vector<Node>>layers(H+1);Node root;root.s=startState;layers[0].push_back(root);int cap=WIDTH*5;
+ for(int t=0;t<H&&Clock::now()<deadline;t++){auto&beam=layers[t];if(beam.empty())continue;prune(beam);for(auto&n:beam){if(Clock::now()>=deadline)return;if(goalPose!=UINT64_MAX&&distance(n.s.pose,goalPose)>H-t)continue;
+  if(MODE==0)commandExpand(n,t,layers,cap,true);
+  else{
+   // A sparse command safety net preserves neutral and temporarily worse moves.
+   commandExpand(n,t,layers,cap,false);
+   int maxD=(MODE==1?2:4);
+   for(int D=1;D<=min(maxD,H-t);D++){
+    auto configs=configurationsFrom(n.s,D,MODE==2);
+    for(U q:configs)for(int timing=0;timing<(D==1?1:3);timing++){if(Clock::now()>=deadline)return;submit(n,schedule(n.s.pose,q,D,timing),t,layers,cap);}
+   }
+  }
+ }}
+}
+struct Back{U pose=0;Bits ones,zeros;vector<int>tail;int score=0;};
+vector<Back> regressFrontier(int maxDepth,int width){vector<Back>beam;vector<U>ends=referencePoses;auto extra=configurationsFrom(startState,min(6,H),false);ends.insert(ends.end(),extra.begin(),extra.end());for(U p:ends){Back b;b.pose=p;b.ones=target;b.zeros=skirt;beam.push_back(b);}vector<Back>checkpoints;
+ for(int depth=0;depth<maxDepth&&Clock::now()<deadline;depth++){vector<Back>pool;for(auto&n:beam){auto v=effect(n.pose);bool valid=true;Bits ones,zeros;for(int w=0;w<W;w++){if((v.three.b[w]&n.ones.b[w])|((v.two.b[w]&~v.three.b[w])&n.zeros.b[w]))valid=false;ones.b[w]=n.ones.b[w]&~v.two.b[w];zeros.b[w]=n.zeros.b[w]&~v.three.b[w];}if(!valid)continue; // Invalid endpoint only rejects this root.
+ auto aa=triples(n.pose,0),bb=triples(n.pose,3);for(auto&a:aa)for(auto&b:bb){if((++evaluations&4095)==0&&Clock::now()>=deadline)return checkpoints;Back z;z.pose=a.pose|b.pose;int dist=distance(startState.pose,z.pose);if(dist+depth+1>H)continue;z.ones=ones;z.zeros=zeros;int backward=a.action|b.action,forward=0;for(int e=0;e<6;e++){int op=(backward>>(2*e))&3;forward|=(op==1?2:op==2?1:op)<<(2*e);}z.tail={forward};z.tail.insert(z.tail.end(),n.tail.begin(),n.tail.end());int rem=0,zz=0;for(int w=0;w<W;w++){rem+=pc(ones.b[w]);zz+=pc(zeros.b[w]);}z.score=-rem*100-zz*12-dist*35;pool.push_back(move(z));if(pool.size()>size_t(width*12)){nth_element(pool.begin(),pool.begin()+width*4,pool.end(),[](auto&a,auto&b){return a.score>b.score;});pool.resize(width*4);}}}
+ sort(pool.begin(),pool.end(),[](auto&a,auto&b){return a.score>b.score;});unordered_set<U>seen;beam.clear();for(auto&n:pool){U h=mix(n.pose);for(int w=0;w<W;w++)h^=mix(n.ones.b[w]+w)^mix(n.zeros.b[w]+w+713);if(!seen.insert(h).second)continue;beam.push_back(n);if(beam.size()>=size_t(width))break;}for(int i=0;i<min(12,(int)beam.size());i++)checkpoints.push_back(beam[i]);}
+ return checkpoints;}
+void bidirectional(){auto overall=deadline;auto now=Clock::now();deadline=now+(overall-now)/3;auto backs=regressFrontier(min(H-1,5),max(8,WIDTH/2));deadline=overall;if(backs.empty())return;history.clear();vector<vector<Node>>layers(H+1);Node root;root.s=startState;layers[0].push_back(root);
+ for(int t=0;t<H&&Clock::now()<deadline;t++){auto&beam=layers[t];if(beam.empty())continue;prune(beam);for(auto&n:beam){for(auto&b:backs){int D=distance(n.s.pose,b.pose);if(t+D+int(b.tail.size())>H||D>4)continue;for(int slack=0;slack<=min(1,H-t-D-int(b.tail.size()));slack++)for(int timing=0;timing<3;timing++){auto seq=schedule(n.s.pose,b.pose,D+slack,timing);State st=n.s;for(int a:seq)st=step(st,a);bridges++;bool ok=st.made==0;for(int w=0;w<W;w++)ok&=!(b.ones.b[w]&~st.m.b[w])&&!(b.zeros.b[w]&st.m.b[w]);if(ok){seq.insert(seq.end(),b.tail.begin(),b.tail.end());save(recover(n.parent,seq));}}}
+ if(t+1<H)commandExpand(n,t,layers,WIDTH*4,MODE==4);
+ if(MODE>=5)for(int D=2;D<=min(4,H-t);D++)for(U q:configurationsFrom(n.s,D,MODE==6))submit(n,schedule(n.s.pose,q,D,rng()%3),t,layers,WIDTH*4);
+ if(Clock::now()>=deadline)return;}}
+}
+int main(){ios::sync_with_stdio(false);cin.tie(nullptr);int ms;while(cin>>R>>W>>NT>>K>>H>>WIDTH>>ms>>SEED>>MODE>>startState.pose>>goalPose){
+ L=6*R;if(W<1||W>MW||L>128)return 2;target=Bits();skirt=Bits();for(int w=0;w<W;w++)cin>>target.b[w];for(int w=0;w<W;w++)cin>>skirt.b[w];for(int e=0;e<6;e++)for(int p=0;p<L;p++){ray[e][p]=Bits();ray[e][p+128]=Bits();for(int w=0;w<W;w++)cin>>ray[e][p+128].b[w];for(int a=0;a<2;a++){int b=p+128*a;nextByte[e][b]={b,(p+L-1)%L+128*a,(p+1)%L+128*a,p+128*(1-a)};}}
+ startState.m=Bits();startState.made=0;for(int w=0;w<W;w++)cin>>startState.m.b[w];int n;cin>>n;vector<int>hint(n);for(int&a:hint)cin>>a;cin>>n;referencePoses.resize(n);for(U&p:referencePoses)cin>>p;
+ rng.seed(SEED);evaluations=configurations=bridges=0;bestProgram.clear();found.clear();auto begin=Clock::now();deadline=begin+chrono::milliseconds(ms);
+ origin.assign(W*64,{});targetCells.clear();skirtCells.clear();for(int c=0;c<W*64;c++){if(isset(target,c))targetCells.push_back(c);if(isset(skirt,c))skirtCells.push_back(c);if(!isset(target,c)&&!isset(skirt,c))continue;for(int e=0;e<6;e++){origin[c][e]=-1;for(int p=0;p<L;p++)if(isset(ray[e][p+128],c)){origin[c][e]=p;break;}if(origin[c][e]<0)return 3;}}
+ if(MODE==9){State s=startState;cout<<hint.size();for(int a:hint){s=step(s,a);cout<<' '<<s.pose<<' '<<s.made;for(int w=0;w<W;w++)cout<<' '<<s.m.b[w];}cout<<'\n'<<flush;continue;}
+ if(MODE>=4)bidirectional();else forward();
+ auto elapsed=chrono::duration_cast<chrono::milliseconds>(Clock::now()-begin).count();cout<<bestProgram.size()<<' '<<evaluations<<' '<<configurations<<' '<<elapsed<<' '<<bridges;for(int a:bestProgram)cout<<' '<<a;cout<<' '<<found.size();for(auto&[q,p]:found){cout<<' '<<q<<' '<<p.size();for(int a:p)cout<<' '<<a;}cout<<'\n'<<flush;
+ }}

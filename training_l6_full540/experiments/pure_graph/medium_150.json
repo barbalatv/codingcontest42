@@ -1,0 +1,86 @@
+{
+  "dataset": "medium",
+  "case": 150,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 13,
+  "best_before": 13,
+  "pure_graph_ticks": 13,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 396,
+  "edges": 1064,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2,
+    "independent_pre_history_prefix": 32
+  },
+  "graph_cpu_seconds": 0.078125,
+  "graph_wall_seconds": 0.1297230999916792,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        23,
+        22,
+        13,
+        14,
+        9,
+        2,
+        41
+      ],
+      "copies": 3,
+      "ticks": 7,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        23,
+        22,
+        13,
+        14,
+        9,
+        2,
+        41
+      ],
+      "end": [
+        22,
+        22,
+        13,
+        15,
+        9,
+        1,
+        63
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        22,
+        22,
+        13,
+        15,
+        9,
+        1,
+        63
+      ],
+      "end": [
+        22,
+        21,
+        15,
+        14,
+        9,
+        2,
+        62
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "verified_opposed_symmetry"
+    }
+  ]
+}

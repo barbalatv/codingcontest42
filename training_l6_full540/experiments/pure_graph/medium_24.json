@@ -1,0 +1,178 @@
+{
+  "dataset": "medium",
+  "case": 24,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 29,
+  "best_before": 29,
+  "pure_graph_ticks": 29,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 300,
+  "edges": 868,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2,
+    "independent_pre_history_prefix": 32
+  },
+  "graph_cpu_seconds": 0.09375,
+  "graph_wall_seconds": 0.14077800000086427,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        0,
+        14,
+        13,
+        6,
+        4,
+        3,
+        47
+      ],
+      "copies": 3,
+      "ticks": 7,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        0,
+        14,
+        13,
+        6,
+        4,
+        3,
+        47
+      ],
+      "end": [
+        17,
+        13,
+        12,
+        7,
+        4,
+        2,
+        63
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        17,
+        13,
+        12,
+        7,
+        4,
+        2,
+        63
+      ],
+      "end": [
+        17,
+        13,
+        13,
+        7,
+        4,
+        3,
+        63
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        17,
+        13,
+        13,
+        7,
+        4,
+        3,
+        63
+      ],
+      "end": [
+        17,
+        13,
+        12,
+        7,
+        4,
+        2,
+        63
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        17,
+        13,
+        12,
+        7,
+        4,
+        2,
+        63
+      ],
+      "end": [
+        17,
+        13,
+        13,
+        7,
+        4,
+        3,
+        63
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        17,
+        13,
+        13,
+        7,
+        4,
+        3,
+        63
+      ],
+      "end": [
+        17,
+        13,
+        12,
+        7,
+        4,
+        2,
+        63
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        17,
+        13,
+        12,
+        7,
+        4,
+        2,
+        63
+      ],
+      "end": [
+        17,
+        13,
+        13,
+        7,
+        4,
+        3,
+        63
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "generalized_bounce"
+    }
+  ]
+}

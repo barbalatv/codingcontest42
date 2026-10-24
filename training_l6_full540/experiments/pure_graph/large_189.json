@@ -1,0 +1,131 @@
+{
+  "dataset": "large",
+  "case": 189,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 21,
+  "best_before": 21,
+  "pure_graph_ticks": 39,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 40,
+  "edges": 144,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2
+  },
+  "graph_cpu_seconds": 0.0625,
+  "graph_wall_seconds": 0.11677550000604242,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        0,
+        34,
+        28,
+        24,
+        14,
+        9,
+        46
+      ],
+      "copies": 2,
+      "ticks": 17,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        0,
+        34,
+        28,
+        24,
+        14,
+        9,
+        46
+      ],
+      "end": [
+        1,
+        33,
+        28,
+        22,
+        13,
+        9,
+        31
+      ],
+      "copies": 1,
+      "ticks": 5,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        1,
+        33,
+        28,
+        22,
+        13,
+        9,
+        31
+      ],
+      "end": [
+        0,
+        34,
+        28,
+        24,
+        14,
+        9,
+        46
+      ],
+      "copies": 1,
+      "ticks": 6,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        0,
+        34,
+        28,
+        24,
+        14,
+        9,
+        46
+      ],
+      "end": [
+        1,
+        33,
+        28,
+        22,
+        13,
+        9,
+        31
+      ],
+      "copies": 1,
+      "ticks": 5,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        1,
+        33,
+        28,
+        22,
+        13,
+        9,
+        31
+      ],
+      "end": [
+        0,
+        34,
+        28,
+        24,
+        14,
+        9,
+        46
+      ],
+      "copies": 1,
+      "ticks": 6,
+      "origin": "B_partial"
+    }
+  ]
+}

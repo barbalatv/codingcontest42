@@ -1,0 +1,132 @@
+{
+  "dataset": "medium",
+  "case": 87,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 33,
+  "best_before": 33,
+  "pure_graph_ticks": 62,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 245,
+  "edges": 734,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2,
+    "independent_pre_history_prefix": 32
+  },
+  "graph_cpu_seconds": 0.15625,
+  "graph_wall_seconds": 0.20288670004811138,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        3,
+        18,
+        15,
+        9,
+        10,
+        2,
+        27
+      ],
+      "copies": 2,
+      "ticks": 9,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        3,
+        18,
+        15,
+        9,
+        10,
+        2,
+        27
+      ],
+      "end": [
+        1,
+        18,
+        15,
+        10,
+        8,
+        1,
+        63
+      ],
+      "copies": 1,
+      "ticks": 3,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        1,
+        18,
+        15,
+        10,
+        8,
+        1,
+        63
+      ],
+      "end": [
+        3,
+        18,
+        13,
+        9,
+        9,
+        2,
+        55
+      ],
+      "copies": 3,
+      "ticks": 24,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        3,
+        18,
+        13,
+        9,
+        9,
+        2,
+        55
+      ],
+      "end": [
+        3,
+        18,
+        15,
+        9,
+        10,
+        2,
+        27
+      ],
+      "copies": 3,
+      "ticks": 23,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        3,
+        18,
+        15,
+        9,
+        10,
+        2,
+        27
+      ],
+      "end": [
+        1,
+        18,
+        15,
+        10,
+        8,
+        1,
+        63
+      ],
+      "copies": 1,
+      "ticks": 3,
+      "origin": "generalized_bounce"
+    }
+  ]
+}

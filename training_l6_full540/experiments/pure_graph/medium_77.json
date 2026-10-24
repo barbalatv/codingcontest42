@@ -1,0 +1,132 @@
+{
+  "dataset": "medium",
+  "case": 77,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 28,
+  "best_before": 28,
+  "pure_graph_ticks": 28,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 622,
+  "edges": 1720,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2,
+    "independent_pre_history_prefix": 32
+  },
+  "graph_cpu_seconds": 0.109375,
+  "graph_wall_seconds": 0.16675099998246878,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        0,
+        15,
+        11,
+        7,
+        9,
+        4,
+        29
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        0,
+        15,
+        11,
+        7,
+        9,
+        4,
+        29
+      ],
+      "end": [
+        17,
+        16,
+        11,
+        8,
+        7,
+        3,
+        63
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        17,
+        16,
+        11,
+        8,
+        7,
+        3,
+        63
+      ],
+      "end": [
+        1,
+        14,
+        11,
+        6,
+        9,
+        5,
+        53
+      ],
+      "copies": 3,
+      "ticks": 6,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        1,
+        14,
+        11,
+        6,
+        9,
+        5,
+        53
+      ],
+      "end": [
+        1,
+        13,
+        9,
+        9,
+        8,
+        4,
+        47
+      ],
+      "copies": 4,
+      "ticks": 8,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        1,
+        13,
+        9,
+        9,
+        8,
+        4,
+        47
+      ],
+      "end": [
+        2,
+        13,
+        11,
+        9,
+        9,
+        5,
+        55
+      ],
+      "copies": 4,
+      "ticks": 8,
+      "origin": "verified_opposed_symmetry"
+    }
+  ]
+}

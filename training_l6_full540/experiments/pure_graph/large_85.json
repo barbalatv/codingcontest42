@@ -1,0 +1,62 @@
+{
+  "dataset": "large",
+  "case": 85,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 17,
+  "best_before": 17,
+  "pure_graph_ticks": 25,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 48,
+  "edges": 104,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2
+  },
+  "graph_cpu_seconds": 0.03125,
+  "graph_wall_seconds": 0.0720242999959737,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        35,
+        31,
+        22,
+        25,
+        12,
+        3,
+        53
+      ],
+      "copies": 2,
+      "ticks": 16,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        35,
+        31,
+        22,
+        25,
+        12,
+        3,
+        53
+      ],
+      "end": [
+        0,
+        33,
+        22,
+        21,
+        13,
+        5,
+        62
+      ],
+      "copies": 1,
+      "ticks": 9,
+      "origin": "generalized_bounce"
+    }
+  ]
+}

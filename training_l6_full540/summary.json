@@ -1,0 +1,1542 @@
+{
+  "status": "FULL_COVERAGE_COMPLETED_LOCAL_VALIDATED",
+  "date": "2026-10-24",
+  "datasets": {
+    "medium": {
+      "cases": 210,
+      "baseline": 5915,
+      "best": 5904,
+      "saved": 11,
+      "improved_cases": 9
+    },
+    "large": {
+      "cases": 190,
+      "baseline": 5092,
+      "best": 5047,
+      "saved": 45,
+      "improved_cases": 24
+    },
+    "enormous": {
+      "cases": 140,
+      "baseline": 4714,
+      "best": 4706,
+      "saved": 8,
+      "improved_cases": 7
+    }
+  },
+  "baseline": 15721,
+  "best": 15657,
+  "saved": 64,
+  "improved_cases": 40,
+  "cases_tested": 540,
+  "coverage": {
+    "medium": {
+      "cases": 210,
+      "A": 210,
+      "B": 210,
+      "C": 210
+    },
+    "large": {
+      "cases": 190,
+      "A": 190,
+      "B": 190,
+      "C": 190
+    },
+    "enormous": {
+      "cases": 140,
+      "A": 140,
+      "B": 140,
+      "C": 140
+    }
+  },
+  "primary_records": 1620,
+  "total_comparative_rows": 2302,
+  "nonoverlapping_attribution": {
+    "A": {
+      "saved": 25,
+      "cases_improved": 22,
+      "measured_search_cpu_seconds": 1084.75
+    },
+    "B": {
+      "saved": 9,
+      "cases_improved": 8,
+      "measured_search_cpu_seconds": 1772.375
+    },
+    "C": {
+      "saved": 30,
+      "cases_improved": 15,
+      "measured_search_cpu_seconds": 1109.84375
+    }
+  },
+  "primary_comparison": {
+    "A": {
+      "cases": 540,
+      "saved": 19,
+      "improved": 19,
+      "cpu_seconds": 794.453125,
+      "wall_seconds": 801.7595806014724,
+      "valid_candidates": 22,
+      "invalid_candidates": 0,
+      "near_rows": 540,
+      "near_cost_le_12": 463,
+      "births_valid": 0
+    },
+    "B": {
+      "cases": 540,
+      "saved": 4,
+      "improved": 4,
+      "cpu_seconds": 803.1875,
+      "wall_seconds": 809.9335689981235,
+      "valid_candidates": 4,
+      "invalid_candidates": 0,
+      "near_rows": 540,
+      "near_cost_le_12": 101,
+      "births_valid": 540
+    },
+    "C": {
+      "cases": 540,
+      "saved": 5,
+      "improved": 5,
+      "cpu_seconds": 805.171875,
+      "wall_seconds": 811.0283081001835,
+      "valid_candidates": 5,
+      "invalid_candidates": 0,
+      "near_rows": 540,
+      "near_cost_le_12": 96,
+      "births_valid": 540
+    }
+  },
+  "primary_categories": {
+    "none": 514,
+    "C_better_than_both": 3,
+    "only_A": 19,
+    "B_better_than_A": 4,
+    "B_C_tie_above_A": 2
+  },
+  "metrics": {
+    "medium": {
+      "before": {
+        "ticks": 5915,
+        "new_target": 24847,
+        "repeated_target": 5882,
+        "erased_target": 128,
+        "new_skirting": 400,
+        "h2_target": 30729,
+        "toggles": 6596,
+        "motion": 18135,
+        "repeat_fraction": 0.19141527547268053,
+        "productive_per_tick": 4.200676246830093
+      },
+      "after": {
+        "ticks": 5904,
+        "new_target": 24849,
+        "repeated_target": 5877,
+        "erased_target": 130,
+        "new_skirting": 425,
+        "h2_target": 30726,
+        "toggles": 6598,
+        "motion": 18094,
+        "repeat_fraction": 0.19127123608670182,
+        "productive_per_tick": 4.208841463414634
+      }
+    },
+    "large": {
+      "before": {
+        "ticks": 5092,
+        "new_target": 20752,
+        "repeated_target": 8657,
+        "erased_target": 127,
+        "new_skirting": 253,
+        "h2_target": 29409,
+        "toggles": 3364,
+        "motion": 18003,
+        "repeat_fraction": 0.2943656703730151,
+        "productive_per_tick": 4.07541241162608
+      },
+      "after": {
+        "ticks": 5047,
+        "new_target": 20757,
+        "repeated_target": 8641,
+        "erased_target": 132,
+        "new_skirting": 265,
+        "h2_target": 29398,
+        "toggles": 3395,
+        "motion": 17789,
+        "repeat_fraction": 0.293931559970066,
+        "productive_per_tick": 4.112740241727759
+      }
+    },
+    "enormous": {
+      "before": {
+        "ticks": 4714,
+        "new_target": 18753,
+        "repeated_target": 11053,
+        "erased_target": 80,
+        "new_skirting": 166,
+        "h2_target": 29806,
+        "toggles": 2692,
+        "motion": 18394,
+        "repeat_fraction": 0.37083137623297324,
+        "productive_per_tick": 3.978150190920662
+      },
+      "after": {
+        "ticks": 4706,
+        "new_target": 18755,
+        "repeated_target": 11005,
+        "erased_target": 82,
+        "new_skirting": 171,
+        "h2_target": 29760,
+        "toggles": 2717,
+        "motion": 18373,
+        "repeat_fraction": 0.3697916666666667,
+        "productive_per_tick": 3.985337866553336
+      }
+    }
+  },
+  "changes": [
+    {
+      "dataset": "medium",
+      "case": 6,
+      "baseline": 16,
+      "best": 15,
+      "saved": 1,
+      "radius": 4,
+      "K": 7,
+      "target_cells": 9,
+      "acceptances_before": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "acceptances_after": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "dataset": "medium",
+      "case": 35,
+      "baseline": 12,
+      "best": 10,
+      "saved": 2,
+      "radius": 5,
+      "K": 3,
+      "target_cells": 16,
+      "acceptances_before": [
+        5,
+        9,
+        12
+      ],
+      "acceptances_after": [
+        4,
+        7,
+        10
+      ]
+    },
+    {
+      "dataset": "medium",
+      "case": 63,
+      "baseline": 32,
+      "best": 31,
+      "saved": 1,
+      "radius": 5,
+      "K": 10,
+      "target_cells": 9,
+      "acceptances_before": [
+        5,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23,
+        26,
+        29,
+        32
+      ],
+      "acceptances_after": [
+        4,
+        7,
+        10,
+        13,
+        16,
+        19,
+        22,
+        25,
+        28,
+        31
+      ]
+    },
+    {
+      "dataset": "medium",
+      "case": 106,
+      "baseline": 25,
+      "best": 23,
+      "saved": 2,
+      "radius": 4,
+      "K": 7,
+      "target_cells": 14,
+      "acceptances_before": [
+        5,
+        8,
+        11,
+        15,
+        19,
+        22,
+        25
+      ],
+      "acceptances_after": [
+        5,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23
+      ]
+    },
+    {
+      "dataset": "medium",
+      "case": 126,
+      "baseline": 54,
+      "best": 53,
+      "saved": 1,
+      "radius": 5,
+      "K": 17,
+      "target_cells": 17,
+      "acceptances_before": [
+        5,
+        9,
+        12,
+        15,
+        18,
+        21,
+        24,
+        27,
+        30,
+        33,
+        36,
+        39,
+        42,
+        45,
+        48,
+        51,
+        54
+      ],
+      "acceptances_after": [
+        5,
+        8,
+        11,
+        14,
+        17,
+        20,
+        23,
+        26,
+        29,
+        32,
+        35,
+        38,
+        41,
+        44,
+        47,
+        50,
+        53
+      ]
+    },
+    {
+      "dataset": "medium",
+      "case": 131,
+      "baseline": 77,
+      "best": 76,
+      "saved": 1,
+      "radius": 5,
+      "K": 15,
+      "target_cells": 23,
+      "acceptances_before": [
+        7,
+        12,
+        17,
+        22,
+        27,
+        32,
+        37,
+        42,
+        47,
+        52,
+        57,
+        62,
+        67,
+        72,
+        77
+      ],
+      "acceptances_after": [
+        6,
+        11,
+        16,
+        21,
+        26,
+        31,
+        36,
+        41,
+        46,
+        51,
+        56,
+        61,
+        66,
+        71,
+        76
+      ]
+    },
+    {
+      "dataset": "medium",
+      "case": 145,
+      "baseline": 78,
+      "best": 77,
+      "saved": 1,
+      "radius": 5,
+      "K": 15,
+      "target_cells": 25,
+      "acceptances_before": [
+        8,
+        13,
+        18,
+        23,
+        28,
+        33,
+        38,
+        43,
+        48,
+        53,
+        58,
+        63,
+        68,
+        73,
+        78
+      ],
+      "acceptances_after": [
+        7,
+        12,
+        17,
+        22,
+        27,
+        32,
+        37,
+        42,
+        47,
+        52,
+        57,
+        62,
+        67,
+        72,
+        77
+      ]
+    },
+    {
+      "dataset": "medium",
+      "case": 148,
+      "baseline": 32,
+      "best": 31,
+      "saved": 1,
+      "radius": 4,
+      "K": 15,
+      "target_cells": 7,
+      "acceptances_before": [
+        3,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32
+      ],
+      "acceptances_after": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31
+      ]
+    },
+    {
+      "dataset": "medium",
+      "case": 180,
+      "baseline": 16,
+      "best": 15,
+      "saved": 1,
+      "radius": 3,
+      "K": 7,
+      "target_cells": 11,
+      "acceptances_before": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "acceptances_after": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 16,
+      "baseline": 13,
+      "best": 11,
+      "saved": 2,
+      "radius": 7,
+      "K": 1,
+      "target_cells": 35,
+      "acceptances_before": [
+        13
+      ],
+      "acceptances_after": [
+        11
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 43,
+      "baseline": 21,
+      "best": 17,
+      "saved": 4,
+      "radius": 7,
+      "K": 5,
+      "target_cells": 10,
+      "acceptances_before": [
+        6,
+        9,
+        13,
+        17,
+        21
+      ],
+      "acceptances_after": [
+        5,
+        8,
+        11,
+        14,
+        17
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 44,
+      "baseline": 36,
+      "best": 33,
+      "saved": 3,
+      "radius": 7,
+      "K": 5,
+      "target_cells": 27,
+      "acceptances_before": [
+        10,
+        16,
+        23,
+        29,
+        36
+      ],
+      "acceptances_after": [
+        9,
+        15,
+        21,
+        27,
+        33
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 58,
+      "baseline": 21,
+      "best": 20,
+      "saved": 1,
+      "radius": 7,
+      "K": 6,
+      "target_cells": 9,
+      "acceptances_before": [
+        6,
+        9,
+        12,
+        15,
+        18,
+        21
+      ],
+      "acceptances_after": [
+        5,
+        8,
+        11,
+        14,
+        17,
+        20
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 82,
+      "baseline": 15,
+      "best": 13,
+      "saved": 2,
+      "radius": 6,
+      "K": 4,
+      "target_cells": 22,
+      "acceptances_before": [
+        5,
+        8,
+        12,
+        15
+      ],
+      "acceptances_after": [
+        4,
+        7,
+        10,
+        13
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 92,
+      "baseline": 40,
+      "best": 38,
+      "saved": 2,
+      "radius": 7,
+      "K": 3,
+      "target_cells": 46,
+      "acceptances_before": [
+        14,
+        27,
+        40
+      ],
+      "acceptances_after": [
+        14,
+        26,
+        38
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 97,
+      "baseline": 12,
+      "best": 11,
+      "saved": 1,
+      "radius": 8,
+      "K": 1,
+      "target_cells": 48,
+      "acceptances_before": [
+        12
+      ],
+      "acceptances_after": [
+        11
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 100,
+      "baseline": 11,
+      "best": 10,
+      "saved": 1,
+      "radius": 7,
+      "K": 1,
+      "target_cells": 22,
+      "acceptances_before": [
+        11
+      ],
+      "acceptances_after": [
+        10
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 101,
+      "baseline": 25,
+      "best": 24,
+      "saved": 1,
+      "radius": 6,
+      "K": 3,
+      "target_cells": 91,
+      "acceptances_before": [
+        9,
+        16,
+        25
+      ],
+      "acceptances_after": [
+        9,
+        16,
+        24
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 102,
+      "baseline": 16,
+      "best": 15,
+      "saved": 1,
+      "radius": 6,
+      "K": 4,
+      "target_cells": 13,
+      "acceptances_before": [
+        7,
+        10,
+        13,
+        16
+      ],
+      "acceptances_after": [
+        6,
+        9,
+        12,
+        15
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 110,
+      "baseline": 33,
+      "best": 28,
+      "saved": 5,
+      "radius": 8,
+      "K": 4,
+      "target_cells": 23,
+      "acceptances_before": [
+        10,
+        18,
+        26,
+        33
+      ],
+      "acceptances_after": [
+        10,
+        16,
+        22,
+        28
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 113,
+      "baseline": 11,
+      "best": 9,
+      "saved": 2,
+      "radius": 6,
+      "K": 1,
+      "target_cells": 33,
+      "acceptances_before": [
+        11
+      ],
+      "acceptances_after": [
+        9
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 126,
+      "baseline": 14,
+      "best": 13,
+      "saved": 1,
+      "radius": 8,
+      "K": 4,
+      "target_cells": 16,
+      "acceptances_before": [
+        5,
+        8,
+        11,
+        14
+      ],
+      "acceptances_after": [
+        4,
+        7,
+        10,
+        13
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 132,
+      "baseline": 10,
+      "best": 9,
+      "saved": 1,
+      "radius": 7,
+      "K": 1,
+      "target_cells": 28,
+      "acceptances_before": [
+        10
+      ],
+      "acceptances_after": [
+        9
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 135,
+      "baseline": 28,
+      "best": 27,
+      "saved": 1,
+      "radius": 6,
+      "K": 6,
+      "target_cells": 14,
+      "acceptances_before": [
+        8,
+        12,
+        16,
+        20,
+        24,
+        28
+      ],
+      "acceptances_after": [
+        7,
+        11,
+        15,
+        19,
+        23,
+        27
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 142,
+      "baseline": 124,
+      "best": 120,
+      "saved": 4,
+      "radius": 8,
+      "K": 6,
+      "target_cells": 91,
+      "acceptances_before": [
+        23,
+        44,
+        64,
+        85,
+        105,
+        124
+      ],
+      "acceptances_after": [
+        23,
+        42,
+        62,
+        81,
+        101,
+        120
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 144,
+      "baseline": 140,
+      "best": 137,
+      "saved": 3,
+      "radius": 8,
+      "K": 6,
+      "target_cells": 131,
+      "acceptances_before": [
+        28,
+        50,
+        73,
+        95,
+        118,
+        140
+      ],
+      "acceptances_after": [
+        27,
+        49,
+        71,
+        93,
+        115,
+        137
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 149,
+      "baseline": 63,
+      "best": 62,
+      "saved": 1,
+      "radius": 7,
+      "K": 3,
+      "target_cells": 54,
+      "acceptances_before": [
+        21,
+        43,
+        63
+      ],
+      "acceptances_after": [
+        25,
+        41,
+        62
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 153,
+      "baseline": 12,
+      "best": 10,
+      "saved": 2,
+      "radius": 6,
+      "K": 3,
+      "target_cells": 13,
+      "acceptances_before": [
+        5,
+        8,
+        12
+      ],
+      "acceptances_after": [
+        4,
+        7,
+        10
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 158,
+      "baseline": 10,
+      "best": 9,
+      "saved": 1,
+      "radius": 6,
+      "K": 2,
+      "target_cells": 19,
+      "acceptances_before": [
+        6,
+        10
+      ],
+      "acceptances_after": [
+        5,
+        9
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 165,
+      "baseline": 28,
+      "best": 27,
+      "saved": 1,
+      "radius": 6,
+      "K": 6,
+      "target_cells": 21,
+      "acceptances_before": [
+        8,
+        12,
+        16,
+        20,
+        24,
+        28
+      ],
+      "acceptances_after": [
+        7,
+        11,
+        15,
+        19,
+        23,
+        27
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 172,
+      "baseline": 24,
+      "best": 22,
+      "saved": 2,
+      "radius": 6,
+      "K": 4,
+      "target_cells": 30,
+      "acceptances_before": [
+        7,
+        12,
+        18,
+        24
+      ],
+      "acceptances_after": [
+        7,
+        12,
+        17,
+        22
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 173,
+      "baseline": 107,
+      "best": 105,
+      "saved": 2,
+      "radius": 8,
+      "K": 6,
+      "target_cells": 42,
+      "acceptances_before": [
+        20,
+        38,
+        55,
+        73,
+        90,
+        107
+      ],
+      "acceptances_after": [
+        20,
+        37,
+        54,
+        71,
+        88,
+        105
+      ]
+    },
+    {
+      "dataset": "large",
+      "case": 176,
+      "baseline": 15,
+      "best": 14,
+      "saved": 1,
+      "radius": 7,
+      "K": 5,
+      "target_cells": 9,
+      "acceptances_before": [
+        7,
+        9,
+        11,
+        13,
+        15
+      ],
+      "acceptances_after": [
+        6,
+        8,
+        10,
+        12,
+        14
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 16,
+      "baseline": 27,
+      "best": 26,
+      "saved": 1,
+      "radius": 11,
+      "K": 2,
+      "target_cells": 29,
+      "acceptances_before": [
+        16,
+        27
+      ],
+      "acceptances_after": [
+        16,
+        26
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 41,
+      "baseline": 33,
+      "best": 32,
+      "saved": 1,
+      "radius": 9,
+      "K": 2,
+      "target_cells": 106,
+      "acceptances_before": [
+        17,
+        33
+      ],
+      "acceptances_after": [
+        17,
+        32
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 57,
+      "baseline": 19,
+      "best": 18,
+      "saved": 1,
+      "radius": 10,
+      "K": 1,
+      "target_cells": 53,
+      "acceptances_before": [
+        19
+      ],
+      "acceptances_after": [
+        18
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 76,
+      "baseline": 20,
+      "best": 19,
+      "saved": 1,
+      "radius": 10,
+      "K": 1,
+      "target_cells": 68,
+      "acceptances_before": [
+        20
+      ],
+      "acceptances_after": [
+        19
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 93,
+      "baseline": 72,
+      "best": 71,
+      "saved": 1,
+      "radius": 10,
+      "K": 2,
+      "target_cells": 85,
+      "acceptances_before": [
+        36,
+        72
+      ],
+      "acceptances_after": [
+        36,
+        71
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 116,
+      "baseline": 13,
+      "best": 11,
+      "saved": 2,
+      "radius": 9,
+      "K": 1,
+      "target_cells": 33,
+      "acceptances_before": [
+        13
+      ],
+      "acceptances_after": [
+        11
+      ]
+    },
+    {
+      "dataset": "enormous",
+      "case": 125,
+      "baseline": 25,
+      "best": 24,
+      "saved": 1,
+      "radius": 9,
+      "K": 2,
+      "target_cells": 31,
+      "acceptances_before": [
+        13,
+        25
+      ],
+      "acceptances_after": [
+        13,
+        24
+      ]
+    }
+  ],
+  "pure_independent_better_than_frozen_baseline": [
+    {
+      "dataset": "medium",
+      "case": 6,
+      "baseline": 16,
+      "pure": 15,
+      "final": 15,
+      "source": "independent_graph",
+      "radius": 4,
+      "target_cells": 9,
+      "K": 7,
+      "structural_material_trace_changed": true,
+      "acceptances_before": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "acceptances_after": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ],
+      "signature_sha256": "5141a20542bf9935ca5b2d832c47a4cacf6f5ec8b7b0287874c2d4625ae2324e",
+      "incumbent_structure_used": false
+    },
+    {
+      "dataset": "medium",
+      "case": 35,
+      "baseline": 12,
+      "pure": 10,
+      "final": 10,
+      "source": "independent_graph",
+      "radius": 5,
+      "target_cells": 16,
+      "K": 3,
+      "structural_material_trace_changed": true,
+      "acceptances_before": [
+        5,
+        9,
+        12
+      ],
+      "acceptances_after": [
+        4,
+        7,
+        10
+      ],
+      "signature_sha256": "a94ac58b16f8b30d346aab866d59dd1bc99d9fe95eba11baeec1cfa322d3aabd",
+      "incumbent_structure_used": false
+    },
+    {
+      "dataset": "medium",
+      "case": 148,
+      "baseline": 32,
+      "pure": 31,
+      "final": 31,
+      "source": "pass1",
+      "radius": 4,
+      "target_cells": 7,
+      "K": 15,
+      "structural_material_trace_changed": true,
+      "acceptances_before": [
+        3,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22,
+        24,
+        26,
+        28,
+        30,
+        32
+      ],
+      "acceptances_after": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21,
+        23,
+        25,
+        27,
+        29,
+        31
+      ],
+      "signature_sha256": "8fdb7097c761c7b932df69da1adda3ec1782dc067d0d56adeee2669d216f8d6a",
+      "incumbent_structure_used": false
+    },
+    {
+      "dataset": "medium",
+      "case": 180,
+      "baseline": 16,
+      "pure": 15,
+      "final": 15,
+      "source": "pass1",
+      "radius": 3,
+      "target_cells": 11,
+      "K": 7,
+      "structural_material_trace_changed": true,
+      "acceptances_before": [
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16
+      ],
+      "acceptances_after": [
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15
+      ],
+      "signature_sha256": "bc0916fbfbbcea8688844123c38df79c86d8b0464f999fd03d30959a2d96ebb2",
+      "incumbent_structure_used": false
+    },
+    {
+      "dataset": "large",
+      "case": 58,
+      "baseline": 21,
+      "pure": 20,
+      "final": 20,
+      "source": "independent_graph",
+      "radius": 7,
+      "target_cells": 9,
+      "K": 6,
+      "structural_material_trace_changed": true,
+      "acceptances_before": [
+        6,
+        9,
+        12,
+        15,
+        18,
+        21
+      ],
+      "acceptances_after": [
+        5,
+        8,
+        11,
+        14,
+        17,
+        20
+      ],
+      "signature_sha256": "e36a20f56a213608e78b33c38eaa4983bbbab70b6d1dfe35421ef27c7e7ddddf",
+      "incumbent_structure_used": false
+    },
+    {
+      "dataset": "large",
+      "case": 100,
+      "baseline": 11,
+      "pure": 10,
+      "final": 10,
+      "source": "continuation4",
+      "radius": 7,
+      "target_cells": 22,
+      "K": 1,
+      "structural_material_trace_changed": true,
+      "acceptances_before": [
+        11
+      ],
+      "acceptances_after": [
+        10
+      ],
+      "signature_sha256": "4f86b2f64a420bfe07275b97b7302223d65fc40a886368c6e99064b3c3369e7d",
+      "incumbent_structure_used": false
+    },
+    {
+      "dataset": "large",
+      "case": 132,
+      "baseline": 10,
+      "pure": 9,
+      "final": 9,
+      "source": "continuation4",
+      "radius": 7,
+      "target_cells": 28,
+      "K": 1,
+      "structural_material_trace_changed": true,
+      "acceptances_before": [
+        10
+      ],
+      "acceptances_after": [
+        9
+      ],
+      "signature_sha256": "f04100a932bcd45531e2e04e72e1c60abf3f5cd31fe4bdb8826d3fbfb50d6b63",
+      "incumbent_structure_used": false
+    },
+    {
+      "dataset": "large",
+      "case": 153,
+      "baseline": 12,
+      "pure": 10,
+      "final": 10,
+      "source": "independent_graph",
+      "radius": 6,
+      "target_cells": 13,
+      "K": 3,
+      "structural_material_trace_changed": true,
+      "acceptances_before": [
+        5,
+        8,
+        12
+      ],
+      "acceptances_after": [
+        4,
+        7,
+        10
+      ],
+      "signature_sha256": "552216dd9cc7872e46d3dceae8af794f621bc2511171931eef911843252a9b5a",
+      "incumbent_structure_used": false
+    },
+    {
+      "dataset": "large",
+      "case": 158,
+      "baseline": 10,
+      "pure": 9,
+      "final": 9,
+      "source": "pass1",
+      "radius": 6,
+      "target_cells": 19,
+      "K": 2,
+      "structural_material_trace_changed": true,
+      "acceptances_before": [
+        6,
+        10
+      ],
+      "acceptances_after": [
+        5,
+        9
+      ],
+      "signature_sha256": "f4e6712c53bde173fab1256a0497915897f103939e7659767d3704c886b9ad1c",
+      "incumbent_structure_used": false
+    },
+    {
+      "dataset": "enormous",
+      "case": 116,
+      "baseline": 13,
+      "pure": 12,
+      "final": 11,
+      "source": "pass1",
+      "radius": 9,
+      "target_cells": 33,
+      "K": 1,
+      "structural_material_trace_changed": true,
+      "acceptances_before": [
+        13
+      ],
+      "acceptances_after": [
+        12
+      ],
+      "signature_sha256": "3d482e1870441287abc72d0ab8b4a0e2a757646d117bf8484bf7d9b512963e49",
+      "incumbent_structure_used": false
+    }
+  ],
+  "pure_actual_saved": 9,
+  "static_statuses": {
+    "INFEASIBLE_PAIR_BOUND": 192,
+    "INFEASIBLE": 338,
+    "OPTIMAL": 10
+  },
+  "certified_optimal_cases": 11,
+  "global_optimality": "NOT_PROVEN",
+  "new_sustained_cycle_period_breakthrough": "NOT_ESTABLISHED",
+  "lower_bound_sum": 6298,
+  "memory_limits_primary": {
+    "True": 1620
+  },
+  "postprocessing_graph_wall_seconds": 436.90340290090535,
+  "graph_cpu_seconds": "NOT_MEASURED_SEPARATELY",
+  "near_repair_attempts": 36,
+  "near_repair_saved": 0,
+  "validation": {
+    "status": "PASS",
+    "cases": 540,
+    "ticks": 15657,
+    "cpp": "PASS",
+    "solve_l5_verify": "PASS",
+    "original_js": "PASS",
+    "stricter_js": "PASS",
+    "protected_files": 2689,
+    "protected_changes": [],
+    "protected_missing": [],
+    "original_validator_sha256": "adce67f40e18b25f6ccb545dc7d2f7899edcfe24480555d85d0cbd7137e2d5a8"
+  },
+  "platform_acceptance": "NOT_REQUESTED_NOT_SUBMITTED",
+  "python": "3.11.9",
+  "head": "6aba0ffdfd118bd10439ef70ed5aaf623c136600",
+  "experiment_wall_seconds_from_snapshot": 54851.99109792709,
+  "independent_graph": {
+    "cases": 540,
+    "actual_saved": 2,
+    "improved_vs_frozen": 8,
+    "saved_vs_frozen": 10,
+    "graph_cpu_seconds": 42.5,
+    "graph_wall_seconds": 63.85303400142584,
+    "provenance": "only B complete/partial, independent births, pre-history prefixes, independent static witnesses, verified transforms; no historical/current best edges"
+  },
+  "continuation4": {
+    "cases": 48,
+    "scores": {
+      "medium": 5905,
+      "large": 5070,
+      "enormous": 4706
+    },
+    "wall_seconds": 109.99893470003735,
+    "arms": {
+      "A": {
+        "cases": 48,
+        "saved_vs_stage_snapshot": 2
+      },
+      "B": {
+        "cases": 48,
+        "saved_vs_stage_snapshot": 2
+      },
+      "C": {
+        "cases": 48,
+        "saved_vs_stage_snapshot": 0
+      }
+    }
+  },
+  "graph_refinement": {
+    "cases": 15,
+    "before": {
+      "medium": 5904,
+      "large": 5055,
+      "enormous": 4706
+    },
+    "after": {
+      "medium": 5904,
+      "large": 5047,
+      "enormous": 4706
+    },
+    "saved": 8,
+    "passes": [
+      {
+        "cases": 15,
+        "before": {
+          "medium": 5904,
+          "large": 5055,
+          "enormous": 4706
+        },
+        "after": {
+          "medium": 5904,
+          "large": 5047,
+          "enormous": 4706
+        },
+        "saved": 8,
+        "wall_seconds": 11.723660200019367
+      },
+      {
+        "cases": 15,
+        "before": {
+          "medium": 5904,
+          "large": 5047,
+          "enormous": 4706
+        },
+        "after": {
+          "medium": 5904,
+          "large": 5047,
+          "enormous": 4706
+        },
+        "saved": 0,
+        "wall_seconds": 9.833727200049907
+      }
+    ],
+    "stop_reason": "NO_SCORE_GAIN",
+    "wall_seconds": 21.557387400069274
+  },
+  "continuation_start_score": 15687,
+  "continuation_saved": 30
+}

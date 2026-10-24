@@ -1,0 +1,247 @@
+{
+  "dataset": "medium",
+  "case": 123,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 27,
+  "best_before": 27,
+  "pure_graph_ticks": 28,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 512,
+  "edges": 1592,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2,
+    "independent_pre_history_prefix": 32
+  },
+  "graph_cpu_seconds": 0.140625,
+  "graph_wall_seconds": 0.15475489990785718,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        17,
+        14,
+        11,
+        7,
+        6,
+        5,
+        47
+      ],
+      "copies": 3,
+      "ticks": 7,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        17,
+        14,
+        11,
+        7,
+        6,
+        5,
+        47
+      ],
+      "end": [
+        0,
+        13,
+        11,
+        7,
+        6,
+        4,
+        59
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        0,
+        13,
+        11,
+        7,
+        6,
+        4,
+        59
+      ],
+      "end": [
+        17,
+        12,
+        9,
+        7,
+        7,
+        5,
+        51
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        17,
+        12,
+        9,
+        7,
+        7,
+        5,
+        51
+      ],
+      "end": [
+        0,
+        13,
+        10,
+        7,
+        6,
+        4,
+        59
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        0,
+        13,
+        10,
+        7,
+        6,
+        4,
+        59
+      ],
+      "end": [
+        1,
+        14,
+        11,
+        7,
+        5,
+        3,
+        51
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        1,
+        14,
+        11,
+        7,
+        5,
+        3,
+        51
+      ],
+      "end": [
+        0,
+        13,
+        9,
+        7,
+        6,
+        4,
+        59
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        0,
+        13,
+        9,
+        7,
+        6,
+        4,
+        59
+      ],
+      "end": [
+        0,
+        13,
+        9,
+        7,
+        6,
+        4,
+        61
+      ],
+      "copies": 1,
+      "ticks": 3,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        0,
+        13,
+        9,
+        7,
+        6,
+        4,
+        61
+      ],
+      "end": [
+        17,
+        12,
+        10,
+        7,
+        7,
+        4,
+        55
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        17,
+        12,
+        10,
+        7,
+        7,
+        4,
+        55
+      ],
+      "end": [
+        0,
+        13,
+        9,
+        7,
+        6,
+        4,
+        63
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        0,
+        13,
+        9,
+        7,
+        6,
+        4,
+        63
+      ],
+      "end": [
+        17,
+        13,
+        9,
+        8,
+        7,
+        4,
+        31
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "verified_opposed_symmetry"
+    }
+  ]
+}

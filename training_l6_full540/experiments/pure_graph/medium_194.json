@@ -1,0 +1,133 @@
+{
+  "dataset": "medium",
+  "case": 194,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 19,
+  "best_before": 19,
+  "pure_graph_ticks": 19,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 466,
+  "edges": 2592,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2,
+    "independent_pre_history_prefix": 32,
+    "independent_static": 1
+  },
+  "graph_cpu_seconds": 0.15625,
+  "graph_wall_seconds": 0.1924792000791058,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        0,
+        20,
+        17,
+        13,
+        8,
+        6,
+        57
+      ],
+      "copies": 1,
+      "ticks": 3,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        0,
+        20,
+        17,
+        13,
+        8,
+        6,
+        57
+      ],
+      "end": [
+        2,
+        20,
+        18,
+        14,
+        8,
+        7,
+        54
+      ],
+      "copies": 4,
+      "ticks": 4,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        2,
+        20,
+        18,
+        14,
+        8,
+        7,
+        54
+      ],
+      "end": [
+        23,
+        20,
+        18,
+        17,
+        8,
+        7,
+        54
+      ],
+      "copies": 4,
+      "ticks": 4,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        23,
+        20,
+        18,
+        17,
+        8,
+        7,
+        54
+      ],
+      "end": [
+        22,
+        20,
+        18,
+        17,
+        8,
+        7,
+        62
+      ],
+      "copies": 4,
+      "ticks": 4,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        22,
+        20,
+        18,
+        17,
+        8,
+        7,
+        62
+      ],
+      "end": [
+        22,
+        20,
+        18,
+        17,
+        8,
+        7,
+        62
+      ],
+      "copies": 4,
+      "ticks": 4,
+      "origin": "B_partial"
+    }
+  ]
+}

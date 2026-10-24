@@ -1,0 +1,132 @@
+{
+  "dataset": "large",
+  "case": 86,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 18,
+  "best_before": 18,
+  "pure_graph_ticks": 32,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 52,
+  "edges": 174,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2,
+    "independent_pre_history_prefix": 25
+  },
+  "graph_cpu_seconds": 0.046875,
+  "graph_wall_seconds": 0.10419099999126047,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        0,
+        30,
+        23,
+        18,
+        12,
+        10,
+        59
+      ],
+      "copies": 1,
+      "ticks": 8,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        0,
+        30,
+        23,
+        18,
+        12,
+        10,
+        59
+      ],
+      "end": [
+        0,
+        30,
+        24,
+        18,
+        12,
+        10,
+        59
+      ],
+      "copies": 1,
+      "ticks": 6,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        0,
+        30,
+        24,
+        18,
+        12,
+        10,
+        59
+      ],
+      "end": [
+        0,
+        30,
+        23,
+        18,
+        12,
+        10,
+        59
+      ],
+      "copies": 1,
+      "ticks": 6,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        0,
+        30,
+        23,
+        18,
+        12,
+        10,
+        59
+      ],
+      "end": [
+        0,
+        30,
+        24,
+        18,
+        12,
+        10,
+        59
+      ],
+      "copies": 1,
+      "ticks": 6,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        0,
+        30,
+        24,
+        18,
+        12,
+        10,
+        59
+      ],
+      "end": [
+        0,
+        30,
+        23,
+        18,
+        12,
+        10,
+        59
+      ],
+      "copies": 1,
+      "ticks": 6,
+      "origin": "B_partial"
+    }
+  ]
+}

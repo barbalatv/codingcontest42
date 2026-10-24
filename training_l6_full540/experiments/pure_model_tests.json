@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "tests": [
+    {
+      "K": 1,
+      "H": 0,
+      "status": "INFEASIBLE",
+      "program": null
+    },
+    {
+      "K": 1,
+      "H": 1,
+      "status": "OPTIMAL",
+      "program": [
+        [
+          "F",
+          "B",
+          "B",
+          "B",
+          "T",
+          "T"
+        ]
+      ]
+    },
+    {
+      "K": 2,
+      "H": 1,
+      "status": "INFEASIBLE",
+      "program": null
+    },
+    {
+      "K": 2,
+      "H": 2,
+      "status": "OPTIMAL",
+      "program": [
+        [
+          "B",
+          "B",
+          "-",
+          "T",
+          "-",
+          "T"
+        ],
+        [
+          "T",
+          "B",
+          "T",
+          "F",
+          "T",
+          "T"
+        ]
+      ]
+    }
+  ],
+  "argument": "reachable-domain restriction follows shortest move+toggle distance; every accepted copy requires one new exact-two creation per target cell"
+}

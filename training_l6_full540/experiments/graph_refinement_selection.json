@@ -1,0 +1,73 @@
+{
+  "cases": [
+    [
+      "enormous",
+      16
+    ],
+    [
+      "large",
+      43
+    ],
+    [
+      "large",
+      82
+    ],
+    [
+      "large",
+      92
+    ],
+    [
+      "large",
+      100
+    ],
+    [
+      "large",
+      110
+    ],
+    [
+      "large",
+      126
+    ],
+    [
+      "large",
+      132
+    ],
+    [
+      "large",
+      142
+    ],
+    [
+      "large",
+      144
+    ],
+    [
+      "large",
+      153
+    ],
+    [
+      "large",
+      172
+    ],
+    [
+      "large",
+      173
+    ],
+    [
+      "medium",
+      35
+    ],
+    [
+      "medium",
+      126
+    ]
+  ],
+  "bounce_rounds_per_pass": 2,
+  "max_passes": 6,
+  "cap": 50,
+  "before": {
+    "medium": 5904,
+    "large": 5055,
+    "enormous": 4706
+  },
+  "reason": "only neighborhoods producing a new best in the continuation; stop on a complete pass without score gain"
+}

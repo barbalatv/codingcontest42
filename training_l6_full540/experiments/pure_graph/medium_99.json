@@ -1,0 +1,201 @@
+{
+  "dataset": "medium",
+  "case": 99,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 34,
+  "best_before": 34,
+  "pure_graph_ticks": 70,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 306,
+  "edges": 630,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2,
+    "independent_pre_history_prefix": 32
+  },
+  "graph_cpu_seconds": 0.125,
+  "graph_wall_seconds": 0.16910359996836632,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        1,
+        26,
+        20,
+        15,
+        10,
+        6,
+        51
+      ],
+      "copies": 1,
+      "ticks": 4,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        1,
+        26,
+        20,
+        15,
+        10,
+        6,
+        51
+      ],
+      "end": [
+        29,
+        25,
+        18,
+        12,
+        9,
+        7,
+        19
+      ],
+      "copies": 4,
+      "ticks": 24,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        29,
+        25,
+        18,
+        12,
+        9,
+        7,
+        19
+      ],
+      "end": [
+        1,
+        26,
+        18,
+        13,
+        8,
+        7,
+        29
+      ],
+      "copies": 1,
+      "ticks": 7,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        1,
+        26,
+        18,
+        13,
+        8,
+        7,
+        29
+      ],
+      "end": [
+        29,
+        25,
+        18,
+        12,
+        9,
+        7,
+        19
+      ],
+      "copies": 1,
+      "ticks": 7,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        29,
+        25,
+        18,
+        12,
+        9,
+        7,
+        19
+      ],
+      "end": [
+        1,
+        26,
+        18,
+        13,
+        8,
+        7,
+        29
+      ],
+      "copies": 1,
+      "ticks": 7,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        1,
+        26,
+        18,
+        13,
+        8,
+        7,
+        29
+      ],
+      "end": [
+        29,
+        25,
+        18,
+        12,
+        9,
+        7,
+        19
+      ],
+      "copies": 1,
+      "ticks": 7,
+      "origin": "verified_opposed_symmetry"
+    },
+    {
+      "start": [
+        29,
+        25,
+        18,
+        12,
+        9,
+        7,
+        19
+      ],
+      "end": [
+        1,
+        26,
+        18,
+        13,
+        8,
+        7,
+        29
+      ],
+      "copies": 1,
+      "ticks": 7,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        1,
+        26,
+        18,
+        13,
+        8,
+        7,
+        29
+      ],
+      "end": [
+        29,
+        25,
+        18,
+        12,
+        9,
+        7,
+        19
+      ],
+      "copies": 1,
+      "ticks": 7,
+      "origin": "verified_opposed_symmetry"
+    }
+  ]
+}

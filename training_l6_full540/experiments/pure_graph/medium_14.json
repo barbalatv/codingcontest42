@@ -1,0 +1,155 @@
+{
+  "dataset": "medium",
+  "case": 14,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 25,
+  "best_before": 25,
+  "pure_graph_ticks": 25,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 420,
+  "edges": 1304,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2,
+    "independent_pre_history_prefix": 32
+  },
+  "graph_cpu_seconds": 0.09375,
+  "graph_wall_seconds": 0.14190980000421405,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        0,
+        15,
+        11,
+        9,
+        5,
+        2,
+        38
+      ],
+      "copies": 1,
+      "ticks": 3,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        0,
+        15,
+        11,
+        9,
+        5,
+        2,
+        38
+      ],
+      "end": [
+        1,
+        14,
+        11,
+        9,
+        6,
+        2,
+        52
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        1,
+        14,
+        11,
+        9,
+        6,
+        2,
+        52
+      ],
+      "end": [
+        0,
+        15,
+        11,
+        9,
+        5,
+        2,
+        38
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        0,
+        15,
+        11,
+        9,
+        5,
+        2,
+        38
+      ],
+      "end": [
+        1,
+        14,
+        11,
+        9,
+        6,
+        2,
+        52
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        1,
+        14,
+        11,
+        9,
+        6,
+        2,
+        52
+      ],
+      "end": [
+        0,
+        15,
+        11,
+        9,
+        5,
+        2,
+        38
+      ],
+      "copies": 2,
+      "ticks": 4,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        0,
+        15,
+        11,
+        9,
+        5,
+        2,
+        38
+      ],
+      "end": [
+        2,
+        15,
+        12,
+        8,
+        4,
+        2,
+        58
+      ],
+      "copies": 4,
+      "ticks": 8,
+      "origin": "B_partial"
+    }
+  ]
+}

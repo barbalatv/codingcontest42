@@ -1,0 +1,96 @@
+[
+  {
+    "command": [
+      "adaptive.py",
+      "--replicates",
+      "--ms",
+      "1500",
+      "--seed",
+      "6700000",
+      "--pass-name",
+      "replicate_2"
+    ],
+    "wall_seconds": 10.263515099999495,
+    "scores": {
+      "medium": 5908,
+      "large": 5076,
+      "enormous": 4707
+    }
+  },
+  {
+    "command": [
+      "adaptive.py",
+      "--replicates",
+      "--ms",
+      "1500",
+      "--seed",
+      "6900000",
+      "--pass-name",
+      "replicate_3"
+    ],
+    "wall_seconds": 10.482099000015296,
+    "scores": {
+      "medium": 5908,
+      "large": 5076,
+      "enormous": 4707
+    }
+  },
+  {
+    "command": [
+      "static_all.py",
+      "--seconds",
+      "1",
+      "--workers",
+      "4"
+    ],
+    "wall_seconds": 11.22286609990988,
+    "scores": {
+      "medium": 5908,
+      "large": 5076,
+      "enormous": 4707
+    }
+  },
+  {
+    "command": [
+      "pure_cycles.py",
+      "--ms",
+      "1500",
+      "--workers",
+      "4"
+    ],
+    "wall_seconds": 164.51986280002166,
+    "scores": {
+      "medium": 5907,
+      "large": 5076,
+      "enormous": 4707
+    }
+  },
+  {
+    "command": [
+      "consolidate.py",
+      "--queries",
+      "0"
+    ],
+    "wall_seconds": 95.10609039990231,
+    "scores": {
+      "medium": 5906,
+      "large": 5075,
+      "enormous": 4707
+    }
+  },
+  {
+    "command": [
+      "final_repair.py",
+      "--limit",
+      "24",
+      "--seconds",
+      "1.5"
+    ],
+    "wall_seconds": 10.443978299968876,
+    "scores": {
+      "medium": 5906,
+      "large": 5075,
+      "enormous": 4707
+    }
+  }
+]

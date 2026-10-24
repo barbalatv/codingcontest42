@@ -1,0 +1,201 @@
+{
+  "dataset": "medium",
+  "case": 69,
+  "incumbent_structure_used": false,
+  "incumbent_trajectory_used": false,
+  "state_hints_used": false,
+  "incumbent_transitions_used": false,
+  "baseline": 26,
+  "best_before": 26,
+  "pure_graph_ticks": 32,
+  "saved_vs_frozen_baseline": 0,
+  "actual_saved": 0,
+  "nodes": 340,
+  "edges": 1108,
+  "independent_source_counts": {
+    "B_partial": 2,
+    "independent_birth": 2,
+    "independent_pre_history_prefix": 32
+  },
+  "graph_cpu_seconds": 0.140625,
+  "graph_wall_seconds": 0.14758570003323257,
+  "frontier": 4096,
+  "path": [
+    {
+      "start": "initial",
+      "end": [
+        17,
+        16,
+        10,
+        9,
+        6,
+        4,
+        61
+      ],
+      "copies": 3,
+      "ticks": 8,
+      "origin": "B_partial"
+    },
+    {
+      "start": [
+        17,
+        16,
+        10,
+        9,
+        6,
+        4,
+        61
+      ],
+      "end": [
+        16,
+        16,
+        11,
+        8,
+        7,
+        3,
+        63
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        16,
+        16,
+        11,
+        8,
+        7,
+        3,
+        63
+      ],
+      "end": [
+        17,
+        15,
+        11,
+        7,
+        7,
+        2,
+        31
+      ],
+      "copies": 2,
+      "ticks": 5,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        17,
+        15,
+        11,
+        7,
+        7,
+        2,
+        31
+      ],
+      "end": [
+        17,
+        16,
+        10,
+        9,
+        6,
+        4,
+        61
+      ],
+      "copies": 1,
+      "ticks": 4,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        17,
+        16,
+        10,
+        9,
+        6,
+        4,
+        61
+      ],
+      "end": [
+        16,
+        16,
+        11,
+        8,
+        7,
+        3,
+        63
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        16,
+        16,
+        11,
+        8,
+        7,
+        3,
+        63
+      ],
+      "end": [
+        16,
+        16,
+        11,
+        9,
+        7,
+        4,
+        37
+      ],
+      "copies": 1,
+      "ticks": 4,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        16,
+        16,
+        11,
+        9,
+        7,
+        4,
+        37
+      ],
+      "end": [
+        16,
+        16,
+        11,
+        8,
+        7,
+        3,
+        63
+      ],
+      "copies": 2,
+      "ticks": 5,
+      "origin": "generalized_bounce"
+    },
+    {
+      "start": [
+        16,
+        16,
+        11,
+        8,
+        7,
+        3,
+        63
+      ],
+      "end": [
+        17,
+        15,
+        10,
+        9,
+        7,
+        4,
+        47
+      ],
+      "copies": 1,
+      "ticks": 2,
+      "origin": "generalized_bounce"
+    }
+  ]
+}
